@@ -8,6 +8,7 @@ const Donate = () => (
         <div className="container">
             <div className="row">
                 <div className="col">
+                <br />
                     <h1>We need your help!</h1>
                 </div>
             </div>

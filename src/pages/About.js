@@ -8,6 +8,7 @@ const About = () => (
         <div className="container">
             <div className="row">
                 <div className="col">
+                <br />
                     <h1>About Project AIDS Nigeria</h1>
                 </div>
             </div>
@@ -18,7 +19,7 @@ const About = () => (
                         In 2007, after thirteen years since my family and I had fled the country as refugees, I revisited Nigeria for the first time. I was initially overjoyed but eventually returned to the States deeply saddened by the dire health conditions of family members and friends. The war my family and I had escaped was over, but sickness had taken its place. Interested in understanding the cause of many of the sicknesses, I visited several hospitals where I spoke with doctors who all concurred that an overwhelming number of patients they saw tested positive for HIV/AIDS.
                         <br /> <br />
                         Unable to turn a blind eye to my home and to people who had shaped me as a child, I decided to employ my developing skills in education to help the with the HIV epidemic. I spoke with a mentor at my church, First United Methodist Church Houston, and the missions board was gracious enough to sponsor my second trip in 2009 which enabled me to better understand the nature of the HIV epidemic in southern Nigeria. While there, I conducted an anonymous survey along with interviews at the general hospital in Bori and discovered that many HIV positive people did not know how they acquired the disease, had a strong desire to better understand the disease, and had little to no support from family and friends with whom many of them did not feel safe revealing their HIV positive status. That same summer, I linked with HIV counselors in Ogoni to conduct outreach events at several schools to gauge students’ understanding about HIV, its prevalence and methods of prevention. I found that for many of the students, the information was new, and that’s when I realized that education could be a starting point for warning young people about H3IV.
-            </p>
+                    </p>
                 </div>
             </div>
             <div className="row">
