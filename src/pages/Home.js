@@ -13,6 +13,7 @@ const Home = () => (
     <div className="container">
       <div className="row">
         <div className="col">
+        <br />
           <h1>Our Mission</h1>
         </div>
       </div>
