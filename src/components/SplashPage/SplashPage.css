@@ -1,11 +1,11 @@
-.hero {
+.SplashPage {
   height: 500px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-.hero::after {
+.SplashPage::after {
   content: "";
   display: block;
   opacity: .4;
@@ -17,16 +17,16 @@
   background: black;
 }
 
-.hero * {
+.SplashPage * {
   position: relative;
   z-index: 2;
 }
 
-.hero h1, .hero h2 {
+.SplashPage h1, .SplashPage h2 {
   color: white;
 }
 
-.hero h1 {
+.SplashPage h1 {
   font-size: 60px;
   padding-top: 140px;
   margin-top: 0;
