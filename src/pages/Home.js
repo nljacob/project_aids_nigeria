@@ -37,6 +37,7 @@ const Home = () => (
           <p>Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg. Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg.</p>
         </div>
       </div>
+<<<<<<< HEAD
       <br/>
       < hr/>
       <div className="row">
@@ -60,3 +61,10 @@ const Home = () => (
 );
 
 export default Home;
+=======
+    </div>
+  </div>
+)
+
+export default Home;
+>>>>>>> bad0a5242b0092256fcd05141f9b1f244f1b6548
