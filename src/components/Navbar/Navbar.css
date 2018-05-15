@@ -1,0 +1,15 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+
+.bg-light {
+  background-color: rgb(186,49,41) !important;
+}
+
+.nav-link {
+  color: rgb(242, 224, 192) !important;
+}
+
+.navbar-brand {
+  color: rgb(242, 224, 192) !important;
+}
