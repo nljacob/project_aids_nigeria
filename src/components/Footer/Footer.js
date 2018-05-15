@@ -1,12 +1,10 @@
 import React from "react";
-import './Footer.css';
+import "./Footer.css";
 
-const Footer = (props) => (
-	<footer class="footer">
-		<div class="container">
-			<p class="text-muted">Place sticky footer content here.</p>
-		</div>
-	</footer>
-)
+const Footer = () => (
+  <footer className="footer">
+    <p>Project AIDS Nigeria</p>
+  </footer>
+);
 
 export default Footer;
