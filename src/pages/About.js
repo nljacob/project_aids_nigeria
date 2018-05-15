@@ -3,7 +3,7 @@ import React from "react";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 
-const Home = () => (
+const About = () => (
     <div>
         <div className="container">
             <div className="row">
@@ -107,4 +107,4 @@ const Home = () => (
 //     </div>
 // );
 
-export default Home;
+export default About;

@@ -14,7 +14,6 @@ const Donate = () => (
             <div className="row">
                 <div className="col">
                     <p>
-                        <br />
                         Project AIDS Nigeria is a Charitable Educational Organization ground in Christian Faith.  We believe that it is only through education and through sharing the truth of the Gospel of Christ that can we can make progress against the advancement og HIV.
                         <br /> <br />
                         But we cannot do it alone...
@@ -43,7 +42,7 @@ const Donate = () => (
             <div className="row">
                 <div className="col">
                     <p>
-                        All donations are used in the Project Aids Nigeria Ministry. Below, please find a chart that represents where each dollar goes.
+                        All donations are used in the Project Aids Nigeria Ministry. To the side there is a chart that represents where each dollar goes.
                     </p>
                 </div>
             </div>
