@@ -39,7 +39,24 @@ const Home = () => (
       </div>
       <br/>
       < hr/>
+      <div className="row">
       <div className="col-5">
         </div>
         <div className="col-6">
         <br />
+            <h1>Statistics</h1>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-2">
+        </div>
+        <div className="col-6">
+        <br/>
+          <img src="https://www.avert.org/sites/default/files/styles/responsive_articlecustom_user_desktop_1x/public/Nigeria%20updated%20August2017.png?itok=qxE0xV4k&timestamp=1504606775" alt="Smiley face" height="300" width="750" />
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+export default Home;
