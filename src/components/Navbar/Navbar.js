@@ -5,23 +5,29 @@ import "./Navbar.css";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
   <nav id="nav-bar" className="navbar navbar-expand-lg navbar-light bg-light">
-    <Link className="navbar-brand" to="/">
-     Project AIDS Nigeria
-    </Link>
     <div>
       <ul className="navbar-nav">
         <li
           className={
             window.location.pathname === "/" ||
-            window.location.pathname === "/home"
+              window.location.pathname === "/home"
               ? "nav-item active"
               : "nav-item"
           }
         >
           <Link to="/" className="nav-link">
-          Home
+            Home
           </Link>
         </li>
+        <div className="btn-group">
+          <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Info
+          </button>
+          <div className="dropdown-menu">
+            <a className="dropdown-item" href="/students">Our Students</a>
+            <a className="dropdown-item" href="/curriculum">Curriculum</a>
+          </div>
+        </div>
         <li
           className={
             window.location.pathname === "/about"
@@ -41,7 +47,7 @@ const Navbar = props => (
           }
         >
           <Link to="/questions" className="nav-link">
-          F.A.Q
+            F.A.Q
           </Link>
         </li>
         <li
@@ -52,7 +58,7 @@ const Navbar = props => (
           }
         >
           <Link to="/donate" className="nav-link">
-          Donate
+            Donate
           </Link>
         </li>
         <li
@@ -63,10 +69,10 @@ const Navbar = props => (
           }
         >
           <Link to="/blog" className="nav-link">
-          Blog
+            Blog
           </Link>
         </li>
-        <li
+        {/* <li
           className={
             window.location.pathname === "/students"
               ? "nav-item active"
@@ -74,10 +80,10 @@ const Navbar = props => (
           }
         >
           <Link to="/students" className="nav-link">
-          Our Students
+            Our Students
           </Link>
-        </li>
-        <li
+        </li> */}
+        {/* <li
           className={
             window.location.pathname === "/curriculum"
               ? "nav-item active"
@@ -85,9 +91,9 @@ const Navbar = props => (
           }
         >
           <Link to="/curriculum" className="nav-link">
-          Curriculum
+            Curriculum
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   </nav>
