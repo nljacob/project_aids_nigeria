@@ -40,6 +40,23 @@ const Home = () => (
       <br/>
       < hr/>
       <Row>
+        <Col size="md-12">
+          <h1>Our Method</h1>
+        </Col>
+      </Row>
+      <Row>
+      <Col size="md-6">
+          <br />
+          <p>We use a peer to peer teaching method. PAN recruits student leaders from the local secondary schools who receive training on the topic of HIV/AIDS and other sexually transmitted diseases and in turn relay the information to their peers at their respective schools.  The PAN Student Assistants each lead their own groups to educate their peers on the topic of HIV. They receive coaching and mentoring from a PAN instructor who supports them and helps to ensure that the students are adequately informed on the topics they set out to discuss.</p>
+        </Col>
+        <Col size="md-6">
+          <br />
+          <img src="http://www.projectaidsnigeria.org/uploads/4/2/3/0/42309013/7809604_orig.jpg" alt="Smiley face" height="300" width="450" />
+        </Col>
+      </Row>
+      <br/>
+      < hr/>
+      <Row>
       <Col size="md-5">
         </Col>
         <Col size="md-6">
