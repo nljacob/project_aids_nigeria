@@ -9,7 +9,7 @@ import students04 from "../../images/students04.jpg";
 // import Col from "../components/Col";
 
 const Students = () => (
-  <div>
+  <div className="students-page">
       <div className="container">
       <br/>
       <h1>Our Students</h1>
