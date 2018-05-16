@@ -1,10 +1,18 @@
-
 * {
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-    font-family: 'Abril Fatface', cursive;
-    /* font-family: 'Fjalla One', sans-serif; */
+.home-page h1 {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    
 }
+
+.home-page h2 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+    
 
