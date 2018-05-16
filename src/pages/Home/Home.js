@@ -1,5 +1,5 @@
 import React from "react";
-import SplashPage from "../components/SplashPage";
+import SplashPage from "../../components/SplashPage";
 // import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
