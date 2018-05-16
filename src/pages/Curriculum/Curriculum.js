@@ -5,7 +5,7 @@ import React from "react";
 // import Col from "../components/Col";
 
 const Curriculum = () => (
-  <div>
+  <div className="curriculum-page">
     
   </div>
 );

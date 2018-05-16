@@ -2,9 +2,10 @@ import React from "react";
 // import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
+import "./About.css";
 
 const About = () => (
-    <div>
+    <div className="about-page">
         <div className="container">
             <div className="row">
                 <div className="col">

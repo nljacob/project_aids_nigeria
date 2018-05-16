@@ -5,7 +5,7 @@ import React from "react";
 // import Col from "../components/Col";
 
 const Questions = () => (
-  <div>
+  <div className="questions-page">
     <div className="container">
       <div className="row">
         <div className="col">
