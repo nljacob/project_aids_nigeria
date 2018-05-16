@@ -5,7 +5,7 @@ import React from "react";
 // import Col from "../components/Col";
 
 const Blog = () => (
-  <div>
+  <div className="blog-page">
     
   </div>
 );

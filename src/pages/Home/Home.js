@@ -7,7 +7,7 @@ import "./Home.css";
 // import Col from "../components/Col";
 
 const Home = () => (
-  <div>
+  <div className="home-page">
     <SplashPage backgroundImage="https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4a027094c15a1ae14bf72f8f71d9380b&auto=format&fit=crop&w=1500&q=80">
       <h1>Project AIDS Nigeria</h1>
       <h2>For Love and Knowledge</h2>
