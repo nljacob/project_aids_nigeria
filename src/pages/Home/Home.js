@@ -1,5 +1,7 @@
 import React from "react";
 import SplashPage from "../../components/SplashPage";
+import "./Home.css";
+// import HomeCSS from "Home.css";
 // import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
