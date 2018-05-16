@@ -19,15 +19,6 @@ const Navbar = props => (
             Home
           </Link>
         </li>
-        <div className="btn-group">
-          <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Info
-          </button>
-          <div className="dropdown-menu">
-            <a className="dropdown-item" href="/students">Our Students</a>
-            <a className="dropdown-item" href="/curriculum">Curriculum</a>
-          </div>
-        </div>
         <li
           className={
             window.location.pathname === "/about"
@@ -72,7 +63,7 @@ const Navbar = props => (
             Blog
           </Link>
         </li>
-        {/* <li
+        <li
           className={
             window.location.pathname === "/students"
               ? "nav-item active"
@@ -82,8 +73,8 @@ const Navbar = props => (
           <Link to="/students" className="nav-link">
             Our Students
           </Link>
-        </li> */}
-        {/* <li
+        </li> 
+        <li
           className={
             window.location.pathname === "/curriculum"
               ? "nav-item active"
@@ -93,7 +84,7 @@ const Navbar = props => (
           <Link to="/curriculum" className="nav-link">
             Curriculum
           </Link>
-        </li> */}
+        </li>
       </ul>
     </div>
   </nav>
