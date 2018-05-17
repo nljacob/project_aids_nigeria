@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
  
 const customStyles = {
@@ -43,7 +43,7 @@ const customStyles = {
    
     afterOpenModal() {
       // references are now sync'd and can be accessed.
-      this.subtitle.style.color = '#f00';
+      // this.subtitle.style.color = '#f00';
     }
    
     closeModal() {
@@ -81,13 +81,13 @@ const customStyles = {
             contentLabel="Example Modal"
           >
    
-            <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-            <button onClick={this.closeModal}>close</button>
+            {/* <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2> */}
+            {/* <button type="button" class="btn btn-secondary" onClick={this.closeModal}>close</button> */}
             {/* <div>I am a modal</div> */}
             <div>{this.props.question}</div>
             <form>
               <fieldset>
-                <legend>Radio buttons</legend>
+                {/* <legend>Radio buttons</legend> */}
                 <label>
                   <input id="radio-a" name="radios" type="radio" value='1' checked={this.state.selectedOption === '1'} onChange={this.handleOptionChange}/> A: {this.props.answerChoiceOne}
                 </label>
@@ -104,7 +104,8 @@ const customStyles = {
                   <input id="radio-d" name="radios" type="radio" value='4' checked={this.state.selectedOption === '4'} onChange={this.handleOptionChange}/> D: {this.props.answerChoiceFour}
                 </label>
               </fieldset>
-              <button type="button" className="btn btn-primary" onClick={this.submitForm} id="Submit Button">Submit</button>
+              <button type="button" className="btn btn-primary" onClick={this.submitForm} id="Submit Button">Submit</button> &nbsp;
+              <button type="button" class="btn btn-secondary" onClick={this.closeModal}>Close</button>
             </form>
            
           </Modal>

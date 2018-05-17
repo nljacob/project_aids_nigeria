@@ -4,7 +4,8 @@
 import React, { Component } from 'react';
 // import './App.css';
 import Video from '../../components/Video/Video';
-import ModalVideo from '../../components/Modal/ModalVideo';
+// import ModalVideo from '../../components/Modal/ModalVideo';
+import "./Curriculum.css";
 
 class App extends Component {
   render() {
