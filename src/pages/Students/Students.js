@@ -7,6 +7,7 @@ import students04 from "../../images/students04.jpg";
 // import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
+import "./Students.css";
 
 const Students = () => (
   <div className="students-page">
