@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 import ModalVideo from '../Modal/ModalVideo';
+
+//TODO: Pull this from a server route via mongo
 import questions from '../../questions.json';
 
 let youTubeTimer;
