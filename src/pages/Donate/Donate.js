@@ -4,7 +4,7 @@ import React from "react";
 // import Col from "../components/Col";
 
 const Donate = () => (
-    <div>
+    <div className="donate-page">
         <div className="container">
             <div className="row">
                 <div className="col">
@@ -31,7 +31,7 @@ const Donate = () => (
                     <p>
                         By 'clicking' on the DONATE button below, you can help us reach and train the workers needed to educate the thousands of Nigerians at risk by this horrible disease.  Will you stand with us?  God Bless You!
                     </p>
-                    <button type="button" class="btn btn-success">DONATE</button>
+                    <a class="btn btn-success" href="https://www.paypal.com/donate/?token=skQUiDIdHc40Dcyqhfx6Yv41y_ZTn0zuuT_pq1rwHt24dB6NdgszXeJx67L0arcpDIT34m&country.x=US&locale.x=US" target="_blank" rel="noopener noreferrer">DONATE</a>
                 </div>
             </div>
             <div className="row">

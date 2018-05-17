@@ -4,10 +4,10 @@ import React from "react";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 
-const Blog = () => (
-  <div>
+const Curriculum = () => (
+  <div className="curriculum-page">
     
   </div>
 );
 
-export default Blog;
+export default Curriculum;
