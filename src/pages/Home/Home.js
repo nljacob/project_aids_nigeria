@@ -40,6 +40,21 @@ const Home = () => (
           <p>Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg. Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg.</p>
         </div>
       </div>
+      <hr/>
+      <div className="row">
+        <div className="col">
+        <br />
+          <h1>Our Method</h1>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <br />
+          <p>
+          We use a peer to peer teaching method. PAN recruits student leaders from the local secondary schools who receive training on the topic of HIV/AIDS and other sexually transmitted diseases and in turn relay the information to their peers at their respective schools.  The PAN Student Assistants each lead their own groups to educate their peers on the topic of HIV. They receive coaching and mentoring from a PAN instructor who supports them and helps to ensure that the students are adequately informed on the topics they set out to discuss.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 )
