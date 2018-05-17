@@ -24,14 +24,14 @@ const About = () => (
                 </div>
             </div>
             <div className="row">
-                <div className="col-6">
+                <div className="col">
                     <br />
                     <p>Since 2009, Project AIDS Nigeria has shared knowledge of HIV with every class of students in five main schools that we’ve partnered with. That’s thousands of students. In 2012, PAN switched its focus from large classroom lectures taught by HIV counselors once or twice a year to smaller, peer to peer groups that meet monthly at the schools. These small groups foster a safer space to deal with the sensitive topics we cover. PAN activities now span eight schools and consist of about thirty Student Assistants who lead cell groups at their respective schools and around the community. Every month, we reach over two hundred students.
                     <br /> <br />
                         Because HIV/AIDS is a sexually transmitted disease, we encourage students to abide by God’s design of sex within marriage. PAN’s goal is to create a space for young people where bold faith in the Lord is normal and students can find encouragement in their aims to pursue God’s plan for their lives. However, PAN is clear and direct about the details of HIV and modes of prevention for all students no matter their choices or circumstances. Our other main goal is to foster genuine love in ourselves and in our communities for all people regardless of their HIV status.
                     </p>
                 </div>
-                <div className="col-6">
+                <div className="col">
                     <br />
                     <img src="http://www.projectaidsnigeria.org/uploads/4/2/3/0/42309013/4016817.jpg?355" alt="Smiley face" height="450" width="450" />
                 </div>

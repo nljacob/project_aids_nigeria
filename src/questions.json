@@ -2,37 +2,37 @@
     {
         "id": 1,
         "question": "Question 1: How do you feel about react?",
-        "answerChoiceOne": "A) Love it so very much!",
-        "answerChoiceTwo": "B) I like it.",
-        "answerChoiceThree": "C) No me gusta.",
-        "answerChoiceFour": "D) Guhhh I freakin hate it!",
+        "answerChoiceOne": " Love it so very much!",
+        "answerChoiceTwo": " I like it.",
+        "answerChoiceThree": " No me gusta.",
+        "answerChoiceFour": " Guhhh I freakin hate it!",
         "answer": 3
     },
     {
         "id": 2,
         "question": "Question 2: How do you feel about modals?",
-        "answerChoiceOne": "A) Love them!",
-        "answerChoiceTwo": "B) I like them.",
-        "answerChoiceThree": "C) No me gusta.",
-        "answerChoiceFour": "D) Guhhh I freakin hate 'em!",
+        "answerChoiceOne": " Love them!",
+        "answerChoiceTwo": " I like them.",
+        "answerChoiceThree": " No me gusta.",
+        "answerChoiceFour": " Guhhh I freakin hate 'em!",
         "answer": 4
     },
     {
         "id": 3,
         "question": "Question 3: How do you feel about the YouTube API?",
-        "answerChoiceOne": "A) Love it so very much!",
-        "answerChoiceTwo": "B) I like it.",
-        "answerChoiceThree": "C) No me gusta.",
-        "answerChoiceFour": "D) Guhhh I freakin hate it!",
+        "answerChoiceOne": " Love it so very much!",
+        "answerChoiceTwo": " I like it.",
+        "answerChoiceThree": " No me gusta.",
+        "answerChoiceFour": " Guhhh I freakin hate it!",
         "answer": 2
     },
     {
         "id": 4,
         "question": "Question 4: How do you feel about JavaScript?",
-        "answerChoiceOne": "A) Love it so very much!",
-        "answerChoiceTwo": "B) I like it.",
-        "answerChoiceThree": "C) No me gusta.",
-        "answerChoiceFour": "D) Guhhh I freakin hate it!",
+        "answerChoiceOne": " Love it so very much!",
+        "answerChoiceTwo": " I like it.",
+        "answerChoiceThree": " No me gusta.",
+        "answerChoiceFour": " Guhhh I freakin hate it!",
         "answer": 1
     }
 ]
