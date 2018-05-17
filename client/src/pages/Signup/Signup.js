@@ -9,11 +9,11 @@ class Signup extends Component {
     this.Auth = new AuthService();
   }
 
-  componentWillMount() {
-    if (this.Auth.loggedIn()) {
-      this.props.history.replace('/');
-    }
-  }
+  // componentWillMount() {
+  //   if (this.Auth.loggedIn()) {
+  //     this.props.history.replace('/');
+  //   }
+  // }
 
   handleFormSubmit = event => {
     event.preventDefault();
