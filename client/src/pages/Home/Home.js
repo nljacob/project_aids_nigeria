@@ -31,11 +31,11 @@ const Home = () => (
         </div>
       </div>
       <div className="row">
-        <div className="col-6">
+        <div className="col">
           <br />
           <img src="https://images.unsplash.com/photo-1509239767605-0703ef611f08?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91bccdaf7e77e35a450ec61c27201c18&auto=format&fit=crop&w=1500&q=80" alt="Smiley face" height="300" width="450" />
         </div>
-        <div className="col-6">
+        <div className="col">
           <br />
           <p>Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg. Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg.</p>
         </div>

@@ -38,7 +38,8 @@ class Certification extends React.Component {
         return (
             <div className="certification-page">
             <div className="container">
-                <h1>Welcome to the Certification page!</h1>
+            <br/>
+                <h1>Welcome to the Certification page!</h1> <br/>
                 <h3>Interested in starting a PAN club at your school?</h3>
                 <p>Our goal at PAN is to share accurate information about AIDS/HIV.  As part of the certification process you will be asked to read through our curriculum, and demonstrate your understanding by passing our certification test.  Once we receive your scores we will contact you to discuss our training process.</p>
                 <br />
@@ -48,7 +49,7 @@ class Certification extends React.Component {
                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">How do you get HIV?</a></li>
                 </ul>
                 <br />
-                <h3>Certification Test</h3>
+                <h3>Certification Test</h3><br/>
 
                 {/* Add new fields (first name, last name, email address) so we can keep this info with their score in the database */}
     
@@ -64,7 +65,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question1" value="c" checked={this.state.selectedOption[0] === 'c'} onChange={this.handleOptionChange(0)}/>Write answers for question #1 here <br/>
                         <input type="radio" name="Question1" value="d" checked={this.state.selectedOption[0] === 'd'} onChange={this.handleOptionChange(0)}/>Write answers for question #1 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #2: </strong>
                         Write the text for question #2 here.
@@ -75,7 +76,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question2" value="c" checked={this.state.selectedOption[1] === 'c'} onChange={this.handleOptionChange(1)}/>Write answers for question #2 here <br/>
                         <input type="radio" name="Question2" value="d" checked={this.state.selectedOption[1] === 'd'} onChange={this.handleOptionChange(1)}/>Write answers for question #2 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #3: </strong>
                         Write the text for question #3 here.
@@ -86,7 +87,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question3" value="c" checked={this.state.selectedOption[2] === 'c'} onChange={this.handleOptionChange(2)}/>Write answers for question #3 here <br/>
                         <input type="radio" name="Question3" value="d" checked={this.state.selectedOption[2] === 'd'} onChange={this.handleOptionChange(2)}/>Write answers for question #3 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #4: </strong>
                         Write the text for question #4 here.
@@ -97,7 +98,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question4" value="c" checked={this.state.selectedOption[3] === 'c'} onChange={this.handleOptionChange(3)}/>Write answers for question #4 here <br/>
                         <input type="radio" name="Question4" value="d" checked={this.state.selectedOption[3] === 'd'} onChange={this.handleOptionChange(3)}/>Write answers for question #4 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #5: </strong>
                         Write the text for question #5 here.
@@ -108,7 +109,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question5" value="c" checked={this.state.selectedOption[4] === 'c'} onChange={this.handleOptionChange(4)}/>Write answers for question #5 here <br/>
                         <input type="radio" name="Question5" value="d" checked={this.state.selectedOption[4] === 'd'} onChange={this.handleOptionChange(4)}/>Write answers for question #5 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #6: </strong>
                         Write the text for question #6 here.
@@ -119,7 +120,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question6" value="c" checked={this.state.selectedOption[5] === 'c'} onChange={this.handleOptionChange(5)}/>Write answers for question #6 here <br/>
                         <input type="radio" name="Question6" value="d" checked={this.state.selectedOption[5] === 'd'} onChange={this.handleOptionChange(5)}/>Write answers for question #6 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #7: </strong>
                         Write the text for question #7 here.
@@ -130,7 +131,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question7" value="c" checked={this.state.selectedOption[6] === 'c'} onChange={this.handleOptionChange(6)}/>Write answers for question #7 here <br/>
                         <input type="radio" name="Question7" value="d" checked={this.state.selectedOption[6] === 'd'} onChange={this.handleOptionChange(6)}/>Write answers for question #7 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #8: </strong>
                         Write the text for question #8 here.
@@ -141,7 +142,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question8" value="c" checked={this.state.selectedOption[7] === 'c'} onChange={this.handleOptionChange(7)}/>Write answers for question #8 here <br/>
                         <input type="radio" name="Question8" value="d" checked={this.state.selectedOption[7] === 'd'} onChange={this.handleOptionChange(7)}/>Write answers for question #8 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #9: </strong>
                         Write the text for question #9 here.
@@ -152,7 +153,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question9" value="c" checked={this.state.selectedOption[8] === 'c'} onChange={this.handleOptionChange(8)}/>Write answers for question #9 here <br/>
                         <input type="radio" name="Question9" value="d" checked={this.state.selectedOption[8] === 'd'} onChange={this.handleOptionChange(8)}/>Write answers for question #9 here <br/>
                     </fieldset>
-    
+                    <br/>
                     <h3>
                         <strong>Question #10: </strong>
                         Write the text for question #10 here.
