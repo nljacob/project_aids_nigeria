@@ -11,10 +11,14 @@ const Footer = () => (
       <i className="fab fa-twitter footericons"></i>
     </a>&nbsp;
     <a href="https://plus.google.com/u/0/100272089643330137361" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-google-plus-g footericons"></i>
+    </a>&nbsp;
+    <a href="https://plus.google.com/u/0/100272089643330137361" target="_blank" rel="noopener noreferrer">
       <i className="fas fa-envelope footericons"></i>
     </a>&nbsp;
     </div>
   </footer>
 );
+
 
 export default Footer;
