@@ -1,8 +1,5 @@
-.donate-page h3 {
+.certification-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
-}
-
-.donate-page #donatebutton {
-    width: 10%;
+    margin-top: 4%;
 }

@@ -1,6 +1,11 @@
 import React from "react";
 import SplashPage from "../../components/SplashPage";
 import "./Home.css";
+import handimagegray from "../../images/handimagegray.jpg";
+import home01 from "../../images/home01.png";
+import home02 from "../../images/home02.jpg";
+import home03 from "../../images/home03.jpg";
+import home04 from "../../images/home04.jpg";
 // import HomeCSS from "Home.css";
 // import Container from "../components/Container";
 // import Row from "../components/Row";
@@ -8,7 +13,7 @@ import "./Home.css";
 
 const Home = () => (
   <div className="home-page">
-    <SplashPage backgroundImage="https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4a027094c15a1ae14bf72f8f71d9380b&auto=format&fit=crop&w=1500&q=80">
+    <SplashPage backgroundImage={handimagegray}>
       <h1>Project AIDS Nigeria</h1>
       <h2>For Love and Knowledge</h2>
     </SplashPage>
@@ -33,27 +38,59 @@ const Home = () => (
       <div className="row">
         <div className="col-6">
           <br />
-          <img src="https://images.unsplash.com/photo-1509239767605-0703ef611f08?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91bccdaf7e77e35a450ec61c27201c18&auto=format&fit=crop&w=1500&q=80" alt="Smiley face" height="300" width="450" />
+          <img src= {home01} id="image-home01" />
         </div>
         <div className="col-6">
           <br />
-          <p>Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg. Lorem ipsum dolor amet actually pop-up flannel kickstarter literally meh. Hot chicken microdosing edison bulb neutra venmo. Chambray asymmetrical kickstarter selfies raw denim XOXO plaid taxidermy biodiesel. Skateboard flannel cred, migas artisan wolf butcher. Glossier pug subway tile lumbersexual godard. Air plant mumblecore try-hard helvetica. Irony art party vape selvage YOLO seitan williamsburg.</p>
-        </div>
-      </div>
-      <hr/>
-      <div className="row">
-        <div className="col">
-        <br />
-          <h1>Our Method</h1>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <br />
+          <h1>Our Method</h1><br/>     
           <p>
           We use a peer to peer teaching method. PAN recruits student leaders from the local secondary schools who receive training on the topic of HIV/AIDS and other sexually transmitted diseases and in turn relay the information to their peers at their respective schools.  The PAN Student Assistants each lead their own groups to educate their peers on the topic of HIV. They receive coaching and mentoring from a PAN instructor who supports them and helps to ensure that the students are adequately informed on the topics they set out to discuss.
           </p>
+
+          </div>
+      </div>
+      <div className="row">
+        <div className="col-6">
+        <br />
+          <h1>Our Students</h1>
+        
+        <br/>
+          <p>
+          Our students come from all over Gokana Local Government area and are between the ages of 14 through 19. They are each affiliated with one of the following secondary schools:
+          </p>
+          <ul>
+            <li>Community Secondary School Bera</li>
+            <li>Community Secondary School Biara</li>
+            <li>Bodo City Girls School</li>
+            <li>Apostolic Community Secondary School Deeyor</li>
+            <li>Government Secondary School Kpor</li>
+            <li>Community Secondary School Mogho</li>
+            <li>Community Secondary School Nweol</li>
+            <li>St Pius Boys School, Bodo City</li>
+          </ul>
+          <br/>
         </div>
+        <div className="col-6">
+        <img src= {home02} id="image-home02" />
+
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+        <p>Being part of PAN takes a lot of time effort and dedication. Students must attend monthly training meetings, spend many hours in preparation to deliver lessons to their peers and attend and organize other community activities for the continuous improvement of their knowledge.</p>
+          <p>PAN students are active leaders in their schools, churches and communities apart from their PAN responsibilities. We recruit only students who exhibit a desire to know Christ more and walk deeper in their Christian faith a per their profession as well as recommendations from teachers, principals and sometimes peers.</p>
+          <p>Our students play different roles in PAN. Some focus on promoting our mission through social media, others mentor newer student assistants, and still others organize community service events. All of the students get ample training and opportunity to practice and improve on their teaching skills. All students also receive training by hospital workers about the facts of HIV as pertains to their immediate community.</p>
+          <p>"PAN's aim is to nurture Christian leaders for Ogoni's future and so we strive to provide as many opportunities as possible for such practice."</p>
+        </div>
+      </div>
+      <br/>
+      <div className="row">
+        <div className="col-6">
+          <img src= {home03} id="image-home03" />
+        </div>
+        <div className="col-6">
+        <img src= {home04} id="image-home04" />
+        </div>      
       </div>
     </div>
   </div>

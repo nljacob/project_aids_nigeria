@@ -3,11 +3,14 @@ nav.navbar.navbar-default {
 }
 
 .bg-light {
-  background-color: rgb(224, 30, 61) !important;
+  background-color: rgb(1,159,175)!important;
 }
 
 .nav-link {
-  color: rgb(242, 224, 192) !important;
+  color: white!important;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin-left: 20px;
 }
 
 .navbar-brand {
@@ -21,5 +24,10 @@ nav.navbar.navbar-default {
 
 a {
   color: black;
+}
+
+.accountlogo {
+  color: white;
+  font-size: 130%;
 }
 

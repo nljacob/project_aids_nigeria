@@ -10,8 +10,15 @@ import "./Curriculum.css";
 class App extends Component {
   render() {
     return (
-      <div id="main">
-        <Video />
+      <div className="curriculum-page">
+        <div className="row">
+          <div className="col-6">
+            <h3>HIV POSITIVE SYMPTOMS AND SIGNS</h3>
+            <div id="main">
+              <Video />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

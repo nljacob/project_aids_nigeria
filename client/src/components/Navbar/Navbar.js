@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import accountlogo from "../../images/accountlogo.jpg";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
@@ -10,7 +11,7 @@ const Navbar = props => (
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav mr-auto">
+      <ul className="navbar-nav mx-auto">
         <li
           className={
             window.location.pathname === "/" ||
@@ -42,7 +43,7 @@ const Navbar = props => (
           }
         >
           <Link to="/questions" className="nav-link">
-            F.A.Q
+            F.A.Q.
           </Link>
         </li>
         <li 
@@ -67,7 +68,7 @@ const Navbar = props => (
             Blog
           </Link>
         </li>
-        <li 
+        {/* <li 
           className={
             window.location.pathname === "/students"
               ? "nav-item active"
@@ -77,7 +78,7 @@ const Navbar = props => (
           <Link to="/students" className="nav-link">
             Our Students
           </Link>
-        </li> 
+        </li>  */}
         <li 
           className={
             window.location.pathname === "/curriculum"
@@ -101,7 +102,31 @@ const Navbar = props => (
             Get Certified
           </Link>
         </li>
+        {/* <li 
+          className={
+            window.location.pathname === "/certification"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/login" className="nav-link">
+          <i className="fas fa-user accountlogo"></i>
+          </Link>
+        </li> */}
       </ul>
+      <ul className = "navbar-nav" >
+      <li 
+          className={
+            window.location.pathname === "/login"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/login" className="nav-link">
+          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i>
+          </Link>
+        </li>
+        </ul>
     </div>
 </nav>
 
