@@ -3,6 +3,11 @@
     text-transform: uppercase;
 }
 
+.donate-page h1 {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+}
+
 .donate-page #donatebutton {
     width: 10%;
 }

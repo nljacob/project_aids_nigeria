@@ -6,8 +6,8 @@ import accountlogo from "../../images/accountlogo.jpg";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
-   <a className="navbar-brand" href=""></a> 
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <a className="navbar-brand" href=""></a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -25,7 +25,7 @@ const Navbar = props => (
             Home
           </Link>
         </li>
-        <li 
+        <li
           className={
             window.location.pathname === "/about"
               ? "nav-item active"
@@ -36,7 +36,7 @@ const Navbar = props => (
             About
           </Link>
         </li>
-        <li 
+        <li
           className={
             window.location.pathname === "/questions"
               ? "nav-item active"
@@ -47,7 +47,7 @@ const Navbar = props => (
             F.A.Q.
           </Link>
         </li>
-        <li 
+        <li
           className={
             window.location.pathname === "/donate"
               ? "nav-item active"
@@ -58,7 +58,7 @@ const Navbar = props => (
             Donate
           </Link>
         </li>
-        <li 
+        <li
           className={
             window.location.pathname === "/contact"
               ? "nav-item active"
@@ -69,7 +69,7 @@ const Navbar = props => (
             Contact
           </Link>
         </li>
-        <li 
+        <li
           className={
             window.location.pathname === "/blog"
               ? "nav-item active"
@@ -91,7 +91,7 @@ const Navbar = props => (
             Our Students
           </Link>
         </li>  */}
-        <li 
+        <li
           className={
             window.location.pathname === "/curriculum"
               ? "nav-item active"
@@ -103,7 +103,7 @@ const Navbar = props => (
           </Link>
         </li>
         {/* Alicia added this one, we can move it if needed (maybe in profile? or do we want public to have access?) */}
-        <li 
+        <li
           className={
             window.location.pathname === "/certification"
               ? "nav-item active"
@@ -126,8 +126,8 @@ const Navbar = props => (
           </Link>
         </li> */}
       </ul>
-      <ul className = "navbar-nav" >
-      <li 
+      <ul className="navbar-nav" >
+        <li
           className={
             window.location.pathname === "/login"
               ? "nav-item active"
@@ -135,12 +135,21 @@ const Navbar = props => (
           }
         >
           <Link to="/login" className="nav-link">
-          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i>
+            <div class="dropdown show">
+              <a class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
           </Link>
         </li>
-        </ul>
+      </ul>
     </div>
-</nav>
+  </nav>
 
   // <nav id="nav-bar" className="navbar navbar-expand-lg navbar-light bg-light">
   //   <div>
