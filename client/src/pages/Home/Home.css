@@ -1,6 +1,19 @@
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(90,90,90);
 }
+
+html,body{
+    height: 100%
+}
+
+
+body {
+    background-color: white;
+}
+
+
+
 
 .home-page h1 {
     font-family: 'Fjalla One', sans-serif;
@@ -13,6 +26,25 @@
     font-family: 'Fjalla One', sans-serif;
 }
 
+.home-page #image-home01 {
+    width: 90%;
+    height: 85%;
+    /* border: solid 10px rgb(90,90,90); */
+}
 
+.home-page #image-home02 {
+    margin-top: 7%;
+    width: 100%;
+    height: 80%;
+}
+
+.home-page #image-home03 {
+    width: 100%;
     
+}
 
+.home-page #image-home04 {
+    width: 100%;
+    height: 100.5%;
+    
+}

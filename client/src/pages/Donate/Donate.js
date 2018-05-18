@@ -3,6 +3,7 @@ import React from "react";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 import "./Donate.css";
+import donatebutton from "../../images/donatebutton.png";
 
 const Donate = () => (
     <div className="donate-page">
@@ -10,7 +11,7 @@ const Donate = () => (
             <div className="row">
                 <div className="col">
                 <br />
-                    <h1>We need your help!</h1>
+                    <h3>We need your help!</h3>
                 </div>
             </div>
             <div className="row">
@@ -24,7 +25,7 @@ const Donate = () => (
             </div>
             <div className="row">
                 <div className="col">
-                    <h1>Please Donate</h1>
+                    <h3>Please Donate</h3>
                 </div>
             </div>
             <div className="row">
@@ -32,13 +33,18 @@ const Donate = () => (
                     <p>
                         By 'clicking' on the DONATE button below, you can help us reach and train the workers needed to educate the thousands of Nigerians at risk by this horrible disease.  Will you stand with us?  God Bless You!
                     </p>
-                    <a className="btn btn-success" href="https://www.paypal.com/donate/?token=QSnBX3U_Q0zOaidkOOeGPPbVg5js15CYTEkIH-NRhzyWGWCpowudzV1RnrOhq4sbmbngAG&country.x=US&locale.x=US" target="_blank" rel="noopener noreferrer">DONATE</a>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick"/>
+                        <input type="hidden" name="hosted_button_id" value="S9EE85PUGBZZE"/>
+                        <input id="donatebutton" type="image" src= {donatebutton}/>
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+                    </form>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
                     <br />
-                    <h1>How we use your donations</h1>
+                    <h3>How we use your donations</h3>
                 </div>
             </div>
             <div className="row">
