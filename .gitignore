@@ -1,5 +1,7 @@
 yarn.lock
 
+.vscode/
+
 # Logs
 logs
 *.log
