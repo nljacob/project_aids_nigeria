@@ -89,6 +89,18 @@ const Navbar = props => (
             Curriculum
           </Link>
         </li>
+        {/* Alicia added this one, we can move it if needed (maybe in profile? or do we want public to have access?) */}
+        <li 
+          className={
+            window.location.pathname === "/certification"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/certification" className="nav-link">
+            Get Certified
+          </Link>
+        </li>
       </ul>
     </div>
 </nav>
