@@ -60,7 +60,6 @@ const customStyles = {
       else {
         alert("False, the correct answer was" + letterArray[this.props.answer -1]);
       }
-      
     }
   
     handleOptionChange =  changeEvent => {

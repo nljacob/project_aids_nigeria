@@ -12,6 +12,7 @@ import About from "./pages/About/About";
 import Donate from "./pages/Donate/Donate";
 import Questions from "./pages/Questions/Questions";
 import Students from "./pages/Students/Students";
+import Contact from "./pages/Contact/Contact";
 import Blog from "./pages/Blog/Blog";
 import Curriculum from "./pages/Curriculum/Curriculum";
 import Navbar from "./components/Navbar";
@@ -39,6 +40,7 @@ ReactDOM.render(
                 <Route exact path="/students" component={Students} />
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/curriculum" component={Curriculum} />
+                <Route exact path="/contact" component={Contact} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/profile/:id" component={Profile} />
