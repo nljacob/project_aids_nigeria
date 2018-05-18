@@ -1,3 +1,7 @@
+yarn.lock
+
+.vscode/
+
 # Logs
 logs
 *.log
@@ -65,3 +69,4 @@ typings/
 
 # Webstorm
 .idea/
+
