@@ -60,6 +60,17 @@ const Navbar = props => (
         </li>
         <li 
           className={
+            window.location.pathname === "/contact"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/contact" className="nav-link">
+            Contact
+          </Link>
+        </li>
+        <li 
+          className={
             window.location.pathname === "/blog"
               ? "nav-item active"
               : "nav-item"
