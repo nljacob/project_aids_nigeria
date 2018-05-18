@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import accountlogo from "../../images/accountlogo.jpg";
 
+
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,6 +56,17 @@ const Navbar = props => (
         >
           <Link to="/donate" className="nav-link">
             Donate
+          </Link>
+        </li>
+        <li 
+          className={
+            window.location.pathname === "/contact"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/contact" className="nav-link">
+            Contact
           </Link>
         </li>
         <li 

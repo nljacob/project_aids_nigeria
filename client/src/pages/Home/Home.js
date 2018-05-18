@@ -36,11 +36,11 @@ const Home = () => (
         </div>
       </div>
       <div className="row">
-        <div className="col-6">
+        <div className="col">
           <br />
           <img src= {home01} id="image-home01" />
         </div>
-        <div className="col-6">
+        <div className="col">
           <br />
           <h1>Our Method</h1><br/>     
           <p>
