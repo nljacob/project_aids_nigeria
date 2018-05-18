@@ -32,7 +32,7 @@ const Donate = () => (
                     <p>
                         By 'clicking' on the DONATE button below, you can help us reach and train the workers needed to educate the thousands of Nigerians at risk by this horrible disease.  Will you stand with us?  God Bless You!
                     </p>
-                    <a class="btn btn-success" href="https://www.paypal.com/donate/?token=QSnBX3U_Q0zOaidkOOeGPPbVg5js15CYTEkIH-NRhzyWGWCpowudzV1RnrOhq4sbmbngAG&country.x=US&locale.x=US" target="_blank" rel="noopener noreferrer">DONATE</a>
+                    <a className="btn btn-success" href="https://www.paypal.com/donate/?token=QSnBX3U_Q0zOaidkOOeGPPbVg5js15CYTEkIH-NRhzyWGWCpowudzV1RnrOhq4sbmbngAG&country.x=US&locale.x=US" target="_blank" rel="noopener noreferrer">DONATE</a>
                 </div>
             </div>
             <div className="row">
