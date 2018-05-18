@@ -10,7 +10,7 @@ const About = () => (
     <div className="about-page">
         <div className="container">
             <div className="row">
-                <div className="col">
+                <div className="col text-center">
                 <br />
                     <h1>ABOUT PROJECT AIDS NIGERIA</h1>
                 </div>

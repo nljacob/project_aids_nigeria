@@ -12,8 +12,12 @@ class App extends Component {
     return (
       <div className="curriculum-page">
         <div className="row">
-          <div className="col-6">
+          <div className="col text-center">
             <h3>HIV POSITIVE SYMPTOMS AND SIGNS</h3>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col text-center">
             <div id="main">
               <Video />
             </div>
@@ -39,7 +43,7 @@ export default App;
 
 // const Curriculum = () => (
 //   <div className="curriculum-page">
-    
+
 //   </div>
 // );
 

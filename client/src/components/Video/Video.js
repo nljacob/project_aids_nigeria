@@ -26,7 +26,7 @@ class Video extends Component {
 
   _onPlay = (event) => {
     // access to player in all event handlers via event.target
-    const stoppingPoints = [5.1, 10.1, 15.1, 18.1];
+    const stoppingPoints = [12.1, 35.1, 100.1, 135.1, 155.1];
     this.setState({
       openModal: false
     });

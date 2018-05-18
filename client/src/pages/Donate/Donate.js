@@ -9,9 +9,9 @@ const Donate = () => (
     <div className="donate-page">
         <div className="container">
             <div className="row">
-                <div className="col">
+                <div className="col text-center">
                 <br />
-                    <h3>We need your help!</h3>
+                    <h1>We need your help!</h1>
                 </div>
             </div>
             <div className="row">
@@ -33,7 +33,7 @@ const Donate = () => (
                     <p>
                         By 'clicking' on the DONATE button below, you can help us reach and train the workers needed to educate the thousands of Nigerians at risk by this horrible disease.  Will you stand with us?  God Bless You!
                     </p>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_s-xclick"/>
                         <input type="hidden" name="hosted_button_id" value="S9EE85PUGBZZE"/>
                         <input id="donatebutton" type="image" src= {donatebutton}/>
@@ -42,13 +42,13 @@ const Donate = () => (
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col text-center">
                     <br />
                     <h3>How we use your donations</h3>
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col text-center">
                     <p>
                         All donations are used in the Project Aids Nigeria Ministry. To the side there is a chart that represents where each dollar goes.
                     </p>
