@@ -20,6 +20,7 @@ import Wrapper from "./components/Wrapper";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import Signup from "./pages/Signup/Signup";
+import AppCert from "./pages/Certification/Certification"
 
 if (localStorage.getItem("id_token")) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('id_token')}`;
@@ -41,6 +42,7 @@ ReactDOM.render(
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/profile/:id" component={Profile} />
+                <Route exact path="/certification" component={AppCert} />
             </Wrapper>
             <Footer />
         </div>
