@@ -5,7 +5,15 @@ import React from "react";
 import "./Contact.css";
 
 const Contact = () => (
-    <h1>Contact page</h1>
+    <div className="contact-page">
+        <div className="container">
+        <div className="row">
+        <div className="col text-center">
+            <h3>Contact Project AIDS Nigeria</h3>
+        </div>
+        </div>
+        </div>
+    </div>
 );
 
 export default Contact;
