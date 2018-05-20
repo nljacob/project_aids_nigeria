@@ -7,5 +7,20 @@ export default {
   // sign up a user to our service
   signUpUser: (username, email, password) => {
     return axios.post('api/signup', {username: username, email: email, password: password});
+  },
+  // save prospective club sponsor's application and test score
+  saveApplication: (selectedOption, sponsorFirstName, sponsorLastName, sponsorImageLink, sponsorEmail, sponsorRolePosition, sponsorAboutMe, sponsorAboutMySchool, sponsorWhyInterested, sponsorTestScore) => {
+    return axios.post('api/certification', {
+      // selectedOption: selectedOption,
+      sponsorFirstName: sponsorFirstName,
+      sponsorLastName: sponsorLastName,
+      sponsorImageLink: sponsorImageLink,
+      sponsorEmail: sponsorEmail,
+      sponsorRolePosition: sponsorRolePosition,
+      sponsorAboutMe: sponsorAboutMe,
+      sponsorAboutMySchool: sponsorAboutMySchool, 
+      sponsorWhyInterested: sponsorWhyInterested,
+      sponsorTestScore: sponsorTestScore
+    })
   }
 };
