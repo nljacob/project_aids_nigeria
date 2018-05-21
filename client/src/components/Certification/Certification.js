@@ -97,7 +97,7 @@ class Certification extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col text-center">
-                        <h1>Welcome to the Certification page!</h1> 
+                        <h3>Welcome to the Certification page!</h3> 
                         <br/>
                     </div>
                 </div>

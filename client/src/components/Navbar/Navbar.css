@@ -4,6 +4,7 @@ nav.navbar.navbar-default {
 
 .bg-light {
   background-color: rgb(1,159,175)!important;
+  /* background-color: rgb(32, 80, 110)!important; */
 }
 
 .nav-link {
@@ -28,6 +29,7 @@ a {
 
 .accountlogo {
   color: white;
+  /* color: rgb(224, 30, 61); */
   font-size: 130%;
 }
 

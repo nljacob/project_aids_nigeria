@@ -7,11 +7,55 @@ import "./Contact.css";
 const Contact = () => (
     <div className="contact-page">
         <div className="container">
-        <div className="row">
-        <div className="col text-center">
-            <h3>Contact Project AIDS Nigeria</h3>
-        </div>
-        </div>
+            <div className="row">
+                <div className="col text-center">
+                        <br/>
+                        <br/>
+                        <h3>Contact Project AIDS Nigeria</h3>
+                        <br/>
+                        <br/>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-6">
+                    <p>ADDRESS</p>
+                    <p>No: 22 Bank Road Bori​<br/>Ogoni, Rivers State, Nigeria</p>
+                    <p>PHONE</p>
+                    <p>09075542187</p>
+                    <p>EMAIL</p>
+                    <p>aidsnigeria@gmail.com<br/>panstudentsconnect@gmail.com </p>
+                </div>
+
+                <div className="col-6">
+                    <form>
+                        <label for="name">Name:</label><br/>
+                        <input id="name" type="text" required/>
+                        
+                        <br/>
+                        <br/>
+
+                        <label for="email">Email:</label><br/>
+                        <input id="email" type="email" required/>
+
+                        <br/>
+                        <br/>
+
+                        <label for="comment">Comment: &nbsp;</label><br/>
+                        <textarea id="comment"name="message" rows="10" cols="30"/>
+
+                        <br/>
+                        <br/>
+
+                        <input type="submit"></input>
+                        
+                    </form>                    
+
+
+                </div>
+            </div>
+            <div className="row">
+                
+            </div>
         </div>
     </div>
 );
