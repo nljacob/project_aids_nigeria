@@ -40,7 +40,7 @@ class Certification extends React.Component {
                 runningScore++;
             }
         }
-        console.log("Runnign score before setting state: " + runningScore);
+        console.log("Running score before setting state: " + runningScore);
 
         this.setState({
             sponsorTestScore: runningScore
@@ -60,7 +60,7 @@ class Certification extends React.Component {
             )
             .then(res => {
             this.setState({
-                // selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 sponsorFirstName: "",
                 sponsorLastName: "",
                 sponsorImageLink: "",
@@ -260,6 +260,7 @@ class Certification extends React.Component {
                     </h5>
                     <fieldset  className = "form-group">
                     <div className = "form-check">
+
                         <input type="radio" name="Question5" value="a" checked={this.state.selectedOption[4] === 'a'} onChange={this.handleOptionChange(4)}/>A type of white blood cell called a monocyte cell <br/>
                         <input type="radio" name="Question5" value="b" checked={this.state.selectedOption[4] === 'b'} onChange={this.handleOptionChange(4)}/>A type of red blood cell called a Macrophage cell <br/>
                         <input type="radio" name="Question5" value="c" checked={this.state.selectedOption[4] === 'c'} onChange={this.handleOptionChange(4)}/>A type of red blood cell called a Lymphocyte cell <br/>
@@ -273,10 +274,12 @@ class Certification extends React.Component {
                     </h5>
                     <fieldset  className = "form-group">
                     <div className = "form-check">
+
                         <input type="radio" name="Question6" value="a" checked={this.state.selectedOption[5] === 'a'} onChange={this.handleOptionChange(5)}/>Boosts a person's immune system <br/>
                         <input type="radio" name="Question6" value="b" checked={this.state.selectedOption[5] === 'b'} onChange={this.handleOptionChange(5)}/>Causes blood disease <br/>
                         <input type="radio" name="Question6" value="c" checked={this.state.selectedOption[5] === 'c'} onChange={this.handleOptionChange(5)}/>Breaks down a person's immune system <br/>
                         <input type="radio" name="Question6" value="d" checked={this.state.selectedOption[5] === 'd'} onChange={this.handleOptionChange(5)}/>Causes liver disease <br/>
+
                    </div>
                     </fieldset>
     
@@ -286,10 +289,12 @@ class Certification extends React.Component {
                     </h5>
                     <fieldset  className = "form-group">
                     <div className = "form-check">
+
                         <input type="radio" name="Question7" value="a" checked={this.state.selectedOption[6] === 'a'} onChange={this.handleOptionChange(6)}/>The virus in your blood could pass into your baby's body <br/>
                         <input type="radio" name="Question7" value="b" checked={this.state.selectedOption[6] === 'b'} onChange={this.handleOptionChange(6)}/>The virus in your blood could be passed to the baby through breastfeeding  <br/>
                         <input type="radio" name="Question7" value="c" checked={this.state.selectedOption[6] === 'c'} onChange={this.handleOptionChange(6)}/>Taking HIV treatment virtually eliminates the risk of passing the virus to the baby <br/>
                         <input type="radio" name="Question7" value="d" checked={this.state.selectedOption[6] === 'd'} onChange={this.handleOptionChange(6)}/>There is no need to discuss this with your doctor as HIV cannot be passed from mother to baby <br/>
+
                    </div>
                     </fieldset>
     
@@ -299,10 +304,12 @@ class Certification extends React.Component {
                     </h5>
                     <fieldset  className = "form-group">
                     <div className = "form-check">
+
                         <input type="radio" name="Question8" value="a" checked={this.state.selectedOption[7] === 'a'} onChange={this.handleOptionChange(7)}/>They contract HIV <br/>
                         <input type="radio" name="Question8" value="b" checked={this.state.selectedOption[7] === 'b'} onChange={this.handleOptionChange(7)}/>Their immune system is too weak to fight off infection, and they develop certain defining symptoms and illnesses <br/>
                         <input type="radio" name="Question8" value="c" checked={this.state.selectedOption[7] === 'c'} onChange={this.handleOptionChange(7)}/>They have HIV and liver disease concurrently <br/>
                         <input type="radio" name="Question8" value="d" checked={this.state.selectedOption[7] === 'd'} onChange={this.handleOptionChange(7)}/>Their immune system is so strong it does more harm than good <br/>
+
                    </div>
                     </fieldset>
     
@@ -325,10 +332,12 @@ class Certification extends React.Component {
                     </h5>
                     <fieldset  className = "form-group">
                     <div className = "form-check">
+
                         <input type="radio" name="Question10" value="a" checked={this.state.selectedOption[9] === 'a'} onChange={this.handleOptionChange(9)}/>Avoid treating patients with HIV/AIDS <br/>
                         <input type="radio" name="Question10" value="b" checked={this.state.selectedOption[9] === 'b'} onChange={this.handleOptionChange(9)}/>Take a multivitamin every day to avoid contracting HIV <br/>
                         <input type="radio" name="Question10" value="c" checked={this.state.selectedOption[9] === 'c'} onChange={this.handleOptionChange(9)}/>Wear protection (like gloves and goggles), wash hands after contact with blood and other bodily fluids, and safely dispose of sharp equipment <br/>
                         <input type="radio" name="Question10" value="d" checked={this.state.selectedOption[9] === 'd'} onChange={this.handleOptionChange(9)}/>Avoid getting pregnant while treating a patient with HIV/AIDS <br/>
+
                    </div>
                     </fieldset>
                     <br />
