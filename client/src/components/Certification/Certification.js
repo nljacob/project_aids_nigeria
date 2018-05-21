@@ -330,10 +330,8 @@ class Certification extends React.Component {
                         <input type="radio" name="Question10" value="d" checked={this.state.selectedOption[9] === 'd'} onChange={this.handleOptionChange(9)}/>Write answers for question #10 here <br/>
                    </div>
                     </fieldset>
-    
                     <br />
-                    <br />
-                    <button type="button" className="btn btn-primary" onClick={this.checkAnswers} id="Submit Button">Submit</button>
+                    <button type="button" className="btn btn-info" onClick={this.checkAnswers} id="Submit Button">Submit</button>
                 </form>
     
             </div>
