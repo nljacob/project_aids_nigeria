@@ -46,8 +46,8 @@ let CertSchema = new Schema({
     required: true
   },
   sponsorTestScore: {
-    type: Number,
-    required: true
+    type: String
+    // required: true
   },
   createdAt: {
     type: Date,
