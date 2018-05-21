@@ -15,7 +15,8 @@ class Signup extends Component {
     email: "",
     password: "",
     username: "",
-    submitFlag: false
+    submitFlag: false,
+    serverCheck : ""
   }
   // componentWillMount() {
   //   if (this.Auth.loggedIn()) {
@@ -30,7 +31,7 @@ class Signup extends Component {
       submitFlag: true
     });
 
-    if (this.state.email && this.state.password) {
+    if (this.state.email && this.state.password && this.state.username) {
       API.signUpUser(this.state.username, this.state.email, this.state.password)
         .then(res => {
           console.log(res.data);
@@ -38,7 +39,9 @@ class Signup extends Component {
           // send them to the login page
           this.props.history.replace('/login');
         })
-        .catch(err => alert(err));
+        .catch(err => {
+          this.setState({serverCheck : "fail"});
+        });
     }
   };
 
@@ -53,7 +56,9 @@ class Signup extends Component {
     if (!this.state.email && this.state.submitFlag) {
       return ("form-control error-focus"); 
     }
-    
+    else if ((this.state.serverCheck === "fail") && this.state.submitFlag){
+      return ("form-control error-focus"); 
+    }
     else {
       return ("form-control");
     }
@@ -63,7 +68,9 @@ class Signup extends Component {
     if (!this.state.password && this.state.submitFlag) {
       return ("form-control error-focus"); 
     }
-    
+    else if ((this.state.serverCheck === "fail") && this.state.submitFlag){
+      return ("form-control error-focus"); 
+    }
     else {
       return ("form-control");
     }
@@ -72,7 +79,9 @@ class Signup extends Component {
     if (!this.state.username && this.state.submitFlag) {
       return ("form-control error-focus"); 
     }
-    
+    else if ((this.state.serverCheck === "fail") && this.state.submitFlag){
+      return ("form-control error-focus"); 
+    }
     else {
       return ("form-control");
     }
@@ -114,6 +123,7 @@ class Signup extends Component {
               onChange={this.handleChange} />
                {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
           </div>
+          {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text"> Username or Email already exists </div><br/></div>  : " "}
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         <br />
