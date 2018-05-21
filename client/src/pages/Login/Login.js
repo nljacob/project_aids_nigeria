@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import AuthService from '../../components/AuthService';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import "./Login.css";
 
 class Login extends Component {
   constructor() {
@@ -9,10 +10,11 @@ class Login extends Component {
   }
 
 
-   state = {
-     email : "",
-     password : ""
-   }
+  state = {
+    email: "",
+    password: "",
+    submitFlag: false
+  }
   // componentWillMount() {
   //   if (this.Auth.loggedIn()) {
   //     this.props.history.replace('/');
@@ -21,58 +23,78 @@ class Login extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
-    if (!this.state.email) {
-      alert("Fill email");
-    } 
-    else if (!this.state.password) {
-      alert("Fill password");
-    } 
-    else{
-    this.Auth.login(this.state.email, this.state.password)
-      .then(res => {
-        // once user is logged in
-        // take them to their profile page
-        this.props.history.replace(`/profile/${res.data.user._id}`);
-      })
-      .catch(err => alert(err));
+    this.setState({
+      submitFlag: true
+    });
+
+    if (this.state.email && this.state.password) {
+
+      this.Auth.login(this.state.email, this.state.password)
+        .then(res => {
+          // once user is logged in
+          // take them to their profile page
+          this.props.history.replace(`/profile/${res.data.user._id}`);
+        })
+        .catch(err => alert(err));
     }
   };
 
   handleChange = event => {
-    const {name, value} = event.target;
+    const { name, value } = event.target;
     this.setState({
-        [name]: value
+      [name]: value
     });
+
   };
+
+ checkEmailError(){
+    if (!this.state.email && this.state.submitFlag) {
+      return ("form-control error-focus"); 
+    }
+    else {
+      return ("form-control");
+    }
+  }
+
+  checkPasswordError(){
+    if (!this.state.password && this.state.submitFlag) {
+      return ("form-control error-focus"); 
+    }
+    else {
+      return ("form-control");
+    }
+  }
 
   render() {
     return (
       <div className="container">
-      <br/>
+        <br />
         <h1>Login</h1>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email address:</label>
-            <input className="form-control"
-                   placeholder="Email"
-                   name="email"
-                   type="email"
-                   id="email"
-                   onChange={this.handleChange} />
+            <input className={this.checkEmailError()}
+              placeholder="Email"
+              name="email"
+              type="email"
+              id="email"
+              onChange={this.handleChange} />
+
+            {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email required</div> : " "}
           </div>
           <div className="form-group">
             <label htmlFor="pwd">Password:</label>
-            <input className="form-control"
-                   placeholder="Password"
-                   name="password"
-                   type="password"
-                   id="pwd"
-                   onChange={this.handleChange} />
+            <input className={this.checkPasswordError()}
+              placeholder="Password"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={this.handleChange} />
+            {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
           </div>
           <button type="submit" className="btn btn-default">Submit</button>
         </form>
-        <br/>
+        <br />
         <p>Don't have an account? Sign up <Link to="/signup">here</Link></p>
       </div>
 
