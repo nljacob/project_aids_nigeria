@@ -11,11 +11,13 @@ const Donate = () => (
             <div className="row">
                 <div className="col text-center">
                 <br />
+                <br/>
                     <h1>We need your help!</h1>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
+                <br/>
                     <p>
                         Project AIDS Nigeria is a Charitable Educational Organization ground in Christian Faith.  We believe that it is only through education and through sharing the truth of the Gospel of Christ that can we can make progress against the advancement og HIV.
                         <br /> <br />

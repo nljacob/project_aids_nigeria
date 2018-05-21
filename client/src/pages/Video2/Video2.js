@@ -13,7 +13,7 @@ class App extends Component {
       <div className="curriculum-page">
         <div className="row">
           <div className="col text-center">
-            <h3>other page</h3>
+            <h3>THE SCIENCE OF HIV/AIDS</h3>
           </div>
         </div>
         <div className="row">

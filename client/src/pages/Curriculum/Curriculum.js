@@ -14,7 +14,7 @@ class App extends Component {
       <div className="container">
         <div className="row">
           <div className="col text-center">
-            <h3>WELCOME TO THE CURRICULUM PAGE!</h3>
+            <h1>WELCOME TO THE CURRICULUM PAGE!</h1>
             <br/>
           </div>
         </div>
