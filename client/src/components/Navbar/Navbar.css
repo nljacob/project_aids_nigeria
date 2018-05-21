@@ -18,10 +18,10 @@ nav.navbar.navbar-default {
   color: rgb(242, 224, 192) !important;
 }
 
-.btn {
+/* .btn {
   background-color: rgb(186,49,41) !important;
   color: rgb(242, 224, 192) !important;
-}
+} */
 
 a {
   color: black;
@@ -32,4 +32,3 @@ a {
   /* color: rgb(224, 30, 61); */
   font-size: 130%;
 }
-

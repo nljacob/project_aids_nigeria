@@ -5,3 +5,13 @@
 .error-focus{
     box-shadow: 0 0 0 1px red;
 }
+
+#login {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: rgb(224, 30, 61);
+}
+
+#here:hover {
+    color: rgb(1,159,175);
+}

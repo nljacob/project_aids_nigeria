@@ -2,4 +2,18 @@
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
     margin-top: 4%;
+    color: rgb(224, 30, 61);
+}
+
+.certification-page #red {
+    color: rgb(224, 30, 61);
+    text-decoration:underline;
+}
+
+.certification-page #red:hover {
+    color: rgb(1,159,175);
+}
+
+input[type="radio"] {
+    margin: 0 8px 0 8px;
 }

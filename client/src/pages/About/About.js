@@ -33,12 +33,13 @@ const About = () => (
 
                 </div>
                 <div className="col-4">
-                    <img src= {about01} id="image-about01" />
+                    <img alt="" src= {about01} id="image-about01" />
                 </div>
             </div>
             <div className="row">
                 <div className="col">
                     <p> Thank you sincerely for your support,
+                    <br/>
                     <br/>
                     Domale Dube Keys
                     <br/>
@@ -51,7 +52,7 @@ const About = () => (
             </div>
             <div className="row">
             <div className="col text-center">
-            <img src= {about02} id="image-about02" />
+            <img alt="" src= {about02} id="image-about02" />
             </div>
             </div>
         </div>
