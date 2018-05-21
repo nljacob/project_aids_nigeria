@@ -40,7 +40,7 @@ class Certification extends React.Component {
                 runningScore++;
             }
         }
-        console.log("Runnign score before setting state: " + runningScore);
+        console.log("Running score before setting state: " + runningScore);
 
         this.setState({
             sponsorTestScore: runningScore
@@ -60,7 +60,7 @@ class Certification extends React.Component {
             )
             .then(res => {
             this.setState({
-                // selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 sponsorFirstName: "",
                 sponsorLastName: "",
                 sponsorImageLink: "",
