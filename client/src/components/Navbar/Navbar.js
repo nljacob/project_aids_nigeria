@@ -135,16 +135,7 @@ const Navbar = props => (
           }
         >
           <Link to="/login" className="nav-link">
-            <div class="dropdown show">
-              <a class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
+          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i> Login
           </Link>
         </li>
       </ul>
