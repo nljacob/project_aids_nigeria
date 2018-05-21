@@ -32,6 +32,8 @@ class Certification extends React.Component {
 
     checkAnswers = (event) => {
 
+        console.log(this.state);
+
         event.preventDefault();
 
         var runningScore = 0;
@@ -42,8 +44,24 @@ class Certification extends React.Component {
         }
         console.log(runningScore);
 
+        this.setState({
+            sponsorTestScore: runningScore
+          });
+
+        console.log("State test score:" + this.state.sponsorTestScore);
+
         API
-        .saveApplication(this.state)
+        .saveApplication(
+            this.state.sponsorFirstName,
+            this.state.sponsorLastName,
+            this.state.sponsorImageLink,
+            this.state.sponsorEmail,
+            this.state.sponsorRolePosition,
+            this.state.sponsorAboutMe,
+            this.state.sponsorAboutMySchool,
+            this.state.sponsorWhyInterested,
+            this.state.sponsorTestScore
+        )
         .then(res => {
           this.setState({
             // selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

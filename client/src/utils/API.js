@@ -9,8 +9,8 @@ export default {
     return axios.post('api/signup', {username: username, email: email, password: password});
   },
   // save prospective club sponsor's application and test score
-  saveApplication: (selectedOption, sponsorFirstName, sponsorLastName, sponsorImageLink, sponsorEmail, sponsorRolePosition, sponsorAboutMe, sponsorAboutMySchool, sponsorWhyInterested, sponsorTestScore) => {
-    return axios.post('api/certification', {
+  saveApplication: (sponsorFirstName, sponsorLastName, sponsorImageLink, sponsorEmail, sponsorRolePosition, sponsorAboutMe, sponsorAboutMySchool, sponsorWhyInterested, sponsorTestScore) => {
+    return axios.post('/api/certification', {
       // selectedOption: selectedOption,
       sponsorFirstName: sponsorFirstName,
       sponsorLastName: sponsorLastName,
@@ -21,6 +21,6 @@ export default {
       sponsorAboutMySchool: sponsorAboutMySchool, 
       sponsorWhyInterested: sponsorWhyInterested,
       sponsorTestScore: sponsorTestScore
-    })
+    });
   }
 };

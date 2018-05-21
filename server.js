@@ -56,7 +56,7 @@ app.post('/api/signup', (req, res) => {
 });
 
 // SAVE NEW SPONSOR APPLICATION AND TEST SCORES
-app.post('api/certification', (req, res) => {
+app.post('/api/certification', (req, res) => {
   db.Certification.create(req.body)
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
