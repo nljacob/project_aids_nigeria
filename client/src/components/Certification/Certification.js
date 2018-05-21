@@ -32,53 +32,54 @@ class Certification extends React.Component {
       }
 
     checkAnswers = (event) => {
-
-        console.log(this.state);
-
+        console.log("The entire state: " , this.state);
         event.preventDefault();
-
         var runningScore = 0;
         for (var i = 0; i < 10; i++) {
             if (this.state.selectedOption[i] === certAnswers[i]){
                 runningScore++;
             }
         }
-        console.log(runningScore);
+        console.log("Runnign score before setting state: " + runningScore);
 
         this.setState({
             sponsorTestScore: runningScore
+          }, () => {
+            // console.log("I guess the state has been set?");
+            API
+            .saveApplication(
+                this.state.sponsorFirstName,
+                this.state.sponsorLastName,
+                this.state.sponsorImageLink,
+                this.state.sponsorEmail,
+                this.state.sponsorRolePosition,
+                this.state.sponsorAboutMe,
+                this.state.sponsorAboutMySchool,
+                this.state.sponsorWhyInterested,
+                this.state.sponsorTestScore
+            )
+            .then(res => {
+            this.setState({
+                // selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                sponsorFirstName: "",
+                sponsorLastName: "",
+                sponsorImageLink: "",
+                sponsorEmail: "",
+                sponsorRolePosition: "",
+                sponsorAboutMe: "",
+                sponsorAboutMySchool: "",
+                sponsorWhyInterested: "",
+                sponsorTestScore: ""
+            });
+            }).catch(err => {
+            console.log(err);
+            });
+            console.log("The entire state: " , this.state);
+            console.log("Test score in the state:" , this.state.sponsorTestScore);
+            console.log("Test score in the state at the end:" , this.state.sponsorTestScore);
           });
 
-        console.log("State test score:" + this.state.sponsorTestScore);
 
-        API
-        .saveApplication(
-            this.state.sponsorFirstName,
-            this.state.sponsorLastName,
-            this.state.sponsorImageLink,
-            this.state.sponsorEmail,
-            this.state.sponsorRolePosition,
-            this.state.sponsorAboutMe,
-            this.state.sponsorAboutMySchool,
-            this.state.sponsorWhyInterested,
-            this.state.sponsorTestScore
-        )
-        .then(res => {
-          this.setState({
-            // selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            sponsorFirstName: "",
-            sponsorLastName: "",
-            sponsorImageLink: "",
-            sponsorEmail: "",
-            sponsorRolePosition: "",
-            sponsorAboutMe: "",
-            sponsorAboutMySchool: "",
-            sponsorWhyInterested: "",
-            sponsorTestScore: ""
-          });
-        }).catch(err => {
-          console.log(err);
-        });
     }
 
     handleOptionChange =  (param) => (changeEvent) => {
@@ -88,7 +89,7 @@ class Certification extends React.Component {
         this.setState({
           selectedOption: tempArray
         });
-        console.log("change event target: " + changeEvent.target.value)
+        // console.log("change event target: " + changeEvent.target.value)
       }
 
     render() {
