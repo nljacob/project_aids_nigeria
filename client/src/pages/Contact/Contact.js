@@ -18,11 +18,11 @@ const Contact = () => (
             </div>
             <div className="row">
                 <div className="col-6">
-                    <p>ADDRESS</p>
+                    <h5>ADDRESS:</h5>
                     <p>No: 22 Bank Road Bori​<br/>Ogoni, Rivers State, Nigeria</p>
-                    <p>PHONE</p>
+                    <h5>PHONE:</h5>
                     <p>09075542187</p>
-                    <p>EMAIL</p>
+                    <h5>EMAIL:</h5>
                     <p>aidsnigeria@gmail.com<br/>panstudentsconnect@gmail.com </p>
                 </div>
 

@@ -110,8 +110,8 @@ class Certification extends React.Component {
 
                 <h5>Curriculum</h5>
                 <ul>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/about-hiv-aids/what-hiv-aids">Click here: What are HIV and AIDS?</a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">Click here: How do you get HIV?</a></li>
+                    <li><a id="red" target="_blank" rel="noopener noreferrer" href="https://www.avert.org/about-hiv-aids/what-hiv-aids">What are HIV and AIDS?</a></li>
+                    <li><a id="red" target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">How do you get HIV?</a></li>
                 </ul>
                 <br />
 

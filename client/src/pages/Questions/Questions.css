@@ -1,8 +1,14 @@
 .questions-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
+    color: rgb(224, 30, 61);
 }
 
 .questions-page h4 {
+    color: rgb(224, 30, 61);
     font-family: 'Fjalla One', sans-serif;
+}
+
+.questions-page #red:hover {
+    color: rgb(1,159,175);
 }

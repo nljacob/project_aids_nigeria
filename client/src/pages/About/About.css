@@ -1,6 +1,7 @@
 .about-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
+    color: rgb(224, 30, 61);
 }
 
 .about-page #image-about01 {

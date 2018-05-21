@@ -28,8 +28,8 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col text-center">
-          <a class="btn btn-info" href="/video" role="button">HIV POSITIVE SYMPTOMS AND SIGNS</a>&nbsp;
-          <a class="btn btn-info" href="/video2" role="button">THE SCIENCE OF HIV/AIDS</a>
+          <a className="btn btn-info" href="/video" role="button">HIV POSITIVE SYMPTOMS AND SIGNS</a>&nbsp;
+          <a className="btn btn-info" href="/video2" role="button">THE SCIENCE OF HIV/AIDS</a>
           </div>
         </div>
       </div>
