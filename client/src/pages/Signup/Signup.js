@@ -91,7 +91,9 @@ class Signup extends Component {
     return (
       <div className="container">
         <br />
-        <h1>Signup</h1>
+        <br />
+        <br /> <br />
+        <h1 id="signup">Signup</h1>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username:</label>
@@ -127,7 +129,7 @@ class Signup extends Component {
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         <br />
-        <p>Already have an account? Login <Link to="/login">here.</Link></p>
+        <p>Already have an account? Login <Link id="here" to="/login">here.</Link></p>
       </div>
     );
   }

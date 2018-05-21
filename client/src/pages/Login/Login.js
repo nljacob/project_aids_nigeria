@@ -87,7 +87,9 @@ class Login extends Component {
     return (
       <div className="container">
         <br />
-        <h1>Login</h1>
+        <br />
+        <br /> <br />
+        <h1 id="login">Login</h1>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email address:</label>
@@ -117,7 +119,7 @@ class Login extends Component {
           <button type="submit" className="btn btn-default" onSubmit={this.resetForm}>Submit</button>
         </form>
         <br />
-        <p>Don't have an account? Sign up <Link to="/signup">here.</Link></p>
+        <p>Don't have an account? Sign up <Link id="here" to="/signup">here.</Link></p>
       </div>
 
     );

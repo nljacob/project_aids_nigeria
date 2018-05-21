@@ -13,6 +13,8 @@ class App extends Component {
       <div className="curriculum-page">
         <div className="row">
           <div className="col text-center">
+          <br/>
+          <br/>
             <h3>THE SCIENCE OF HIV/AIDS</h3>
           </div>
         </div>
@@ -25,7 +27,7 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col text-center">
-          <a class="btn btn-primary" href="/curriculum" role="button">Previous page</a>
+          <a class="btn btn-info" href="/curriculum" role="button">Previous page</a>
           </div>
         </div>
       </div>

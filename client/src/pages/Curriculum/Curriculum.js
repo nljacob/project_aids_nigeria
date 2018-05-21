@@ -3,7 +3,7 @@
 // James, Nitya, and Alicia's work starts here
 import React, { Component } from 'react';
 // import './App.css';
-import Video from '../../components/Video/Video';
+// import Video from '../../components/Video/Video';
 // import ModalVideo from '../../components/Modal/ModalVideo';
 import "./Curriculum.css";
 

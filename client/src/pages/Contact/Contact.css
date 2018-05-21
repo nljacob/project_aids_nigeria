@@ -11,4 +11,17 @@
     color: rgb(224, 30, 61);
 }
 
+#name {
+    width: 256px;
+}
+
+#email {
+    width: 256px;
+}
+
+#comment {
+    width: 406px;
+    height: 106px;
+}
+
 

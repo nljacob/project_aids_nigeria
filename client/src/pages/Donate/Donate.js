@@ -20,7 +20,6 @@ const Donate = () => (
             </div>
             <div className="row">
                 <div className="col">
-                <br/>
                     <p>
                         Project AIDS Nigeria is a Charitable Educational Organization ground in Christian Faith.  We believe that it is only through education and through sharing the truth of the Gospel of Christ that can we can make progress against the advancement og HIV.
                         <br/>
@@ -41,7 +40,7 @@ const Donate = () => (
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_s-xclick"/>
                         <input type="hidden" name="hosted_button_id" value="S9EE85PUGBZZE"/>
-                        <input id="donatebutton" type="image" src= {donatebutton}/>
+                        <input alt="" id="donatebutton" type="image" src= {donatebutton}/>
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
                     </form>
                 </div>
