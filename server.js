@@ -59,7 +59,7 @@ app.post('/api/signup', (req, res) => {
 app.post('/api/certification', (req, res) => {
   db.Certification.create(req.body)
     .then(data => res.json(data))
-    .catch(err => res.status(400).json(err));
+    .catch(err => res.json(err));
 });
 
 // Any route with isAuthenticated is protected and you need a valid token
