@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "question": "Question 1: Once inside the bloodstream HIV targets a variety of cells but most specifically _______?", 
+        "answerChoiceOne": " Lymphocytes cells (also called t-helper cells)",
+        "answerChoiceTwo": " Monocytes cells",
+        "answerChoiceThree": " Neutrophils cells",
+        "answerChoiceFour": " Basophils cells",
+        "answer": 1
+    },
+    {
+        "id": 2,
+        "question": "Question 2: Why do the t-cells treat the viral genes as their own?",
+        "answerChoiceOne": " Because they blend in",
+        "answerChoiceTwo": " Because they can’t fight them off",
+        "answerChoiceThree": " Because they are integrated into the host cell genome",
+        "answerChoiceFour": " Because there are too many",
+        "answer": 3
+    },
+    {
+        "id": 3,
+        "question": "Question 3: How many virions are created each day?",
+        "answerChoiceOne": " 10 thousand",
+        "answerChoiceTwo": " 10 billion",
+        "answerChoiceThree": " 100 thousand",
+        "answerChoiceFour": " 10 million",
+        "answer": 2
+    },
+    {
+        "id": 4,
+        "question": "Question 4: Do people die from AIDS?",
+        "answerChoiceOne": " No, they die of an illness the body couldn’t fend off",
+        "answerChoiceTwo": " Yes, all the time",
+        "answerChoiceThree": " No, they die from cancer caused by AIDS",
+        "answerChoiceFour": " Yes, they also die from cancer caused by AIDS",
+        "answer": 1
+    },
+    {
+        "id": 5,
+        "question": "Question 5: If you are at high risk of getting HIV what can you take?",
+        "answerChoiceOne": " Truvada",
+        "answerChoiceTwo": " Anti-retroviral",
+        "answerChoiceThree": " Daraprim",
+        "answerChoiceFour": " Pre-exposure prophylaxis (PrEP)",
+        "answer": 4
+    },
+    {
+        "id": 6,
+        "question": "Question 5: In one situation, a subject was given what type of transplant to find a cure?",
+        "answerChoiceOne": " Heart transplant",
+        "answerChoiceTwo": " Veins transplant",
+        "answerChoiceThree": " Bone marrow transplant",
+        "answerChoiceFour": " Brain transplant",
+        "answer": 3
+    }
+]
