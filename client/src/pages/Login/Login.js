@@ -104,8 +104,8 @@ class Login extends Component {
             {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
           </div>
 
-          {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div className="error-text">Invalid Email/Password</div> : " "}
-         <br/>
+          {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text">Invalid Email/Password </div><br/></div>  : " "}
+        
           <button type="submit" className="btn btn-default">Submit</button>
         </form>
         <br />
