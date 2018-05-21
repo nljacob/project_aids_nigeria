@@ -5,15 +5,37 @@ import React from "react";
 // import Col from "../components/Col";
 import certAnswers from '../../certAnswers.json'
 import "./Certification.css";
+import API from '../../utils/API';
 
 class Certification extends React.Component {
 
     state = {
         certAnswers: certAnswers,
-        selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        sponsorFirstName: "",
+        sponsorLastName: "",
+        sponsorImageLink: "",
+        sponsorEmail: "",
+        sponsorRolePosition: "",
+        sponsorAboutMe: "",
+        sponsorAboutMySchool: "",
+        sponsorWhyInterested: "",
+        sponsorTestScore: ""
     };
 
+    handleInputChange = event => {
+        let { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      }
+
     checkAnswers = (event) => {
+
+        console.log(this.state);
+
+        event.preventDefault();
+
         var runningScore = 0;
         for (var i = 0; i < 10; i++) {
             if (this.state.selectedOption[i] === certAnswers[i]){
@@ -22,7 +44,40 @@ class Certification extends React.Component {
         }
         console.log(runningScore);
 
-        // ***Later send the score to the database along with their username/email address
+        this.setState({
+            sponsorTestScore: runningScore
+          });
+
+        console.log("State test score:" + this.state.sponsorTestScore);
+
+        API
+        .saveApplication(
+            this.state.sponsorFirstName,
+            this.state.sponsorLastName,
+            this.state.sponsorImageLink,
+            this.state.sponsorEmail,
+            this.state.sponsorRolePosition,
+            this.state.sponsorAboutMe,
+            this.state.sponsorAboutMySchool,
+            this.state.sponsorWhyInterested,
+            this.state.sponsorTestScore
+        )
+        .then(res => {
+          this.setState({
+            // selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            sponsorFirstName: "",
+            sponsorLastName: "",
+            sponsorImageLink: "",
+            sponsorEmail: "",
+            sponsorRolePosition: "",
+            sponsorAboutMe: "",
+            sponsorAboutMySchool: "",
+            sponsorWhyInterested: "",
+            sponsorTestScore: ""
+          });
+        }).catch(err => {
+          alert(err);
+        });
     }
 
     handleOptionChange =  (param) => (changeEvent) => {
@@ -48,20 +103,79 @@ class Certification extends React.Component {
                 <div className="row">
                     <div className="col">
                         <h5>Interested in starting a PAN club at your school?</h5>
-                        <p>Our goal at PAN is to share accurate information about AIDS/HIV.  As part of the certification process you will be asked to read through our curriculum, and demonstrate your understanding by passing our certification test.  Once we receive your scores we will contact you to discuss our training process.</p>
+                        <p>Our goal at PAN is to share accurate information about AIDS/HIV.  One way we do this is by screening potential club sponsors with a basic application and certification test.  Any adult at your school (teacher, administrator, counselor, etc...) who is willing to sponsor the club is eligible to complete our PAN application and certification test.  The application is our way of getting to know you and your school, so please use this as an opportunity to shine!  Tell us about all the great things your school already does, and why you are interested in bringing PAN to your school site.  Then you will be asked to read through part of our curriculum, and demonstrate your understanding by passing our certification test.  This ensures that the club sponsor has a basic understanding of our curriculum from which to build as the club grows.  Once we receive your application and test score we will contact you to discuss our training process and other certification details.  Thank you for your interest in PAN!  We look forward to working with you soon!</p>
                     </div>
                 </div>
+
                 <h5>Curriculum</h5>
                 <ul>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/about-hiv-aids/what-hiv-aids">What are HIV and AIDS?</a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">How do you get HIV?</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/about-hiv-aids/what-hiv-aids">Click here: What are HIV and AIDS?</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">Click here: How do you get HIV?</a></li>
                 </ul>
                 <br />
-                <h5>Certification Test</h5>
+
+                <h5>Application and Certification Test</h5>
 
                 {/* Add new fields (first name, last name, email address) so we can keep this info with their score in the database */}
     
                 <form>
+
+                    First Name: <br/> <input 
+                        type="text" 
+                        name="sponsorFirstName" 
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorFirstName}
+                        /> <br/> <br/>
+                    Last Name: <br/> <input 
+                        type="text" 
+                        name="sponsorLastName"
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorLastName} 
+                        /> <br/> <br/>
+                    Photo: <br/> <input 
+                        type="text" 
+                        name="sponsorImageLink" 
+                        placeholder="image link for profile"
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorImageLink}
+                        /> <br/> <br/>
+                    Email Address: <br/> <input 
+                        type="email" 
+                        name="sponsorEmail" 
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorEmail}
+                        /> <br/> <br/>
+                    Role/Position: <br/> <input 
+                        type="text" 
+                        name="sponsorRolePosition" 
+                        placeholder="teacher, counselor, ..."
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorRolePosition}
+                        /> <br/> <br/>
+                    About Me: <br/> <textarea 
+                        rows="4" 
+                        cols="100" 
+                        name="sponsorAboutMe" 
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorAboutMe}
+                        /> <br/> <br/>
+                    About My School: <br/> <textarea 
+                        rows="4" 
+                        cols="100" 
+                        name="sponsorAboutMySchool" 
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorAboutMySchool}
+                        /> <br/> <br/>
+                    Why we are interested in starting a PAN club: <br/> <textarea 
+                        rows="4" 
+                        cols="100" 
+                        name="sponsorWhyInterested" 
+                        onChange={this.handleInputChange}
+                        value={this.state.sponsorWhyInterested}
+                        /> <br/> <br/>
+
+                    <br/>
+
                     <h5>
                         <strong>Question #1: </strong>
                         Write the text for question #1 here.

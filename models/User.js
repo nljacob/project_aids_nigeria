@@ -8,6 +8,9 @@ let UserSchema = new Schema({
     required: true,
     trim: true
   },
+  // isAdmin: {
+  //   type: Boolean
+  // },
   email: {
     type: String,
     required: true,
