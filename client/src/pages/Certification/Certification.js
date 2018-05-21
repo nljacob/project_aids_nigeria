@@ -9,6 +9,7 @@ const AppCert = () => (
   <div className="certification-page">
     <br/>
     <br/>
+    <br/>
     <Certification />
   </div>
 );

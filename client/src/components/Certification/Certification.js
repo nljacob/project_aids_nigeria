@@ -111,8 +111,8 @@ class Certification extends React.Component {
 
                 <h5>Curriculum</h5>
                 <ul>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/about-hiv-aids/what-hiv-aids">Click here: What are HIV and AIDS?</a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">Click here: How do you get HIV?</a></li>
+                    <li><a id="red" target="_blank" rel="noopener noreferrer" href="https://www.avert.org/about-hiv-aids/what-hiv-aids">What are HIV and AIDS?</a></li>
+                    <li><a id="red" target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">How do you get HIV?</a></li>
                 </ul>
                 <br />
 
@@ -331,10 +331,8 @@ class Certification extends React.Component {
                         <input type="radio" name="Question10" value="d" checked={this.state.selectedOption[9] === 'd'} onChange={this.handleOptionChange(9)}/>avoid getting pregnant while treating a patient with HIV/AIDS <br/>
                    </div>
                     </fieldset>
-    
                     <br />
-                    <br />
-                    <button type="button" className="btn btn-primary" onClick={this.checkAnswers} id="Submit Button">Submit</button>
+                    <button type="button" className="btn btn-info" onClick={this.checkAnswers} id="Submit Button">Submit</button>
                 </form>
     
             </div>
@@ -342,9 +340,5 @@ class Certification extends React.Component {
         )
     }
 }
-
-// const Certification = () => (
-
-// );
 
 export default Certification;

@@ -5,3 +5,9 @@
 .error-focus{
     box-shadow: 0 0 0 1px red;
 }
+
+#signup {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: rgb(224, 30, 61);
+}
