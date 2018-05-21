@@ -7,7 +7,6 @@ html,body{
     height: 100%
 }
 
-
 body {
     background-color: white;
 }
@@ -16,8 +15,16 @@ body {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    
 }
+
+.home-page .paragraph-header {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgb(224, 30, 61);
+    /* color: rgb(1,159,175) (teal) */
+}
+
 
 .home-page h2 {
     font-family: 'Fjalla One', sans-serif;
@@ -25,7 +32,7 @@ body {
 
 .home-page #image-home01 {
     width: 90%;
-    height: 85%;
+    height: 95%;
     /* border: solid 10px rgb(90,90,90); */
 }
 

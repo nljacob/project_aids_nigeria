@@ -10,22 +10,26 @@ const Donate = () => (
         <div className="container">
             <div className="row">
                 <div className="col text-center">
-                <br />
-                    <h1>We need your help!</h1>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                    <h3>We need your help!</h3>
+                    <br/>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
                     <p>
                         Project AIDS Nigeria is a Charitable Educational Organization ground in Christian Faith.  We believe that it is only through education and through sharing the truth of the Gospel of Christ that can we can make progress against the advancement og HIV.
-                        <br /> <br />
+                        <br/>
                         But we cannot do it alone...
                     </p>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <h3>Please Donate</h3>
+                    <h4>Please Donate</h4>
                 </div>
             </div>
             <div className="row">
@@ -44,7 +48,7 @@ const Donate = () => (
             <div className="row">
                 <div className="col text-center">
                     <br />
-                    <h3>How we use your donations</h3>
+                    <h4>How we use your donations</h4>
                 </div>
             </div>
             <div className="row">
