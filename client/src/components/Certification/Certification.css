@@ -13,3 +13,7 @@
 .certification-page #red:hover {
     color: rgb(1,159,175);
 }
+
+input[type="radio"] {
+    margin: 0 8px 0 8px;
+}
