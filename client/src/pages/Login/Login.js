@@ -8,6 +8,11 @@ class Login extends Component {
     this.Auth = new AuthService();
   }
 
+
+   state = {
+     email : "",
+     password : ""
+   }
   // componentWillMount() {
   //   if (this.Auth.loggedIn()) {
   //     this.props.history.replace('/');
@@ -16,7 +21,14 @@ class Login extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-
+    
+    if (!this.state.email) {
+      alert("Fill email");
+    } 
+    else if (!this.state.password) {
+      alert("Fill password");
+    } 
+    else{
     this.Auth.login(this.state.email, this.state.password)
       .then(res => {
         // once user is logged in
@@ -24,6 +36,7 @@ class Login extends Component {
         this.props.history.replace(`/profile/${res.data.user._id}`);
       })
       .catch(err => alert(err));
+    }
   };
 
   handleChange = event => {
@@ -46,7 +59,7 @@ class Login extends Component {
                    name="email"
                    type="email"
                    id="email"
-                   onChange={this.handleChange}/>
+                   onChange={this.handleChange} />
           </div>
           <div className="form-group">
             <label htmlFor="pwd">Password:</label>
@@ -55,7 +68,7 @@ class Login extends Component {
                    name="password"
                    type="password"
                    id="pwd"
-                   onChange={this.handleChange}/>
+                   onChange={this.handleChange} />
           </div>
           <button type="submit" className="btn btn-default">Submit</button>
         </form>
