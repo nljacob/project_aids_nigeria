@@ -41,9 +41,17 @@ class Login extends Component {
           });
           // err => alert(err);
     }
+   
   };
 
-  handleChange = event => {
+  resetForm = () => {
+    this.setState({
+      email : "",
+      password : ""
+    })
+  }
+
+   handleChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -61,7 +69,7 @@ class Login extends Component {
     else {
       return ("form-control");
     }
-  }
+ }
 
   checkPasswordError(){
     if (!this.state.password && this.state.submitFlag) {
@@ -106,7 +114,7 @@ class Login extends Component {
 
           {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text">Invalid Email/Password </div><br/></div>  : " "}
         
-          <button type="submit" className="btn btn-default">Submit</button>
+          <button type="submit" className="btn btn-default" onSubmit={this.resetForm}>Submit</button>
         </form>
         <br />
         <p>Don't have an account? Sign up <Link to="/signup">here</Link></p>
