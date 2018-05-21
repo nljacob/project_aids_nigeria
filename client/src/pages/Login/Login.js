@@ -13,7 +13,8 @@ class Login extends Component {
   state = {
     email: "",
     password: "",
-    submitFlag: false
+    submitFlag: false,
+    serverCheck : ""
   }
   // componentWillMount() {
   //   if (this.Auth.loggedIn()) {
@@ -35,7 +36,10 @@ class Login extends Component {
           // take them to their profile page
           this.props.history.replace(`/profile/${res.data.user._id}`);
         })
-        .catch(err => alert(err));
+        .catch(err => {
+            this.setState({serverCheck : "fail"});
+          });
+          // err => alert(err);
     }
   };
 
@@ -51,6 +55,9 @@ class Login extends Component {
     if (!this.state.email && this.state.submitFlag) {
       return ("form-control error-focus"); 
     }
+    else if ((this.state.serverCheck === "fail") && this.state.submitFlag){
+      return ("form-control error-focus"); 
+    }
     else {
       return ("form-control");
     }
@@ -58,6 +65,9 @@ class Login extends Component {
 
   checkPasswordError(){
     if (!this.state.password && this.state.submitFlag) {
+      return ("form-control error-focus"); 
+    }
+    else if ((this.state.serverCheck === "fail") && this.state.submitFlag){
       return ("form-control error-focus"); 
     }
     else {
@@ -81,6 +91,7 @@ class Login extends Component {
               onChange={this.handleChange} />
 
             {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email required</div> : " "}
+            
           </div>
           <div className="form-group">
             <label htmlFor="pwd">Password:</label>
@@ -92,6 +103,9 @@ class Login extends Component {
               onChange={this.handleChange} />
             {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
           </div>
+
+          {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div className="error-text">Invalid Email/Password</div> : " "}
+         <br/>
           <button type="submit" className="btn btn-default">Submit</button>
         </form>
         <br />
