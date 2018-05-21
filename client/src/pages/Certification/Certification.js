@@ -7,6 +7,8 @@ import Certification from '../../components/Certification/Certification'
 
 const AppCert = () => (
   <div className="certification-page">
+    <br/>
+    <br/>
     <Certification />
   </div>
 );

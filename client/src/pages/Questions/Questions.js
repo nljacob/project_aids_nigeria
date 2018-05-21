@@ -10,9 +10,11 @@ const Questions = () => (
     <div className="container">
       <div className="row">
         <div className="col text-center">
-          <br />
           <br/>
-          <h1>AIDS Frequently Asked Questions</h1>
+          <br/>
+          <br/>
+          <br/>
+          <h3>AIDS Frequently Asked Questions</h3>
           <br />
         </div>
       </div>
@@ -33,7 +35,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-          <h3 id="AIDS">What is AIDS? What causes AIDS?</h3>
+          <h4 id="AIDS">What is AIDS? What causes AIDS?</h4>
           <br />
           <p>
             AIDS stands for Acquired Immune Deficiency Syndrome.
@@ -47,7 +49,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-          <h3 id="difference">What is the Difference Between HIV and AIDS?</h3>
+          <h4 id="difference">What is the Difference Between HIV and AIDS?</h4>
           <br />
           <p>
             HIV is the virus that causes AIDS. HIV means:
@@ -63,7 +65,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-          <h3 id="infected">How can I tell if I’m infected with HIV?</h3>
+          <h4 id="infected">How can I tell if I’m infected with HIV?</h4>
           <br />
           <p>
             The only way to determine whether you are infected is to be tested for HIV infection. You can’t rely on symptoms to know whether or not you are infected with HIV. Many people who are infected with HIV don’t have any symptoms at all for many years.
@@ -75,7 +77,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-          <h3 id="symptoms">What are the Symptoms of AIDS?</h3>
+          <h4 id="symptoms">What are the Symptoms of AIDS?</h4>
           <br />
           <p>
             There are no common symptoms for individuals diagnosed with AIDS. When immune system damage is more severe, people may experience opportunistic infections (called opportunistic because they are caused by organisms which cannot induce disease in people with normal immune systems, but take the “opportunity” to flourish in people with HIV). Most of these more severe infections, diseases and symptoms fall under the Centers for Disease Control’s definition of full-blown “AIDS.” The median time to receive an AIDS diagnosis among those infected with HIV is 7-10 years.
@@ -85,7 +87,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-          <h3 id="transmitted">How is HIV Transmitted?</h3>
+          <h4 id="transmitted">How is HIV Transmitted?</h4>
           <br />
           <p>
             HIV can be transmitted from an infected person to another through:
@@ -107,7 +109,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-          <h3 id="test">What if I test HIV positive?</h3>
+          <h4 id="test">What if I test HIV positive?</h4>
           <br />
           <p>
             If you test positive, the sooner you take steps to protect your health, the better. Early medical treatment, a healthy lifestyle and a positive attitude can help you stay well. Prompt medical care may delay the onset of AIDS and prevent some life-threatening conditions. It is important to know that a positive HIV test should always be confirmed, to be sure that it is a true positive. If your test result is positive, there are a number of important steps you can take immediately to protect your health:
@@ -126,7 +128,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-          <h3 id="healthy">Is there anything I can do to stay healthy?</h3>
+          <h4> id="healthy">Is there anything I can do to stay healthy?</h4>
           <br />
           <p>
             The short answer is yes. There are things that you can do to stay healthy. Once you find a doctor or clinic, your main objective is to get an evaluation of your general health and immune function.

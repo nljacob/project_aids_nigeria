@@ -7,6 +7,7 @@ import certAnswers from '../../certAnswers.json'
 import "./Certification.css";
 import API from '../../utils/API';
 
+
 class Certification extends React.Component {
 
     state = {
@@ -96,7 +97,7 @@ class Certification extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col text-center">
-                        <h1>Welcome to the Certification page!</h1> 
+                        <h3>Welcome to the Certification page!</h3> 
                         <br/>
                     </div>
                 </div>
@@ -119,60 +120,83 @@ class Certification extends React.Component {
                 {/* Add new fields (first name, last name, email address) so we can keep this info with their score in the database */}
     
                 <form>
-
+                <div className="form-group">
                     First Name: <br/> <input 
+                    className = "form-control"
                         type="text" 
                         name="sponsorFirstName" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorFirstName}
-                        /> <br/> <br/>
+                        /> 
+                        </div>
+                        <div className="form-group">
                     Last Name: <br/> <input 
+                     className = "form-control"
                         type="text" 
                         name="sponsorLastName"
                         onChange={this.handleInputChange}
                         value={this.state.sponsorLastName} 
-                        /> <br/> <br/>
-                    Photo: <br/> <input 
+                        /> 
+                        </div>
+                        <div className="form-group">
+                    Photo: <br/> <input
+                    className = "form-control" 
                         type="text" 
                         name="sponsorImageLink" 
                         placeholder="image link for profile"
                         onChange={this.handleInputChange}
                         value={this.state.sponsorImageLink}
-                        /> <br/> <br/>
+                        /> 
+                        </div>
+                        <div className="form-group">
                     Email Address: <br/> <input 
+                    className = "form-control"
                         type="email" 
                         name="sponsorEmail" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorEmail}
-                        /> <br/> <br/>
+                        />
+                        </div>
+                        <div className="form-group">
                     Role/Position: <br/> <input 
+                    className = "form-control"
                         type="text" 
                         name="sponsorRolePosition" 
                         placeholder="teacher, counselor, ..."
                         onChange={this.handleInputChange}
                         value={this.state.sponsorRolePosition}
-                        /> <br/> <br/>
+                        /> 
+                        </div>
+                        <div className="form-group">
                     About Me: <br/> <textarea 
+                    className = "form-control"
                         rows="4" 
                         cols="100" 
                         name="sponsorAboutMe" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMe}
-                        /> <br/> <br/>
-                    About My School: <br/> <textarea 
+                        /> 
+                        </div>
+                        <div className="form-group">
+                    About My School: <br/> <textarea
+                    className = "form-control" 
                         rows="4" 
                         cols="100" 
                         name="sponsorAboutMySchool" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMySchool}
-                        /> <br/> <br/>
+                        /> 
+                        </div>
+                        <div className="form-group">
                     Why we are interested in starting a PAN club: <br/> <textarea 
-                        rows="4" 
+                     className = "form-control"
+                     rows="4" 
                         cols="100" 
                         name="sponsorWhyInterested" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorWhyInterested}
-                        /> <br/> <br/>
+                        /> 
+                        </div>
 
                     <br/>
 
@@ -181,110 +205,130 @@ class Certification extends React.Component {
                         Write the text for question #1 here.
                         
                     </h5>
-                    <fieldset>
+                    <fieldset className = "form-group">
+                        <div className="form-check">
                         <input type="radio" name="Question1" value="a" checked={this.state.selectedOption[0] === 'a'} onChange={this.handleOptionChange(0)}/>Write answers for question #1 here <br/>
                         <input type="radio" name="Question1" value="b" checked={this.state.selectedOption[0] === 'b'} onChange={this.handleOptionChange(0)}/>Write answers for question #1 here <br/>
                         <input type="radio" name="Question1" value="c" checked={this.state.selectedOption[0] === 'c'} onChange={this.handleOptionChange(0)}/>Write answers for question #1 here <br/>
                         <input type="radio" name="Question1" value="d" checked={this.state.selectedOption[0] === 'd'} onChange={this.handleOptionChange(0)}/>Write answers for question #1 here <br/>
+                        </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #2: </strong>
                         Write the text for question #2 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className="form-check">
                         <input type="radio" name="Question2" value="a" checked={this.state.selectedOption[1] === 'a'} onChange={this.handleOptionChange(1)}/>Write answers for question #2 here <br/>
                         <input type="radio" name="Question2" value="b" checked={this.state.selectedOption[1] === 'b'} onChange={this.handleOptionChange(1)}/>Write answers for question #2 here <br/>
                         <input type="radio" name="Question2" value="c" checked={this.state.selectedOption[1] === 'c'} onChange={this.handleOptionChange(1)}/>Write answers for question #2 here <br/>
                         <input type="radio" name="Question2" value="d" checked={this.state.selectedOption[1] === 'd'} onChange={this.handleOptionChange(1)}/>Write answers for question #2 here <br/>
+                    </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #3: </strong>
                         Write the text for question #3 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question3" value="a" checked={this.state.selectedOption[2] === 'a'} onChange={this.handleOptionChange(2)}/>Write answers for question #3 here <br/>
                         <input type="radio" name="Question3" value="b" checked={this.state.selectedOption[2] === 'b'} onChange={this.handleOptionChange(2)}/>Write answers for question #3 here <br/>
                         <input type="radio" name="Question3" value="c" checked={this.state.selectedOption[2] === 'c'} onChange={this.handleOptionChange(2)}/>Write answers for question #3 here <br/>
                         <input type="radio" name="Question3" value="d" checked={this.state.selectedOption[2] === 'd'} onChange={this.handleOptionChange(2)}/>Write answers for question #3 here <br/>
+                   </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #4: </strong>
                         Write the text for question #4 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question4" value="a" checked={this.state.selectedOption[3] === 'a'} onChange={this.handleOptionChange(3)}/>Write answers for question #4 here <br/>
                         <input type="radio" name="Question4" value="b" checked={this.state.selectedOption[3] === 'b'} onChange={this.handleOptionChange(3)}/>Write answers for question #4 here <br/>
                         <input type="radio" name="Question4" value="c" checked={this.state.selectedOption[3] === 'c'} onChange={this.handleOptionChange(3)}/>Write answers for question #4 here <br/>
                         <input type="radio" name="Question4" value="d" checked={this.state.selectedOption[3] === 'd'} onChange={this.handleOptionChange(3)}/>Write answers for question #4 here <br/>
+                    </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #5: </strong>
                         Write the text for question #5 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question5" value="a" checked={this.state.selectedOption[4] === 'a'} onChange={this.handleOptionChange(4)}/>Write answers for question #5 here <br/>
                         <input type="radio" name="Question5" value="b" checked={this.state.selectedOption[4] === 'b'} onChange={this.handleOptionChange(4)}/>Write answers for question #5 here <br/>
                         <input type="radio" name="Question5" value="c" checked={this.state.selectedOption[4] === 'c'} onChange={this.handleOptionChange(4)}/>Write answers for question #5 here <br/>
                         <input type="radio" name="Question5" value="d" checked={this.state.selectedOption[4] === 'd'} onChange={this.handleOptionChange(4)}/>Write answers for question #5 here <br/>
+                   </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #6: </strong>
                         Write the text for question #6 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question6" value="a" checked={this.state.selectedOption[5] === 'a'} onChange={this.handleOptionChange(5)}/>Write answers for question #6 here <br/>
                         <input type="radio" name="Question6" value="b" checked={this.state.selectedOption[5] === 'b'} onChange={this.handleOptionChange(5)}/>Write answers for question #6 here <br/>
                         <input type="radio" name="Question6" value="c" checked={this.state.selectedOption[5] === 'c'} onChange={this.handleOptionChange(5)}/>Write answers for question #6 here <br/>
                         <input type="radio" name="Question6" value="d" checked={this.state.selectedOption[5] === 'd'} onChange={this.handleOptionChange(5)}/>Write answers for question #6 here <br/>
+                   </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #7: </strong>
                         Write the text for question #7 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question7" value="a" checked={this.state.selectedOption[6] === 'a'} onChange={this.handleOptionChange(6)}/>Write answers for question #7 here <br/>
                         <input type="radio" name="Question7" value="b" checked={this.state.selectedOption[6] === 'b'} onChange={this.handleOptionChange(6)}/>Write answers for question #7 here <br/>
                         <input type="radio" name="Question7" value="c" checked={this.state.selectedOption[6] === 'c'} onChange={this.handleOptionChange(6)}/>Write answers for question #7 here <br/>
                         <input type="radio" name="Question7" value="d" checked={this.state.selectedOption[6] === 'd'} onChange={this.handleOptionChange(6)}/>Write answers for question #7 here <br/>
+                   </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #8: </strong>
                         Write the text for question #8 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question8" value="a" checked={this.state.selectedOption[7] === 'a'} onChange={this.handleOptionChange(7)}/>Write answers for question #8 here <br/>
                         <input type="radio" name="Question8" value="b" checked={this.state.selectedOption[7] === 'b'} onChange={this.handleOptionChange(7)}/>Write answers for question #8 here <br/>
                         <input type="radio" name="Question8" value="c" checked={this.state.selectedOption[7] === 'c'} onChange={this.handleOptionChange(7)}/>Write answers for question #8 here <br/>
                         <input type="radio" name="Question8" value="d" checked={this.state.selectedOption[7] === 'd'} onChange={this.handleOptionChange(7)}/>Write answers for question #8 here <br/>
+                   </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #9: </strong>
                         Write the text for question #9 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question9" value="a" checked={this.state.selectedOption[8] === 'a'} onChange={this.handleOptionChange(8)}/>Write answers for question #9 here <br/>
                         <input type="radio" name="Question9" value="b" checked={this.state.selectedOption[8] === 'b'} onChange={this.handleOptionChange(8)}/>Write answers for question #9 here <br/>
                         <input type="radio" name="Question9" value="c" checked={this.state.selectedOption[8] === 'c'} onChange={this.handleOptionChange(8)}/>Write answers for question #9 here <br/>
                         <input type="radio" name="Question9" value="d" checked={this.state.selectedOption[8] === 'd'} onChange={this.handleOptionChange(8)}/>Write answers for question #9 here <br/>
+                   </div>
                     </fieldset>
     
                     <h5>
                         <strong>Question #10: </strong>
                         Write the text for question #10 here.
                     </h5>
-                    <fieldset>
+                    <fieldset  className = "form-group">
+                    <div className = "form-check">
                         <input type="radio" name="Question10" value="a" checked={this.state.selectedOption[9] === 'a'} onChange={this.handleOptionChange(9)}/>Write answers for question #10 here <br/>
                         <input type="radio" name="Question10" value="b" checked={this.state.selectedOption[9] === 'b'} onChange={this.handleOptionChange(9)}/>Write answers for question #10 here <br/>
                         <input type="radio" name="Question10" value="c" checked={this.state.selectedOption[9] === 'c'} onChange={this.handleOptionChange(9)}/>Write answers for question #10 here <br/>
                         <input type="radio" name="Question10" value="d" checked={this.state.selectedOption[9] === 'd'} onChange={this.handleOptionChange(9)}/>Write answers for question #10 here <br/>
+                   </div>
                     </fieldset>
     
                     <br />

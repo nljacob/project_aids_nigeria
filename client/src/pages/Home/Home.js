@@ -13,7 +13,7 @@ import home04 from "../../images/home04.jpg";
 
 const Home = () => (
   <div className="home-page">
-    <SplashPage backgroundImage={handimagegray}>
+    <SplashPage backgroundImage={handimagegray} >
       <h1>Project AIDS Nigeria</h1>
       <h2>For Love and Knowledge</h2>
     </SplashPage>
@@ -21,7 +21,8 @@ const Home = () => (
       <div className="row">
         <div className="col">
         <br />
-          <h1>Our Mission</h1>
+        <br />
+          <h1 className="paragraph-header">Our Mission</h1>
         </div>
       </div>
       <div className="row">
@@ -42,7 +43,7 @@ const Home = () => (
         </div>
         <div className="col">
           <br />
-          <h1>Our Method</h1><br/>     
+          <h1 className="paragraph-header">Our Method</h1><br/>     
           <p>
           We use a peer to peer teaching method. PAN recruits student leaders from the local secondary schools who receive training on the topic of HIV/AIDS and other sexually transmitted diseases and in turn relay the information to their peers at their respective schools.  The PAN Student Assistants each lead their own groups to educate their peers on the topic of HIV. They receive coaching and mentoring from a PAN instructor who supports them and helps to ensure that the students are adequately informed on the topics they set out to discuss.
           </p>
@@ -52,7 +53,8 @@ const Home = () => (
       <div className="row">
         <div className="col-6">
         <br />
-          <h1>Our Students</h1>
+        <br/>
+          <h1 className="paragraph-header">Our Students</h1>
         
         <br/>
           <p>

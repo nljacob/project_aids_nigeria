@@ -14,18 +14,20 @@
 } */
 
 .footer {
-  /* background-color: rgb(224, 30, 61); (pink)*/
   background-color: rgb(1,159,175);
+  /* background-color: rgb(32, 80, 110); (navy) */
   /* background-color: rgb(166,166,166); (gray) */
+  /* background-color: rgb(224, 30, 61); (pink)*/
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 16px;
   padding-left: 16px;
+  width: 100%;
 }
 
 .footericons {
   color:white;
-  font-size: 130%;
+  font-size: 100%;
   margin-top: .5%;
   margin-bottom: .5%;
   margin-right: 2%;

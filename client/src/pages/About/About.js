@@ -11,9 +11,11 @@ const About = () => (
         <div className="container">
             <div className="row">
                 <div className="col text-center">
-                <br />
                 <br/>
-                    <h1>ABOUT PROJECT AIDS NIGERIA</h1>
+                <br/>
+                <br/>
+                <br/>
+                    <h3>ABOUT PROJECT AIDS NIGERIA</h3>
                 </div>
             </div>
             <div className="row">
@@ -24,20 +26,19 @@ const About = () => (
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col-8">
                     <p>Since 2009, Project AIDS Nigeria has shared knowledge of HIV with every class of students in five main schools that we’ve partnered with. That’s thousands of students. In 2012, PAN switched its focus from large classroom lectures taught by HIV counselors once or twice a year to smaller, peer to peer groups that meet monthly at the schools. These small groups foster a safer space to deal with the sensitive topics we cover. PAN activities now span eight schools and consist of about thirty Student Assistants who lead cell groups at their respective schools and around the community. Every month, we reach over two hundred students.</p>
                     <p>Because HIV/AIDS is a sexually transmitted disease, we encourage students to abide by God’s design of sex within marriage. PAN’s goal is to create a space for young people where bold faith in the Lord is normal and students can find encouragement in their aims to pursue God’s plan for their lives. However, PAN is clear and direct about the details of HIV and modes of prevention for all students no matter their choices or circumstances. Our other main goal is to foster genuine love in ourselves and in our communities for all people regardless of their HIV status.</p>
+                    <p> Over the years, I have found overwhelming support for the dream that my home country would one day be HIV free. I am especially grateful to First United Methodist Church for their continued support. I also thank my friends, Goodnews and Neeha and my family who have donated countless hours to this cause. I’m indebted to my husband Michael supports me like no other. I finally thank our students who do the real work in Nigeria for their courage to speak boldly in hopes of saving their peers and community from disease. I pray that the Lord will continue to give us all strength in our attempt to live believing in his promises and live according to his plan.</p>
+
                 </div>
-                <div className="col text-center">
+                <div className="col-4">
                     <img src= {about01} id="image-about01" />
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <p> Over the years, I have found overwhelming support for the dream that my home country would one day be HIV free. I am especially grateful to First United Methodist Church for their continued support. I also thank my friends, Goodnews and Neeha and my family who have donated countless hours to this cause. I’m indebted to my husband Michael supports me like no other. I finally thank our students who do the real work in Nigeria for their courage to speak boldly in hopes of saving their peers and community from disease. I pray that the Lord will continue to give us all strength in our attempt to live believing in his promises and live according to his plan.
-                    <br/>
-                    <br/>
-                    Thank you for sincerely your support,
+                    <p> Thank you sincerely for your support,
                     <br/>
                     <br/>
                     Domale Dube Keys
@@ -46,6 +47,7 @@ const About = () => (
                     <br/>
                     Founding Director
                     </p>
+                    <br/>
                 </div>
             </div>
             <div className="row">
