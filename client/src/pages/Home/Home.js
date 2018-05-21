@@ -32,10 +32,6 @@ const Home = () => (
             Project AIDS Nigeria (PAN) delivers educational workshops about HIV and other sexually transmitted diseases to prevent new infections and to reduce the stigma associated with HIV.  Project AIDS Nigeria also works closely with local hospitals to help them better serve their HIV/AIDS patients through providing volunteers for certain tasks or aiding with non-medicinal material needs.
           </p>
         </div>
-        <div className="col">
-          <br />
-         
-        </div>
       </div>
       <div className="row">
         <div className="col">
@@ -93,7 +89,7 @@ const Home = () => (
         </div>      
       </div>
       <br/>
-      <div className="row">
+      {/* <div className="row">
         <div className="col">
           <img alt="" src= {statimg01} id="statimgs"/>
         </div>
@@ -103,7 +99,7 @@ const Home = () => (
         <div className="col">
         <img alt="" src= {statimg03} id="statimgs"/>
         </div>     
-      </div>
+      </div> */}
     </div>
   </div>
 )

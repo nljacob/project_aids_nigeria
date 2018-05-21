@@ -341,8 +341,4 @@ class Certification extends React.Component {
     }
 }
 
-// const Certification = () => (
-
-// );
-
 export default Certification;

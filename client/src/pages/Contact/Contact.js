@@ -3,6 +3,7 @@ import React from "react";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 import "./Contact.css";
+import map from "../../images/map.png";
 
 const Contact = () => (
     <div className="contact-page">
@@ -17,16 +18,34 @@ const Contact = () => (
                 </div>
             </div>
             <div className="row">
-                <div className="col-6">
-                    <h5>ADDRESS:</h5>
-                    <p>No: 22 Bank Road Bori​<br/>Ogoni, Rivers State, Nigeria</p>
-                    <h5>PHONE:</h5>
-                    <p>09075542187</p>
-                    <h5>EMAIL:</h5>
-                    <p>aidsnigeria@gmail.com<br/>panstudentsconnect@gmail.com </p>
+                <div className="col-6 text-center">
+                    <h4>ADDRESS:</h4>
+                    <h6>No: 22 Bank Road Bori​<br/>Ogoni, Rivers State, Nigeria</h6>
+                    <h4>PHONE:</h4>
+                    <h6>09075542187</h6>
+                    <h4>EMAIL:</h4>
+                    <h6>aidsnigeria@gmail.com<br/>panstudentsconnect@gmail.com </h6>
                 </div>
-
                 <div className="col-6">
+                <img alt="" src= {map} id="map-image" />
+                </div>
+                </div>
+                <div className="row">
+                <div className="col text-center">
+                <h3>SEND US A MESSAGE</h3>
+                <br/>
+                </div>
+                </div>
+                <div className="row">
+                <div className="col text-center">
+                <p>We welcome your comments and your support. Please complete the form below and we will contact you as soon as possible.</p>
+                <br/>
+                </div>
+                </div>
+            <div className="row">
+            <div className="col">
+            </div>
+            <div className="col">
                     <form>
                         <label for="name">Name:</label><br/>
                         <input id="name" type="text" required/>
@@ -49,12 +68,9 @@ const Contact = () => (
                         <button type="button" class="btn btn-info">Submit</button>
                         
                     </form>                    
-
-
                 </div>
+                <div className="col">
             </div>
-            <div className="row">
-                
             </div>
         </div>
     </div>
