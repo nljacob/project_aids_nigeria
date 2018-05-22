@@ -7,7 +7,7 @@
     color: rgb(224, 30, 61);
 }
 
-.contact-page h4 {
+.contact-page h5 {
     color: rgb(224, 30, 61);
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
@@ -39,8 +39,8 @@
 
 .contact-page #map-image {
     width: 100%;
-    height: 90%;
-    
+    height: 100%;
+    /* border: .5px rgb(166,166,166) solid;     */
 }
 
 .contact-page input {
@@ -58,4 +58,19 @@
     padding-left: 7%;
     padding-right: 7%;
     border: none;
+}
+
+.contact-page #contactinfo {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: .5px rgb(166,166,166) solid;
+    padding: 2% 2.5% 2% 1.5%;
+    text-align: center;
+}
+
+.contact-page h6 {
+    margin-bottom: 10%;
 }
