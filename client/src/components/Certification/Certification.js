@@ -23,6 +23,7 @@ class Certification extends React.Component {
         sponsorAboutMySchool: "",
         sponsorWhyInterested: "",
         sponsorTestScore: "",
+        submitFlag: false,
         redirect: false
     };
 
@@ -33,59 +34,96 @@ class Certification extends React.Component {
         });
       }
 
+      checkFirstNameError(){
+        if(!this.state.sponsorFirstName){
+            this.setState({
+                redirect : false
+            });
+            return ("form-control error-focus"); 
+        }
+        else{
+            this.setState({
+                redirect : true
+            });
+           return ("");
+        }
+        // if(!this.state.sponsorLastName){}
+        // if(!this.state.sponsorImageLink){}
+        // if(!this.state.sponsorEmail){}
+        // if(!this.state.sponsorRolePosition){}
+        // if(!this.state.sponsorAboutMe){}
+        // if(!this.state.sponsorAboutMySchool){}
+        // if(!this.state.sponsorWhyInterested){}
+        // if(!this.state.sponsorTestScore){}
+    }
+    
+    fieldValidation() {
+        if (!this.state.sponsorFirstName||!this.state.sponsorLastName||!this.state.sponsorImageLink||!this.state.sponsorEmail||!this.state.sponsorRolePosition||!this.state.sponsorAboutMe||!this.state.sponsorAboutMySchool||!this.state.sponsorWhyInterested)
+        {
+            return(false)
+        }
+        else {
+            return(true)
+        }
+    }
+
     checkAnswers = (event) => {
         // console.log("The entire state: " , this.state);
         event.preventDefault();
-        var runningScore = 0;
-        for (var i = 0; i < 10; i++) {
-            if (this.state.selectedOption[i] === certAnswers[i]){
-                runningScore++;
+        // call validate function
+        this.checkFirstNameError;
+        let validationFlag = this.fieldValidation()
+        if (validationFlag){
+            var runningScore = 0;
+            for (var i = 0; i < 10; i++) {
+                if (this.state.selectedOption[i] === certAnswers[i]){
+                    runningScore++;
+                }
             }
-        }
-        // console.log("Running score before setting state: " + runningScore);
-        this.setState({
-            sponsorTestScore: runningScore
-          }, () => {
-            // console.log("I guess the state has been set?");
-            API
-            .saveApplication(
-                this.state.sponsorFirstName,
-                this.state.sponsorLastName,
-                this.state.sponsorImageLink,
-                this.state.sponsorEmail,
-                this.state.sponsorRolePosition,
-                this.state.sponsorAboutMe,
-                this.state.sponsorAboutMySchool,
-                this.state.sponsorWhyInterested,
-                this.state.sponsorTestScore
-            )
-            .then(res => {
+            // console.log("Running score before setting state: " + runningScore);
             this.setState({
-                selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                sponsorFirstName: "",
-                sponsorLastName: "",
-                sponsorImageLink: "",
-                sponsorEmail: "",
-                sponsorRolePosition: "",
-                sponsorAboutMe: "",
-                sponsorAboutMySchool: "",
-                sponsorWhyInterested: "",
-                sponsorTestScore: "",
-                redirect: true
+                sponsorTestScore: runningScore
+            }, () => {
+                // console.log("I guess the state has been set?");
+                API
+                .saveApplication(
+                    this.state.sponsorFirstName,
+                    this.state.sponsorLastName,
+                    this.state.sponsorImageLink,
+                    this.state.sponsorEmail,
+                    this.state.sponsorRolePosition,
+                    this.state.sponsorAboutMe,
+                    this.state.sponsorAboutMySchool,
+                    this.state.sponsorWhyInterested,
+                    this.state.sponsorTestScore
+                )
+                .then(res => {
+                this.setState({
+                    selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    sponsorFirstName: "",
+                    sponsorLastName: "",
+                    sponsorImageLink: "",
+                    sponsorEmail: "",
+                    sponsorRolePosition: "",
+                    sponsorAboutMe: "",
+                    sponsorAboutMySchool: "",
+                    sponsorWhyInterested: "",
+                    sponsorTestScore: "",
+                    redirect: true
+                });
+                // this.props.history.replace('/thankyou');
+                // if (this.state.redirect) {
+                //     return <Redirect to ='/thankyou' />
+                // }
+                }).catch(err => {
+                console.log(err);
+                });
+                // console.log("The entire state: " , this.state);
+                // console.log("Test score in the state:" , this.state.sponsorTestScore);
+                // console.log("Test score in the state at the end:" , this.state.sponsorTestScore);
             });
-            // this.props.history.replace('/thankyou');
-            // if (this.state.redirect) {
-            //     return <Redirect to ='/thankyou' />
-            // }
-            }).catch(err => {
-            console.log(err);
-            });
-            // console.log("The entire state: " , this.state);
-            // console.log("Test score in the state:" , this.state.sponsorTestScore);
-            // console.log("Test score in the state at the end:" , this.state.sponsorTestScore);
-          });
 
-
+        }
     }
 
     handleOptionChange =  (param) => (changeEvent) => {
@@ -142,15 +180,18 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorFirstName}
                         /> 
+                         {(!this.state.sponsorFirstName && this.state.submitFlag ) ? <div className="error-text">Firstname required</div> : " "}
                         </div>
                         <div className="form-group">
-                    Last Name: <br/> <input 
+                    Last Name: <br/>
+                     <input 
                      className = "form-control"
                         type="text" 
                         name="sponsorLastName"
                         onChange={this.handleInputChange}
                         value={this.state.sponsorLastName} 
                         /> 
+                       
                         </div>
                         <div className="form-group">
                     Photo: <br/> <input
