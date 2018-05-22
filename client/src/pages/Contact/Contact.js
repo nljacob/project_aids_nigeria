@@ -66,7 +66,7 @@ const Contact = () => (
                         
                     </form>                    
                 </div>
-                <div className="col">
+                <div className="col text-center">
             </div>
             </div>
         </div>
