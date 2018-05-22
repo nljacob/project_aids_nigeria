@@ -212,7 +212,7 @@ class Certification extends React.Component {
                 <form>
                 <div className="form-group">
                     First Name: <br/> <input 
-                    className = {this.checkFirstNameError("sponsorFirstName")}
+                    className = {this.checkFieldErrorMessage("sponsorFirstName")}
                         type="text" 
                         name="sponsorFirstName" 
                         onChange={this.handleInputChange}
@@ -223,7 +223,7 @@ class Certification extends React.Component {
                         <div className="form-group">
                     Last Name: <br/>
                      <input 
-                     className = "form-control"
+                     className = {this.checkFieldErrorMessage("sponsorLastName")}
                         type="text" 
                         name="sponsorLastName"
                         onChange={this.handleInputChange}
@@ -233,7 +233,7 @@ class Certification extends React.Component {
                         </div>
                         <div className="form-group">
                     Photo: <br/> <input
-                    className = "form-control" 
+                    className = {this.checkFieldErrorMessage("sponsorImageLink")}
                         type="text" 
                         name="sponsorImageLink" 
                         placeholder="image link for profile"
@@ -244,7 +244,7 @@ class Certification extends React.Component {
                         </div>
                         <div className="form-group">
                     Email Address: <br/> <input 
-                    className = "form-control"
+                    className = {this.checkFieldErrorMessage("sponsorEmail")}
                         type="email" 
                         name="sponsorEmail" 
                         onChange={this.handleInputChange}
@@ -254,7 +254,7 @@ class Certification extends React.Component {
                         </div>
                         <div className="form-group">
                     Role/Position: <br/> <input 
-                    className = "form-control"
+                    className = {this.checkFieldErrorMessage("sponsorRolePosition")}
                         type="text" 
                         name="sponsorRolePosition" 
                         placeholder="teacher, counselor, ..."
@@ -265,7 +265,7 @@ class Certification extends React.Component {
                         </div>
                         <div className="form-group">
                     About Me: <br/> <textarea 
-                    className = "form-control"
+                    className = {this.checkFieldErrorMessage("sponsorAboutMe")}
                         rows="4" 
                         cols="100" 
                         name="sponsorAboutMe" 
@@ -276,7 +276,7 @@ class Certification extends React.Component {
                         </div>
                         <div className="form-group">
                     About My School: <br/> <textarea
-                    className = "form-control" 
+                    className = {this.checkFieldErrorMessage("sponsorAboutMySchool")} 
                         rows="4" 
                         cols="100" 
                         name="sponsorAboutMySchool" 
@@ -287,7 +287,7 @@ class Certification extends React.Component {
                         </div>
                         <div className="form-group">
                     Why we are interested in starting a PAN club: <br/> <textarea 
-                     className = "form-control"
+                     className = {this.checkFieldErrorMessage("sponsorWhyInterested")}
                      rows="4" 
                         cols="100" 
                         name="sponsorWhyInterested" 
