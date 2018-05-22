@@ -19,19 +19,6 @@ const Questions = () => (
         </div>
       </div>
       <div className="row">
-<<<<<<< HEAD
-        <div className="col">
-          <ul>
-            <li><a href="#AIDS">What is AIDS? What causes AIDS?</a></li> 
-            <li><a href="#difference">What is the Difference Between HIV and AIDS?</a></li>
-            <li><a href="#infected">How can I tell if I’m infected with HIV?</a></li>
-            <li><a href="#symptoms">What are the Symptoms of AIDS?</a></li>
-            <li><a href="#transmitted">How is HIV Transmitted?</a></li>
-            <li><a href="#test">What if I test HIV positive?</a></li>
-            <li><a href="#healthy">Is there anything I can do to stay healthy?</a></li>
-          </ul>
-        </div>
-=======
       <div className="col">
       </div>
         <div className="col">
@@ -47,7 +34,6 @@ const Questions = () => (
         </div>
         <div className="col">
       </div>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
       </div>
       <hr />
       <div className="row">
@@ -146,11 +132,7 @@ const Questions = () => (
       <div className="row">
         <div className="col">
           <br />
-<<<<<<< HEAD
-          <h4> id="healthy">Is there anything I can do to stay healthy?</h4>
-=======
           <h4 id="healthy">Is there anything I can do to stay healthy?</h4>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
           <br />
           <p>
             The short answer is yes. There are things that you can do to stay healthy. Once you find a doctor or clinic, your main objective is to get an evaluation of your general health and immune function.

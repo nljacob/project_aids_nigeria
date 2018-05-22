@@ -5,12 +5,6 @@
 .curriculum-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
-<<<<<<< HEAD
-    margin-top: 5%;
-    margin-left: 5%;
-
-}
-=======
     margin-top: 4%;
     color: rgb(224, 30, 61);
 }
@@ -23,4 +17,3 @@
     background-color: rgb(224, 30, 61);
     border-color:  rgb(224, 30, 61);
 } 
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb

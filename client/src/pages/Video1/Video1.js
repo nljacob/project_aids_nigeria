@@ -13,11 +13,8 @@ class App extends Component {
       <div className="curriculum-page">
         <div className="row">
           <div className="col text-center">
-<<<<<<< HEAD
-=======
           <br/>
           <br/>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
             <h3>HIV POSITIVE SYMPTOMS AND SIGNS</h3>
           </div>
         </div>
@@ -30,11 +27,7 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col text-center">
-<<<<<<< HEAD
-          <a class="btn btn-primary" href="/curriculum" role="button">Previous page</a>
-=======
           <a class="btn btn-info" href="/curriculum" role="button">Previous page</a>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
           </div>
         </div>
       </div>

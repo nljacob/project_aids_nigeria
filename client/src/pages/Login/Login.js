@@ -87,13 +87,9 @@ class Login extends Component {
     return (
       <div className="container">
         <br />
-<<<<<<< HEAD
-        <h1>Login</h1>
-=======
         <br />
         <br /> <br />
         <h1 id="login">Login</h1>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email address:</label>
@@ -120,17 +116,10 @@ class Login extends Component {
 
           {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text">Invalid Email/Password </div><br/></div>  : " "}
         
-<<<<<<< HEAD
-          <button type="submit" className="btn btn-default" onSubmit={this.resetForm}>Submit</button>
-        </form>
-        <br />
-        <p>Don't have an account? Sign up <Link to="/signup">here</Link></p>
-=======
           <button type="submit" className="btn btn-info" onSubmit={this.resetForm}>Submit</button>
         </form>
         <br />
         <p>Don't have an account? Sign up <Link id="here" to="/signup">here.</Link></p>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
       </div>
 
     );

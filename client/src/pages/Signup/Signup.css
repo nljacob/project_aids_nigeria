@@ -4,13 +4,10 @@
 
 .error-focus{
     box-shadow: 0 0 0 1px red;
-<<<<<<< HEAD
-=======
 }
 
 #signup {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
     color: rgb(224, 30, 61);
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 }

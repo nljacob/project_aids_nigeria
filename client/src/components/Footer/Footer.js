@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 // import { Link } from "react-router-dom";
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 import "./Footer.css";
 
 const Footer = () => (
@@ -27,12 +23,4 @@ const Footer = () => (
   </footer>
 );
 
-<<<<<<< HEAD
-
-<Link to="/login" className="nav-link">
-          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i>
-          </Link>
-
-=======
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 export default Footer;

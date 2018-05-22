@@ -18,17 +18,10 @@ nav.navbar.navbar-default {
   color: rgb(242, 224, 192) !important;
 }
 
-<<<<<<< HEAD
-.btn {
-  background-color: rgb(186,49,41) !important;
-  color: rgb(242, 224, 192) !important;
-}
-=======
 /* .btn {
   background-color: rgb(186,49,41) !important;
   color: rgb(242, 224, 192) !important;
 } */
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 
 a {
   color: black;
@@ -38,9 +31,4 @@ a {
   color: white;
   /* color: rgb(224, 30, 61); */
   font-size: 130%;
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb

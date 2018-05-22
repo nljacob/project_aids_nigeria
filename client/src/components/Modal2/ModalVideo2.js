@@ -22,12 +22,8 @@ const customStyles = {
    
       this.state = {
         modalIsOpen: false,
-<<<<<<< HEAD
-        selectedOption: 0
-=======
         selectedOption: 0,
         message: ""
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
       };
    
       this.openModal = this.openModal.bind(this);
@@ -60,12 +56,6 @@ const customStyles = {
       console.log(this.props);
       if (this.props.answer == this.state.selectedOption)
       {
-<<<<<<< HEAD
-        alert("Correct Answer!");
-      }
-      else {
-        alert("False, the correct answer was" + letterArray[this.props.answer -1]);
-=======
         this.setState({
           message: "Correct Answer!"
         })
@@ -74,7 +64,6 @@ const customStyles = {
         this.setState({
           message: "False, the correct answer was" + letterArray[this.props.answer -1]
         })
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
       }
     }
   
@@ -99,10 +88,7 @@ const customStyles = {
             {/* <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2> */}
             {/* <button type="button" class="btn btn-secondary" onClick={this.closeModal}>close</button> */}
             {/* <div>I am a modal</div> */}
-<<<<<<< HEAD
-=======
             <div className="text-center" id="modal-message">{this.state.message}</div>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
             <div>{this.props.question}</div>
             <form>
               <fieldset>
@@ -123,13 +109,8 @@ const customStyles = {
                   <input id="radio-d" name="radios" type="radio" value='4' checked={this.state.selectedOption === '4'} onChange={this.handleOptionChange}/> D: {this.props.answerChoiceFour}
                 </label>
               </fieldset>
-<<<<<<< HEAD
-              <button type="button" className="btn btn-primary" onClick={this.submitForm} id="Submit Button">Submit</button> &nbsp;
-              <button type="button" class="btn btn-secondary" onClick={this.closeModal}>Close</button>
-=======
               <button type="button" className="btn btn-info" onClick={this.submitForm} id="Submit Button">Submit</button> &nbsp;
               <button type="button" class="btn btn-info" onClick={this.closeModal}>Close</button>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
             </form>
            
           </Modal>

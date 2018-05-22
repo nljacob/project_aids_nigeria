@@ -3,11 +3,7 @@
 // James, Nitya, and Alicia's work starts here
 import React, { Component } from 'react';
 // import './App.css';
-<<<<<<< HEAD
-import Video from '../../components/Video/Video';
-=======
 // import Video from '../../components/Video/Video';
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 // import ModalVideo from '../../components/Modal/ModalVideo';
 import "./Curriculum.css";
 
@@ -32,10 +28,6 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col text-center">
-<<<<<<< HEAD
-          <a class="btn btn-info" href="/video" role="button">HIV POSITIVE SYMPTOMS AND SIGNS</a>&nbsp;
-          <a class="btn btn-info" href="/video2" role="button">THE SCIENCE OF HIV/AIDS</a>
-=======
           <a id="button-space" className="btn btn-info" href="/video" role="button">HIV POSITIVE SYMPTOMS AND SIGNS</a>
           <a id="button-space"className="btn btn-info" href="/video2" role="button">THE SCIENCE OF HIV/AIDS</a>
           <a id="button-space" className="btn btn-info" href="" role="button">WHAT IS HIV?</a>
@@ -46,7 +38,6 @@ class App extends Component {
           <a id="button-space" className="btn btn-info" href="" role="button">MEDICINE FOR HIV</a>
           <a id="button-space" className="btn btn-info" href="" role="button">CURES FOR HIV</a>
           <a id="button-space" className="btn btn-info" href="" role="button">RESOURCES FOR AIDS</a>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
           </div>
         </div>
       </div>

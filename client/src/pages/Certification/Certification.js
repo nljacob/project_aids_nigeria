@@ -9,10 +9,7 @@ const AppCert = () => (
   <div className="certification-page">
     <br/>
     <br/>
-<<<<<<< HEAD
-=======
     <br/>
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
     <Certification />
   </div>
 );

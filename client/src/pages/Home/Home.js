@@ -6,12 +6,9 @@ import home01 from "../../images/home01.png";
 import home02 from "../../images/home02.jpg";
 import home03 from "../../images/home03.jpg";
 import home04 from "../../images/home04.jpg";
-<<<<<<< HEAD
-=======
 import statimg01 from "../../images/statimg01.png";
 import statimg02 from "../../images/statimg02.png";
 import statimg03 from "../../images/statimg03.png";
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 // import HomeCSS from "Home.css";
 // import Container from "../components/Container";
 // import Row from "../components/Row";
@@ -28,23 +25,10 @@ const Home = () => (
         <div className="col">
         <br />
         <br />
-<<<<<<< HEAD
-          <h1 className="paragraph-header">Our Mission</h1>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <br />
-          <p>
-            Project AIDS Nigeria is organized exclusively for the charitable and educational purpose of helping rural communities in Nigeria combat the HIV/AIDS epidemic. We achieve this goal by providing education for the prevention of HIV/AIDS through a Christian perspective and by working closely with local hospitals to better serve their HIV/AIDS patients.
-          <br />
-            <br />
-=======
         <h1 className="paragraph-header">Our Mission</h1>
           <br />
           <p>
             Project AIDS Nigeria is organized exclusively for the charitable and educational purpose of helping rural communities in Nigeria combat the HIV/AIDS epidemic. We achieve this goal by providing education for the prevention of HIV/AIDS through a Christian perspective and by working closely with local hospitals to better serve their HIV/AIDS patients.
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
             Project AIDS Nigeria (PAN) delivers educational workshops about HIV and other sexually transmitted diseases to prevent new infections and to reduce the stigma associated with HIV.  Project AIDS Nigeria also works closely with local hospitals to help them better serve their HIV/AIDS patients through providing volunteers for certain tasks or aiding with non-medicinal material needs.
           </p>
         </div>
@@ -52,11 +36,7 @@ const Home = () => (
       <div className="row">
         <div className="col">
           <br />
-<<<<<<< HEAD
-          <img src= {home01} id="image-home01" />
-=======
           <img alt="" src= {home01} id="image-home01" />
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
         </div>
         <div className="col">
           <br />
@@ -64,10 +44,6 @@ const Home = () => (
           <p>
           We use a peer to peer teaching method. PAN recruits student leaders from the local secondary schools who receive training on the topic of HIV/AIDS and other sexually transmitted diseases and in turn relay the information to their peers at their respective schools.  The PAN Student Assistants each lead their own groups to educate their peers on the topic of HIV. They receive coaching and mentoring from a PAN instructor who supports them and helps to ensure that the students are adequately informed on the topics they set out to discuss.
           </p>
-<<<<<<< HEAD
-
-=======
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
           </div>
       </div>
       <div className="row">
@@ -75,10 +51,6 @@ const Home = () => (
         <br />
         <br/>
           <h1 className="paragraph-header">Our Students</h1>
-<<<<<<< HEAD
-        
-=======
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
         <br/>
           <p>
           Our students come from all over Gokana Local Government area and are between the ages of 14 through 19. They are each affiliated with one of the following secondary schools:
@@ -96,12 +68,7 @@ const Home = () => (
           <br/>
         </div>
         <div className="col-6">
-<<<<<<< HEAD
-        <img src= {home02} id="image-home02" />
-
-=======
         <img alt="" src= {home02} id="image-home02" />
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
         </div>
       </div>
       <div className="row">
@@ -115,14 +82,6 @@ const Home = () => (
       <br/>
       <div className="row">
         <div className="col-6">
-<<<<<<< HEAD
-          <img src= {home03} id="image-home03" />
-        </div>
-        <div className="col-6">
-        <img src= {home04} id="image-home04" />
-        </div>      
-      </div>
-=======
           <img alt="" src= {home03} id="image-home03" />
         </div>
         <div className="col-6">
@@ -141,7 +100,6 @@ const Home = () => (
         <img alt="" src= {statimg03} id="statimgs"/>
         </div>     
       </div> */}
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
     </div>
   </div>
 )

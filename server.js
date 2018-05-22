@@ -9,10 +9,6 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 // Setting CORS so that any website can
 // Access our API
 app.use((req, res, next) => {
@@ -78,7 +74,6 @@ app.get('/api/user/:id', isAuthenticated, (req, res) => {
   }).catch(err => res.status(400).send(err));
 });
 
-<<<<<<< HEAD
 //== v James 5/21/18 v ==
 
 app.use('/assets', express.static(path.resolve('step-3/assets'), { maxAge: '30 days' }));
@@ -101,9 +96,6 @@ app.post('/writings', (req, res) => {
 });
 
 //== ^ ^ ==
-=======
-//Add blog routes here
->>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
