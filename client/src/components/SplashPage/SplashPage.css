@@ -1,0 +1,37 @@
+.SplashPage {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.SplashPage::after {
+  content: "";
+  display: block;
+  opacity: .4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+.SplashPage * {
+  position: relative;
+  z-index: 2;
+}
+
+.SplashPage h1, .SplashPage h2 {
+  color: white;
+}
+
+.SplashPage h1 {
+  font-size: 60px;
+  padding-top: 140px;
+  margin-top: 0;
+}
+
+#handimage {
+  height: 100vh;
+}
