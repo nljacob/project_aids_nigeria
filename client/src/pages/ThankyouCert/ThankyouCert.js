@@ -15,7 +15,7 @@ class ThankyouApp extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col text-center">
             <p>You will receive an email from us within two weeks to discuss next steps.  We look forward to working with you to bring PAN to your school!   </p>
             <br/>
           </div>

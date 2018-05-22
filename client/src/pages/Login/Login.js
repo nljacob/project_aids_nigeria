@@ -94,8 +94,7 @@ class Login extends Component {
             <br/>
             <br/> 
             <br/>
-            <h1 id="login">Log In</h1>
-            <br/>
+            <h1 id="login">Login</h1>
             <br/>
             <form onSubmit={this.handleFormSubmit}>
               
