@@ -88,7 +88,7 @@ const customStyles = {
             {/* <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2> */}
             {/* <button type="button" class="btn btn-secondary" onClick={this.closeModal}>close</button> */}
             {/* <div>I am a modal</div> */}
-            <div>{this.state.message}</div>
+            <div className="text-center">{this.state.message}</div>
             <div>{this.props.question}</div>
             <form>
               <fieldset>
@@ -109,8 +109,8 @@ const customStyles = {
                   <input id="radio-d" name="radios" type="radio" value='4' checked={this.state.selectedOption === '4'} onChange={this.handleOptionChange}/> D: {this.props.answerChoiceFour}
                 </label>
               </fieldset>
-              <button type="button" className="btn btn-primary" onClick={this.submitForm} id="Submit Button">Submit</button> &nbsp;
-              <button type="button" class="btn btn-secondary" onClick={this.closeModal}>Close</button>
+              <button type="button" className="btn btn-info" onClick={this.submitForm} id="Submit Button">Submit</button> &nbsp;
+              <button type="button" class="btn btn-info" onClick={this.closeModal}>Close</button>
             </form>
            
           </Modal>
