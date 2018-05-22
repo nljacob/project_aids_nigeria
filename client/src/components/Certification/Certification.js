@@ -96,10 +96,10 @@ class Certification extends React.Component {
     inputFieldValidation() {
         if (!this.state.sponsorFirstName||!this.state.sponsorLastName||!this.state.sponsorImageLink||!this.state.sponsorEmail||!this.state.sponsorRolePosition||!this.state.sponsorAboutMe||!this.state.sponsorAboutMySchool||!this.state.sponsorWhyInterested)
         {
-            return(false)
+            return(false);
         }
         else {
-            return(true)
+            return(true);
         }
     }
 
@@ -311,6 +311,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question1" value="c" checked={this.state.selectedOption[0] === 'c'} onChange={this.handleOptionChange(0)}/>One of the main ways to get HIV is through unprotected sex. <br/>
                         <input type="radio" name="Question1" value="d" checked={this.state.selectedOption[0] === 'd'} onChange={this.handleOptionChange(0)}/>A mother infected with HIV can pass the virus to her baby. <br/>
                         </div>
+                        {(!this.state.selectedOption[0] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -324,6 +325,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question2" value="c" checked={this.state.selectedOption[1] === 'c'} onChange={this.handleOptionChange(1)}/>If left untreated, will take 30 years before damaging the immune system so severely it can no longer defend itself <br/>
                         <input type="radio" name="Question2" value="d" checked={this.state.selectedOption[1] === 'd'} onChange={this.handleOptionChange(1)}/>Attacks the immune system <br/>
                     </div>
+                    {(!this.state.selectedOption[1] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -337,6 +339,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question3" value="c" checked={this.state.selectedOption[2] === 'c'} onChange={this.handleOptionChange(2)}/>Use Lambskin or Novelty condoms <br/>
                         <input type="radio" name="Question3" value="d" checked={this.state.selectedOption[2] === 'd'} onChange={this.handleOptionChange(2)}/>Ask your healthcare professional if the blood product you are receiving (blood transfusion, organ or tissue transplant) has been tested for HIV <br/>
                    </div>
+                   {(!this.state.selectedOption[2] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -352,6 +355,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question4" value="d" checked={this.state.selectedOption[3] === 'd'} onChange={this.handleOptionChange(3)}/>by wearing mosquito repellent any time you go outside<br/>
 
                     </div>
+                    {(!this.state.selectedOption[3] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -366,6 +370,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question5" value="c" checked={this.state.selectedOption[4] === 'c'} onChange={this.handleOptionChange(4)}/>A type of red blood cell called a Lymphocyte cell <br/>
                         <input type="radio" name="Question5" value="d" checked={this.state.selectedOption[4] === 'd'} onChange={this.handleOptionChange(4)}/>A type of white blood cell called a T-helper cell. <br/>
                    </div>
+                   {(!this.state.selectedOption[4] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
