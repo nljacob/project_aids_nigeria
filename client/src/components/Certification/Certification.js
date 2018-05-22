@@ -94,7 +94,7 @@ class Certification extends React.Component {
    }
     
     inputFieldValidation() {
-        if (!this.state.sponsorFirstName||!this.state.sponsorLastName||!this.state.sponsorImageLink||!this.state.sponsorEmail||!this.state.sponsorRolePosition||!this.state.sponsorAboutMe||!this.state.sponsorAboutMySchool||!this.state.sponsorWhyInterested)
+        if (!this.state.sponsorFirstName||!this.state.sponsorLastName||!this.state.sponsorImageLink||!this.state.sponsorEmail||!this.state.sponsorRolePosition||!this.state.sponsorAboutMe||!this.state.sponsorAboutMySchool||!this.state.sponsorWhyInterested||!this.state.selectedOption[0]||!this.state.selectedOption[1]||!this.state.selectedOption[2]||!this.state.selectedOption[3]||!this.state.selectedOption[4]||!this.state.selectedOption[5]||!this.state.selectedOption[6]||!this.state.selectedOption[7]||!this.state.selectedOption[8]||!this.state.selectedOption[9])
         {
             return(false);
         }
@@ -272,7 +272,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMe}
                         /> 
-                        {(!this.state.sponsorAboutMe && this.state.submitFlag ) ? <div className="error-text">Field required</div> : " "}
+                        {(!this.state.sponsorAboutMe && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                         </div>
                         <div className="form-group">
                     About My School: <br/> <textarea
@@ -283,7 +283,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMySchool}
                         /> 
-                        {(!this.state.sponsorAboutMySchool && this.state.submitFlag ) ? <div className="error-text">Field required</div> : " "}
+                        {(!this.state.sponsorAboutMySchool && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                         </div>
                         <div className="form-group">
                     Why we are interested in starting a PAN club: <br/> <textarea 
@@ -294,7 +294,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorWhyInterested}
                         /> 
-                        {(!this.state.sponsorWhyInterested && this.state.submitFlag ) ? <div className="error-text">Field required</div> : " "}
+                        {(!this.state.sponsorWhyInterested && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                         </div>
 
                     <br/>
@@ -386,6 +386,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question6" value="d" checked={this.state.selectedOption[5] === 'd'} onChange={this.handleOptionChange(5)}/>Causes liver disease <br/>
 
                    </div>
+                   {(!this.state.selectedOption[5] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -401,6 +402,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question7" value="d" checked={this.state.selectedOption[6] === 'd'} onChange={this.handleOptionChange(6)}/>There is no need to discuss this with your doctor as HIV cannot be passed from mother to baby <br/>
 
                    </div>
+                   {(!this.state.selectedOption[6] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -416,6 +418,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question8" value="d" checked={this.state.selectedOption[7] === 'd'} onChange={this.handleOptionChange(7)}/>Their immune system is so strong it does more harm than good <br/>
 
                    </div>
+                   {(!this.state.selectedOption[7] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -429,6 +432,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question9" value="c" checked={this.state.selectedOption[8] === 'c'} onChange={this.handleOptionChange(8)}/>Adult Immune Deficiency Syndrome <br/>
                         <input type="radio" name="Question9" value="d" checked={this.state.selectedOption[8] === 'd'} onChange={this.handleOptionChange(8)}/>Adenine Immune Deficiency Syndrome <br/>
                    </div>
+                   {(!this.state.selectedOption[8] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -444,6 +448,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question10" value="d" checked={this.state.selectedOption[9] === 'd'} onChange={this.handleOptionChange(9)}/>Avoid getting pregnant while treating a patient with HIV/AIDS <br/>
 
                    </div>
+                   {(!this.state.selectedOption[9] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
                     <br />
                     <button type="button" className="btn btn-info" onClick={this.checkAnswers} id="Submit Button">Submit</button>
