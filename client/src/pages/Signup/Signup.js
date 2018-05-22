@@ -91,7 +91,13 @@ class Signup extends Component {
     return (
       <div className="container">
         <br />
+<<<<<<< HEAD
         <h1>Signup</h1>
+=======
+        <br />
+        <br /> <br />
+        <h1 id="signup">Signup</h1>
+>>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username:</label>
@@ -124,10 +130,17 @@ class Signup extends Component {
                {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
           </div>
           {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text"> Username or Email already exists </div><br/></div>  : " "}
+<<<<<<< HEAD
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         <br />
         <p>Already have an account? Login <Link to="/login">here.</Link></p>
+=======
+          <button type="submit" className="btn btn-info">Submit</button>
+        </form>
+        <br />
+        <p>Already have an account? Login <Link id="here" to="/login">here.</Link></p>
+>>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
       </div>
     );
   }

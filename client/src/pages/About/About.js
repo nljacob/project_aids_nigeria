@@ -33,13 +33,21 @@ const About = () => (
 
                 </div>
                 <div className="col-4">
+<<<<<<< HEAD
                     <img src= {about01} id="image-about01" />
+=======
+                    <img alt="" src= {about01} id="image-about01" />
+>>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
                 </div>
             </div>
             <div className="row">
                 <div className="col">
                     <p> Thank you sincerely for your support,
                     <br/>
+<<<<<<< HEAD
+=======
+                    <br/>
+>>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
                     Domale Dube Keys
                     <br/>
                     Project AIDS Nigeria
@@ -51,7 +59,11 @@ const About = () => (
             </div>
             <div className="row">
             <div className="col text-center">
+<<<<<<< HEAD
             <img src= {about02} id="image-about02" />
+=======
+            <img alt="" src= {about02} id="image-about02" />
+>>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
             </div>
             </div>
         </div>

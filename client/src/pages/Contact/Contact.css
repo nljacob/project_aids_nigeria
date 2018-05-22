@@ -4,4 +4,46 @@
     margin-top: 5%;
     margin-left: 5%;
     letter-spacing: .8px;
+<<<<<<< HEAD
 }
+=======
+    color: rgb(224, 30, 61);
+}
+
+.contact-page h4 {
+    color: rgb(224, 30, 61);
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    margin-top: 5%;
+    margin-left: 5%;
+    letter-spacing: .8px;
+}
+
+.contact-page h6 {
+    /* text-transform: uppercase; */
+    margin-top: 5%;
+    margin-left: 5%;
+    letter-spacing: .10px;
+}
+
+
+#name {
+    width: 256px;
+}
+
+#email {
+    width: 256px;
+}
+
+#comment {
+    width: 406px;
+    height: 106px;
+}
+
+.contact-page #map-image {
+    width: 100%;
+    height: 90%;
+    
+}
+
+>>>>>>> dc45c8a68e2baeb9410ca4155fb3d8f8f51c12fb
