@@ -1,7 +1,7 @@
 import React from "react";
 import SplashPage from "../../components/SplashPage";
 import "./Home.css";
-import handimagegray from "../../images/handimagegray.jpg";
+import handimagegray from "../../images/handimagegray.png";
 import home01 from "../../images/home01.png";
 import home02 from "../../images/home02.jpg";
 import home03 from "../../images/home03.jpg";

@@ -18,6 +18,10 @@ const Contact = () => (
                 </div>
             </div>
             <div className="row">
+            <div className="col-6">
+                <img alt="" src= {map} id="map-image" />
+            </div>
+                
                 <div className="col-6 text-center">
                     <h4>ADDRESS:</h4>
                     <h6>No: 22 Bank Road Bori​<br/>Ogoni, Rivers State, Nigeria</h6>
@@ -26,13 +30,11 @@ const Contact = () => (
                     <h4>EMAIL:</h4>
                     <h6>aidsnigeria@gmail.com<br/>panstudentsconnect@gmail.com </h6>
                 </div>
-                <div className="col-6">
-                <img alt="" src= {map} id="map-image" />
-                </div>
+                
                 </div>
                 <div className="row">
                 <div className="col text-center">
-                <h3>SEND US A MESSAGE</h3>
+                <h3 id="sendmessage">SEND US A MESSAGE</h3>
                 <br/>
                 </div>
                 </div>
@@ -45,27 +47,22 @@ const Contact = () => (
             <div className="row">
             <div className="col">
             </div>
-            <div className="col">
+            <div className="col text-center">
                     <form>
-                        <label htmlFor="name">Name:</label><br/>
-                        <input id="name" type="text" required/>
                         
+                        <input id="name" type="text" placeholder="Name" required/>
+                        <br/>
+                        <br/>
+                        
+                        <input id="email" type="email" placeholder="Email" required/>
                         <br/>
                         <br/>
 
-                        <label htmlFor="email">Email:</label><br/>
-                        <input id="email" type="email" required/>
-
+                        <textarea id="comment"name="message" placeholder="Comment"/>
                         <br/>
                         <br/>
 
-                        <label htmlFor="comment">Comment: &nbsp;</label><br/>
-                        <textarea id="comment"name="message" rows="10" cols="30"/>
-
-                        <br/>
-                        <br/>
-
-                        <button type="button" className="btn btn-info">Submit</button>
+                        <button type="button" className="btn btn-info">SUBMIT</button>
                         
                     </form>                    
                 </div>
