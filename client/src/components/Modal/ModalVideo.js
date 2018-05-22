@@ -88,7 +88,7 @@ const customStyles = {
             {/* <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2> */}
             {/* <button type="button" class="btn btn-secondary" onClick={this.closeModal}>close</button> */}
             {/* <div>I am a modal</div> */}
-            <div className="text-center">{this.state.message}</div>
+            <div className="text-center" id="modal-message">{this.state.message}</div>
             <div>{this.props.question}</div>
             <form>
               <fieldset>
