@@ -18,58 +18,38 @@ function WritingList(props) {
 	);
 }
 
-function CreateWriting(props) { // become Frankenstein
-	/*
-	 * - Grabs text values from `MyTitle` and `MyText` inputs;
-	 * - send values to parent component (<App />)
-	 * - reset inputs
-	 */
-	const submit = () => {
-		const MyTitleInput = document.querySelector('#MyTitle');
-		const MyTextInput = document.querySelector('#MyText');
-
-		props.onAddWriting({
-			MyTitle: MyTitleInput.value,
-			MyText: MyTextInput.value
-		});
-
-		MyTitleInput.value = "";
-		MyTextInput.value = "";
-	}
-
-	return (
-		<div >
-                <br />
-                <br />
-                <br />
-			<input id="MyTitle" className="form-control"
-				placeholder="My Title" />
-				<br/>
-			<textarea id="MyText" className="form-control"
-				placeholder="My Text" rows = "10" />
-				<br/>
-			<button className="btn btn-primary" type="button" onClick={submit}>
-				Add Blog Post
-			</button>
-		</div>
-	);
-}
-
 class Blog extends React.Component {
 	constructor() {
 		super();
 
 		this.state = {
-			writings: []
+			writings: [],
+			blogAccepted: false,
+			MyTitle: "",
+			MyText: ""
 		};
+
 	}
+
+
 
 	componentWillMount() {
 		fetch('/writings')
 			.then(res => res.json())
 			.then(data => {
-				this.setState({  writings: data });
+				this.setState({ writings: data });
 			})
+	}
+
+	submit = () => {
+		
+		let addWritingData = {
+			MyTitle: this.state.MyTitle,
+			MyText: this.state.MyText
+		};
+		
+		this.handleAddWriting(addWritingData);
+
 	}
 
 	/*
@@ -83,21 +63,39 @@ class Blog extends React.Component {
 			},
 			body: JSON.stringify(newWriting)
 		})
-		.then(res => res.json())
-		.then(writing => {
-			this.setState({
-				writings: this.state.writings.concat(writing)
+			.then(res => res.json())
+			.then(writing => {
+				this.setState({
+					writings: this.state.writings.concat(writing),
+					blogAccepted: true,
+					MyText: "",
+					MyTitle: ""
+				});
 			});
+	}
+
+	handleFormInput = e => {
+		let {name, value} = e.target;
+		this.setState({
+			[name]: value
 		});
 	}
 
 	render() {
 		return (
-			
-            <div>
-                <br style= {{lineHeight: 8}}></br>
-				<WritingList writings={this.state.writings} />
-				<CreateWriting onAddWriting={this.handleAddWriting.bind(this)}/>
+			<div>
+				<div >
+					<input id="MyTitle" name="MyTitle" className="form-control"
+						placeholder="My Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
+					<br />
+					<textarea id="MyText" name="MyText" className="form-control"
+						placeholder="My Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
+					<br />
+					{this.state.blogAccepted ? <div className="error-text">Your post has been accepted.  Check the Blog tab to marvel at your work!</div> : " "}
+					<button className="btn btn-primary" type="button" onClick={this.submit}>
+						Add Blog Post
+					</button>
+				</div>
 			</div>
 		);
 	}
