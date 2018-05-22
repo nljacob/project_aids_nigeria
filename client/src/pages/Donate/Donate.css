@@ -13,3 +13,7 @@
 .donate-page #donatebutton {
     width: 10%;
 }
+
+.donate-page #centered {
+    text-align: center;
+}

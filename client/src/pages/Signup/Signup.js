@@ -132,7 +132,7 @@ class Signup extends Component {
                {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
           </div>
           {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text"> Username or Email already exists </div><br/></div>  : " "}
-          <button type="submit" className="btn">SUBMIT</button>
+          <button type="submit" className="btn btn-info">Submit</button>
         </form>
         <br/>
         <p>Already have an account? Login <Link id="here" to="/login">here.</Link></p>

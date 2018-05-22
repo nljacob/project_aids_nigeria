@@ -1,3 +1,11 @@
+.error-text{
+    color : red;
+}
+
+.error-focus{
+    box-shadow: 0 0 0 1px red;
+}
+
 .certification-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
@@ -16,4 +24,9 @@
 
 input[type="radio"] {
     margin: 0 8px 0 8px;
+}
+
+/* ModalVideo */
+#modal-message { 
+    color: rgb(224, 30, 61);
 }

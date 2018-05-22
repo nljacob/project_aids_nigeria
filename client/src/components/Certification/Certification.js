@@ -23,6 +23,7 @@ class Certification extends React.Component {
         sponsorAboutMySchool: "",
         sponsorWhyInterested: "",
         sponsorTestScore: "",
+        submitFlag: false,
         redirect: false
     };
 
@@ -33,59 +34,134 @@ class Certification extends React.Component {
         });
       }
 
+      checkFieldErrorMessage(field){
+          let formControl = "form-control";
+        switch(field){
+
+            case "sponsorFirstName":
+            if(!this.state.sponsorFirstName && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+                }
+            break;
+
+            case "sponsorLastName":
+            if(!this.state.sponsorLastName && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+                }
+            break;
+
+            case "sponsorImageLink":
+            if(!this.state.sponsorImageLink && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+            }
+            break;
+
+            case "sponsorEmail":
+            if(!this.state.sponsorEmail && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+            }
+            break;
+
+            case "sponsorRolePosition":
+            if(!this.state.sponsorRolePosition && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+            }
+            break;
+
+            case "sponsorAboutMe":
+            if(!this.state.sponsorAboutMe && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+                }
+                break;
+
+                case "sponsorAboutMySchool":
+                if(!this.state.sponsorAboutMySchool && this.state.submitFlag){
+                    formControl = "form-control error-focus"; 
+                }
+                break;
+
+                case "sponsorWhyInterested":
+                if(!this.state.sponsorWhyInterested && this.state.submitFlag){
+                    formControl = "form-control error-focus"; 
+                }
+                break;
+                
+                default:
+                formControl = "form-control";
+            }
+
+        return formControl;
+   }
+    
+    inputFieldValidation() {
+        if (!this.state.sponsorFirstName||!this.state.sponsorLastName||!this.state.sponsorImageLink||!this.state.sponsorEmail||!this.state.sponsorRolePosition||!this.state.sponsorAboutMe||!this.state.sponsorAboutMySchool||!this.state.sponsorWhyInterested||!this.state.selectedOption[0]||!this.state.selectedOption[1]||!this.state.selectedOption[2]||!this.state.selectedOption[3]||!this.state.selectedOption[4]||!this.state.selectedOption[5]||!this.state.selectedOption[6]||!this.state.selectedOption[7]||!this.state.selectedOption[8]||!this.state.selectedOption[9])
+        {
+            return(false);
+        }
+        else {
+            return(true);
+        }
+    }
+
     checkAnswers = (event) => {
         // console.log("The entire state: " , this.state);
         event.preventDefault();
-        var runningScore = 0;
-        for (var i = 0; i < 10; i++) {
-            if (this.state.selectedOption[i] === certAnswers[i]){
-                runningScore++;
-            }
-        }
-        // console.log("Running score before setting state: " + runningScore);
         this.setState({
-            sponsorTestScore: runningScore
-          }, () => {
-            // console.log("I guess the state has been set?");
-            API
-            .saveApplication(
-                this.state.sponsorFirstName,
-                this.state.sponsorLastName,
-                this.state.sponsorImageLink,
-                this.state.sponsorEmail,
-                this.state.sponsorRolePosition,
-                this.state.sponsorAboutMe,
-                this.state.sponsorAboutMySchool,
-                this.state.sponsorWhyInterested,
-                this.state.sponsorTestScore
-            )
-            .then(res => {
+            submitFlag : true
+        });
+        // call validate function
+        let validationFlag = this.inputFieldValidation()
+        if (validationFlag){
+            var runningScore = 0;
+            for (var i = 0; i < 10; i++) {
+                if (this.state.selectedOption[i] === certAnswers[i]){
+                    runningScore++;
+                }
+            }
+            // console.log("Running score before setting state: " + runningScore);
             this.setState({
-                selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                sponsorFirstName: "",
-                sponsorLastName: "",
-                sponsorImageLink: "",
-                sponsorEmail: "",
-                sponsorRolePosition: "",
-                sponsorAboutMe: "",
-                sponsorAboutMySchool: "",
-                sponsorWhyInterested: "",
-                sponsorTestScore: "",
-                redirect: true
+                sponsorTestScore: runningScore
+            }, () => {
+                // console.log("I guess the state has been set?");
+                API
+                .saveApplication(
+                    this.state.sponsorFirstName,
+                    this.state.sponsorLastName,
+                    this.state.sponsorImageLink,
+                    this.state.sponsorEmail,
+                    this.state.sponsorRolePosition,
+                    this.state.sponsorAboutMe,
+                    this.state.sponsorAboutMySchool,
+                    this.state.sponsorWhyInterested,
+                    this.state.sponsorTestScore
+                )
+                .then(res => {
+                this.setState({
+                    selectedOption: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    sponsorFirstName: "",
+                    sponsorLastName: "",
+                    sponsorImageLink: "",
+                    sponsorEmail: "",
+                    sponsorRolePosition: "",
+                    sponsorAboutMe: "",
+                    sponsorAboutMySchool: "",
+                    sponsorWhyInterested: "",
+                    sponsorTestScore: "",
+                    redirect: true
+                });
+                // this.props.history.replace('/thankyou');
+                // if (this.state.redirect) {
+                //     return <Redirect to ='/thankyou' />
+                // }
+                }).catch(err => {
+                console.log(err);
+                });
+                // console.log("The entire state: " , this.state);
+                // console.log("Test score in the state:" , this.state.sponsorTestScore);
+                // console.log("Test score in the state at the end:" , this.state.sponsorTestScore);
             });
-            // this.props.history.replace('/thankyou');
-            // if (this.state.redirect) {
-            //     return <Redirect to ='/thankyou' />
-            // }
-            }).catch(err => {
-            console.log(err);
-            });
-            // console.log("The entire state: " , this.state);
-            // console.log("Test score in the state:" , this.state.sponsorTestScore);
-            // console.log("Test score in the state at the end:" , this.state.sponsorTestScore);
-          });
 
-
+        }
     }
 
     handleOptionChange =  (param) => (changeEvent) => {
@@ -101,7 +177,7 @@ class Certification extends React.Component {
     render() {
         
         const {redirect} = this.state;
-
+         console.log(redirect);
         if (redirect) {
             return <Redirect to='/thankyou' />
         }
@@ -136,80 +212,89 @@ class Certification extends React.Component {
                 <form>
                 <div className="form-group">
                     First Name: <br/> <input 
-                    className = "form-control"
+                    className = {this.checkFieldErrorMessage("sponsorFirstName")}
                         type="text" 
                         name="sponsorFirstName" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorFirstName}
                         /> 
+                         {(!this.state.sponsorFirstName && this.state.submitFlag ) ? <div className="error-text">Firstname required</div> : " "}
                         </div>
                         <div className="form-group">
-                    Last Name: <br/> <input 
-                     className = "form-control"
+                    Last Name: <br/>
+                     <input 
+                     className = {this.checkFieldErrorMessage("sponsorLastName")}
                         type="text" 
                         name="sponsorLastName"
                         onChange={this.handleInputChange}
                         value={this.state.sponsorLastName} 
                         /> 
+                       {(!this.state.sponsorLastName && this.state.submitFlag ) ? <div className="error-text">Lastname required</div> : " "}
                         </div>
                         <div className="form-group">
                     Photo: <br/> <input
-                    className = "form-control" 
+                    className = {this.checkFieldErrorMessage("sponsorImageLink")}
                         type="text" 
                         name="sponsorImageLink" 
                         placeholder="image link for profile"
                         onChange={this.handleInputChange}
                         value={this.state.sponsorImageLink}
                         /> 
+                        {(!this.state.sponsorImageLink && this.state.submitFlag ) ? <div className="error-text">Image URL required</div> : " "}
                         </div>
                         <div className="form-group">
                     Email Address: <br/> <input 
-                    className = "form-control"
+                    className = {this.checkFieldErrorMessage("sponsorEmail")}
                         type="email" 
                         name="sponsorEmail" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorEmail}
                         />
+                        {(!this.state.sponsorEmail && this.state.submitFlag ) ? <div className="error-text">Email required</div> : " "}
                         </div>
                         <div className="form-group">
                     Role/Position: <br/> <input 
-                    className = "form-control"
+                    className = {this.checkFieldErrorMessage("sponsorRolePosition")}
                         type="text" 
                         name="sponsorRolePosition" 
                         placeholder="teacher, counselor, ..."
                         onChange={this.handleInputChange}
                         value={this.state.sponsorRolePosition}
                         /> 
+                        {(!this.state.sponsorRolePosition && this.state.submitFlag ) ? <div className="error-text">Enter a role/position</div> : " "}
                         </div>
                         <div className="form-group">
                     About Me: <br/> <textarea 
-                    className = "form-control"
+                    className = {this.checkFieldErrorMessage("sponsorAboutMe")}
                         rows="4" 
                         cols="100" 
                         name="sponsorAboutMe" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMe}
                         /> 
+                        {(!this.state.sponsorAboutMe && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                         </div>
                         <div className="form-group">
                     About My School: <br/> <textarea
-                    className = "form-control" 
+                    className = {this.checkFieldErrorMessage("sponsorAboutMySchool")} 
                         rows="4" 
                         cols="100" 
                         name="sponsorAboutMySchool" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMySchool}
                         /> 
+                        {(!this.state.sponsorAboutMySchool && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                         </div>
                         <div className="form-group">
                     Why we are interested in starting a PAN club: <br/> <textarea 
-                     className = "form-control"
+                     className = {this.checkFieldErrorMessage("sponsorWhyInterested")}
                      rows="4" 
                         cols="100" 
                         name="sponsorWhyInterested" 
                         onChange={this.handleInputChange}
                         value={this.state.sponsorWhyInterested}
                         /> 
+                        {(!this.state.sponsorWhyInterested && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                         </div>
 
                     <br/>
@@ -226,6 +311,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question1" value="c" checked={this.state.selectedOption[0] === 'c'} onChange={this.handleOptionChange(0)}/>One of the main ways to get HIV is through unprotected sex. <br/>
                         <input type="radio" name="Question1" value="d" checked={this.state.selectedOption[0] === 'd'} onChange={this.handleOptionChange(0)}/>A mother infected with HIV can pass the virus to her baby. <br/>
                         </div>
+                        {(!this.state.selectedOption[0] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -239,6 +325,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question2" value="c" checked={this.state.selectedOption[1] === 'c'} onChange={this.handleOptionChange(1)}/>If left untreated, will take 30 years before damaging the immune system so severely it can no longer defend itself <br/>
                         <input type="radio" name="Question2" value="d" checked={this.state.selectedOption[1] === 'd'} onChange={this.handleOptionChange(1)}/>Attacks the immune system <br/>
                     </div>
+                    {(!this.state.selectedOption[1] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -252,6 +339,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question3" value="c" checked={this.state.selectedOption[2] === 'c'} onChange={this.handleOptionChange(2)}/>Use Lambskin or Novelty condoms <br/>
                         <input type="radio" name="Question3" value="d" checked={this.state.selectedOption[2] === 'd'} onChange={this.handleOptionChange(2)}/>Ask your healthcare professional if the blood product you are receiving (blood transfusion, organ or tissue transplant) has been tested for HIV <br/>
                    </div>
+                   {(!this.state.selectedOption[2] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -267,6 +355,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question4" value="d" checked={this.state.selectedOption[3] === 'd'} onChange={this.handleOptionChange(3)}/>by wearing mosquito repellent any time you go outside<br/>
 
                     </div>
+                    {(!this.state.selectedOption[3] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -281,6 +370,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question5" value="c" checked={this.state.selectedOption[4] === 'c'} onChange={this.handleOptionChange(4)}/>A type of red blood cell called a Lymphocyte cell <br/>
                         <input type="radio" name="Question5" value="d" checked={this.state.selectedOption[4] === 'd'} onChange={this.handleOptionChange(4)}/>A type of white blood cell called a T-helper cell. <br/>
                    </div>
+                   {(!this.state.selectedOption[4] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -296,6 +386,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question6" value="d" checked={this.state.selectedOption[5] === 'd'} onChange={this.handleOptionChange(5)}/>Causes liver disease <br/>
 
                    </div>
+                   {(!this.state.selectedOption[5] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -311,6 +402,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question7" value="d" checked={this.state.selectedOption[6] === 'd'} onChange={this.handleOptionChange(6)}/>There is no need to discuss this with your doctor as HIV cannot be passed from mother to baby <br/>
 
                    </div>
+                   {(!this.state.selectedOption[6] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -326,6 +418,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question8" value="d" checked={this.state.selectedOption[7] === 'd'} onChange={this.handleOptionChange(7)}/>Their immune system is so strong it does more harm than good <br/>
 
                    </div>
+                   {(!this.state.selectedOption[7] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -339,6 +432,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question9" value="c" checked={this.state.selectedOption[8] === 'c'} onChange={this.handleOptionChange(8)}/>Adult Immune Deficiency Syndrome <br/>
                         <input type="radio" name="Question9" value="d" checked={this.state.selectedOption[8] === 'd'} onChange={this.handleOptionChange(8)}/>Adenine Immune Deficiency Syndrome <br/>
                    </div>
+                   {(!this.state.selectedOption[8] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
     
                     <h5>
@@ -354,6 +448,7 @@ class Certification extends React.Component {
                         <input type="radio" name="Question10" value="d" checked={this.state.selectedOption[9] === 'd'} onChange={this.handleOptionChange(9)}/>Avoid getting pregnant while treating a patient with HIV/AIDS <br/>
 
                    </div>
+                   {(!this.state.selectedOption[9] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
                     <br />
                     <button type="button" className="btn btn-info" onClick={this.checkAnswers} id="Submit Button">Submit</button>
