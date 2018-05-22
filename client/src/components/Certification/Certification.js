@@ -34,28 +34,64 @@ class Certification extends React.Component {
         });
       }
 
-      checkFirstNameError(){
-        if(!this.state.sponsorFirstName){
-            this.setState({
-                redirect : false
-            });
-            return ("form-control error-focus"); 
-        }
-        else{
-            this.setState({
-                redirect : true
-            });
-           return ("");
-        }
-        // if(!this.state.sponsorLastName){}
-        // if(!this.state.sponsorImageLink){}
-        // if(!this.state.sponsorEmail){}
-        // if(!this.state.sponsorRolePosition){}
-        // if(!this.state.sponsorAboutMe){}
-        // if(!this.state.sponsorAboutMySchool){}
-        // if(!this.state.sponsorWhyInterested){}
-        // if(!this.state.sponsorTestScore){}
-    }
+      checkFieldErrorMessage(field){
+          let formControl = "form-control";
+        switch(field){
+
+            case "sponsorFirstName":
+            if(!this.state.sponsorFirstName && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+             }
+            break;
+
+            case "sponsorLastName":
+            if(!this.state.sponsorLastName && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+             }
+             break;
+
+             case "sponsorImageLink":
+             if(!this.state.sponsorImageLink && this.state.submitFlag){
+                 formControl = "form-control error-focus"; 
+              }
+              break;
+
+              case "sponsorEmail":
+              if(!this.state.sponsorEmail && this.state.submitFlag){
+                  formControl = "form-control error-focus"; 
+               }
+               break;
+
+               case "sponsorRolePosition":
+               if(!this.state.sponsorRolePosition && this.state.submitFlag){
+                   formControl = "form-control error-focus"; 
+                }
+                break;
+
+                case "sponsorAboutMe":
+                if(!this.state.sponsorAboutMe && this.state.submitFlag){
+                    formControl = "form-control error-focus"; 
+                 }
+                 break;
+
+                 case "sponsorAboutMySchool":
+                 if(!this.state.sponsorAboutMySchool && this.state.submitFlag){
+                     formControl = "form-control error-focus"; 
+                  }
+                  break;
+
+                  case "sponsorWhyInterested":
+                  if(!this.state.sponsorWhyInterested && this.state.submitFlag){
+                      formControl = "form-control error-focus"; 
+                   }
+                   break;
+                   
+                    default:
+                    formControl = "form-control";
+            }
+
+        return formControl;
+   }
     
     inputFieldValidation() {
         if (!this.state.sponsorFirstName||!this.state.sponsorLastName||!this.state.sponsorImageLink||!this.state.sponsorEmail||!this.state.sponsorRolePosition||!this.state.sponsorAboutMe||!this.state.sponsorAboutMySchool||!this.state.sponsorWhyInterested)
@@ -176,7 +212,7 @@ class Certification extends React.Component {
                 <form>
                 <div className="form-group">
                     First Name: <br/> <input 
-                    className = "form-control"
+                    className = {this.checkFirstNameError("sponsorFirstName")}
                         type="text" 
                         name="sponsorFirstName" 
                         onChange={this.handleInputChange}
@@ -236,7 +272,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMe}
                         /> 
-                        {(!this.state.sponsorAboutMe && this.state.submitFlag ) ? <div className="error-text">About me field is required</div> : " "}
+                        {(!this.state.sponsorAboutMe && this.state.submitFlag ) ? <div className="error-text">Field required</div> : " "}
                         </div>
                         <div className="form-group">
                     About My School: <br/> <textarea
