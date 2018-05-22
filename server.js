@@ -74,7 +74,28 @@ app.get('/api/user/:id', isAuthenticated, (req, res) => {
   }).catch(err => res.status(400).send(err));
 });
 
-//Add blog routes here
+//== v James 5/21/18 v ==
+
+app.use('/assets', express.static(path.resolve('step-3/assets'), { maxAge: '30 days' }));
+
+app.get('/writings', (req, res) => {
+	db.Writings.find((err, writings) => {
+		if (err) return res.status(500).send(err);
+
+		res.send(writings);
+	});
+});
+
+app.post('/writings', (req, res) => {
+  
+  newWritings = db.Writings.create(req.body)
+  .then(data => res.json(data))
+  .catch(err => res.status(400).json(err));
+
+
+});
+
+//== ^ ^ ==
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
