@@ -14,6 +14,7 @@ import Questions from "./pages/Questions/Questions";
 import Students from "./pages/Students/Students";
 import Contact from "./pages/Contact/Contact";
 import Blog from "./pages/Blog/Blog";
+import ViewBlog from "./pages/ViewBlog/ViewBlog";
 import Curriculum from "./pages/Curriculum/Curriculum";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -41,7 +42,8 @@ ReactDOM.render(
                 <Route exact path="/donate" component={Donate} />
                 <Route exact path="/questions" component={Questions} />
                 <Route exact path="/students" component={Students} />
-                <Route exact path="/blog" component={Blog} />
+                <Route exact path="/blog" component={ViewBlog} />
+                <Route exact path="/viewblog" component={Blog} />
                 <Route exact path="/video" component={Video1} />
                 <Route exact path="/video2" component={Video2} />
                 <Route exact path="/curriculum" component={Curriculum} />

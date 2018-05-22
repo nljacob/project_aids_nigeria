@@ -3,10 +3,10 @@ import React from "react";
 // import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
-import "./Blog.css";
-import BlogElement from '../../components/Blog/Blog'
+import "./ViewBlog.css";
+import BlogElement from '../../components/ViewBlog/ViewBlog'
 
-const Blog = () => (
+const ViewBlog = () => (
   <div className="blog-page">
     
     <div className="container">
@@ -19,4 +19,4 @@ const Blog = () => (
   </div>
 );
 
-export default Blog;
+export default ViewBlog;
