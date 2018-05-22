@@ -47,25 +47,25 @@ const Contact = () => (
             </div>
             <div className="col">
                     <form>
-                        <label for="name">Name:</label><br/>
+                        <label htmlFor="name">Name:</label><br/>
                         <input id="name" type="text" required/>
                         
                         <br/>
                         <br/>
 
-                        <label for="email">Email:</label><br/>
+                        <label htmlFor="email">Email:</label><br/>
                         <input id="email" type="email" required/>
 
                         <br/>
                         <br/>
 
-                        <label for="comment">Comment: &nbsp;</label><br/>
+                        <label htmlFor="comment">Comment: &nbsp;</label><br/>
                         <textarea id="comment"name="message" rows="10" cols="30"/>
 
                         <br/>
                         <br/>
 
-                        <button type="button" class="btn btn-info">Submit</button>
+                        <button type="button" className="btn btn-info">Submit</button>
                         
                     </form>                    
                 </div>
