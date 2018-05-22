@@ -22,7 +22,8 @@ const customStyles = {
    
       this.state = {
         modalIsOpen: false,
-        selectedOption: 0
+        selectedOption: 0,
+        message: ""
       };
    
       this.openModal = this.openModal.bind(this);
@@ -55,10 +56,14 @@ const customStyles = {
       console.log(this.props);
       if (this.props.answer == this.state.selectedOption)
       {
-        alert("Correct Answer!");
+        this.setState({
+          message: "Correct Answer!"
+        })
       }
       else {
-        alert("False, the correct answer was" + letterArray[this.props.answer -1]);
+        this.setState({
+          message: "False, the correct answer was" + letterArray[this.props.answer -1]
+        })
       }
     }
   
@@ -83,6 +88,7 @@ const customStyles = {
             {/* <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2> */}
             {/* <button type="button" class="btn btn-secondary" onClick={this.closeModal}>close</button> */}
             {/* <div>I am a modal</div> */}
+            <div>{this.state.message}</div>
             <div>{this.props.question}</div>
             <form>
               <fieldset>
