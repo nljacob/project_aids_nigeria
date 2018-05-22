@@ -12,3 +12,7 @@
 .curriculum-page #button-space {
     margin: 8px 8px 8px 8px;
 }
+
+.curriculum-page #button-space:hover {
+    background-color: rgb(224, 30, 61);
+} 
