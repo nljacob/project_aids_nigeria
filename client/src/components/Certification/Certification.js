@@ -41,53 +41,53 @@ class Certification extends React.Component {
             case "sponsorFirstName":
             if(!this.state.sponsorFirstName && this.state.submitFlag){
                 formControl = "form-control error-focus"; 
-             }
+                }
             break;
 
             case "sponsorLastName":
             if(!this.state.sponsorLastName && this.state.submitFlag){
                 formControl = "form-control error-focus"; 
-             }
-             break;
+                }
+            break;
 
-             case "sponsorImageLink":
-             if(!this.state.sponsorImageLink && this.state.submitFlag){
-                 formControl = "form-control error-focus"; 
-              }
-              break;
+            case "sponsorImageLink":
+            if(!this.state.sponsorImageLink && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+            }
+            break;
 
-              case "sponsorEmail":
-              if(!this.state.sponsorEmail && this.state.submitFlag){
-                  formControl = "form-control error-focus"; 
-               }
-               break;
+            case "sponsorEmail":
+            if(!this.state.sponsorEmail && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+            }
+            break;
 
-               case "sponsorRolePosition":
-               if(!this.state.sponsorRolePosition && this.state.submitFlag){
-                   formControl = "form-control error-focus"; 
+            case "sponsorRolePosition":
+            if(!this.state.sponsorRolePosition && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
+            }
+            break;
+
+            case "sponsorAboutMe":
+            if(!this.state.sponsorAboutMe && this.state.submitFlag){
+                formControl = "form-control error-focus"; 
                 }
                 break;
 
-                case "sponsorAboutMe":
-                if(!this.state.sponsorAboutMe && this.state.submitFlag){
+                case "sponsorAboutMySchool":
+                if(!this.state.sponsorAboutMySchool && this.state.submitFlag){
                     formControl = "form-control error-focus"; 
-                 }
-                 break;
+                }
+                break;
 
-                 case "sponsorAboutMySchool":
-                 if(!this.state.sponsorAboutMySchool && this.state.submitFlag){
-                     formControl = "form-control error-focus"; 
-                  }
-                  break;
-
-                  case "sponsorWhyInterested":
-                  if(!this.state.sponsorWhyInterested && this.state.submitFlag){
-                      formControl = "form-control error-focus"; 
-                   }
-                   break;
-                   
-                    default:
-                    formControl = "form-control";
+                case "sponsorWhyInterested":
+                if(!this.state.sponsorWhyInterested && this.state.submitFlag){
+                    formControl = "form-control error-focus"; 
+                }
+                break;
+                
+                default:
+                formControl = "form-control";
             }
 
         return formControl;
