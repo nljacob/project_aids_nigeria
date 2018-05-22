@@ -20,7 +20,7 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/" className="nav-link">
+          <Link to="/#splashimage" className="nav-link">
             Home
           </Link>
         </li>
@@ -111,7 +111,7 @@ const Navbar = props => (
           }
         >
           <Link to="/login" className="nav-link">
-          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i> Login
+          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i> Log In
           </Link>
         </li>
       </ul>

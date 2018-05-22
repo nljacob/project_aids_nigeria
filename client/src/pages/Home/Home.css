@@ -53,7 +53,27 @@ body {
     
 }
 
-.home-page #statimgs {
-    width: 100%;
+.home-page #image-statimg03 {
+    height: 90%;
+    width: 60%;
+    margin-top: 17%;
+    
+}
+
+.home-page #image-statimg01 {
+    height: 110%;
+    width: 75%;    
+    margin-top: -15%;
+}
+
+.home-page #image-statimg02 {
     height: 100%;
+    width: 120%;
+}
+
+.home-page #quote {
+    color: rgb(1,159,175);
+    font-size: 120%;
+    margin-top: 1%;
+    margin-bottom: 0;
 }

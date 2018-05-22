@@ -15,7 +15,7 @@ const Footer = () => (
     <a href="https://plus.google.com/u/0/100272089643330137361" target="_blank" rel="noopener noreferrer">
       <i className="fab fa-google-plus-g footericons"></i>
     </a>
-    <a href="/contact">
+    <a href="/contact#sendmessage">
       <i className="fas fa-envelope footericons"></i>
     </a>    
   </div>

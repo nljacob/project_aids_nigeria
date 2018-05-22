@@ -29,11 +29,10 @@ const Donate = () => (
                         By 'clicking' on the DONATE button below, you can help us reach and train the workers needed to educate the thousands of Nigerians at risk by this horrible disease.  Will you stand with us?  God Bless You!
                     </p>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                        <input type="hidden" name="cmd" value="_s-xclick" />
-                        <input type="hidden" name="hosted_button_id" value="S9EE85PUGBZZE" />
-                        {/* <input alt="" id="donatebutton" type="image" src={donatebutton} /> */}
-                        <a class="btn btn-info" href="" role="button">DONATE</a>
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                        <input type="hidden" name="cmd" value="_s-xclick"/>
+                        <input type="hidden" name="hosted_button_id" value="S9EE85PUGBZZE"/>
+                        <input alt="" id="donatebutton" type="image" src= {donatebutton}/>
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
                     </form>
                 </div>
                 <div className="col">
