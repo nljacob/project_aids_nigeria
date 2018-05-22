@@ -57,7 +57,7 @@ class Certification extends React.Component {
         // if(!this.state.sponsorTestScore){}
     }
     
-    fieldValidation() {
+    inputFieldValidation() {
         if (!this.state.sponsorFirstName||!this.state.sponsorLastName||!this.state.sponsorImageLink||!this.state.sponsorEmail||!this.state.sponsorRolePosition||!this.state.sponsorAboutMe||!this.state.sponsorAboutMySchool||!this.state.sponsorWhyInterested)
         {
             return(false)
@@ -70,9 +70,11 @@ class Certification extends React.Component {
     checkAnswers = (event) => {
         // console.log("The entire state: " , this.state);
         event.preventDefault();
+        this.setState({
+            submitFlag : true
+        });
         // call validate function
-        this.checkFirstNameError;
-        let validationFlag = this.fieldValidation()
+        let validationFlag = this.inputFieldValidation()
         if (validationFlag){
             var runningScore = 0;
             for (var i = 0; i < 10; i++) {
@@ -139,7 +141,7 @@ class Certification extends React.Component {
     render() {
         
         const {redirect} = this.state;
-
+         console.log(redirect);
         if (redirect) {
             return <Redirect to='/thankyou' />
         }
@@ -191,7 +193,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorLastName} 
                         /> 
-                       
+                       {(!this.state.sponsorLastName && this.state.submitFlag ) ? <div className="error-text">Lastname required</div> : " "}
                         </div>
                         <div className="form-group">
                     Photo: <br/> <input
@@ -202,6 +204,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorImageLink}
                         /> 
+                        {(!this.state.sponsorImageLink && this.state.submitFlag ) ? <div className="error-text">Image URL required</div> : " "}
                         </div>
                         <div className="form-group">
                     Email Address: <br/> <input 
@@ -211,6 +214,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorEmail}
                         />
+                        {(!this.state.sponsorEmail && this.state.submitFlag ) ? <div className="error-text">Email required</div> : " "}
                         </div>
                         <div className="form-group">
                     Role/Position: <br/> <input 
@@ -221,6 +225,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorRolePosition}
                         /> 
+                        {(!this.state.sponsorRolePosition && this.state.submitFlag ) ? <div className="error-text">Enter a role/position</div> : " "}
                         </div>
                         <div className="form-group">
                     About Me: <br/> <textarea 
@@ -231,6 +236,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMe}
                         /> 
+                        {(!this.state.sponsorAboutMe && this.state.submitFlag ) ? <div className="error-text">About me field is required</div> : " "}
                         </div>
                         <div className="form-group">
                     About My School: <br/> <textarea
@@ -241,6 +247,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorAboutMySchool}
                         /> 
+                        {(!this.state.sponsorAboutMySchool && this.state.submitFlag ) ? <div className="error-text">Field required</div> : " "}
                         </div>
                         <div className="form-group">
                     Why we are interested in starting a PAN club: <br/> <textarea 
@@ -251,6 +258,7 @@ class Certification extends React.Component {
                         onChange={this.handleInputChange}
                         value={this.state.sponsorWhyInterested}
                         /> 
+                        {(!this.state.sponsorWhyInterested && this.state.submitFlag ) ? <div className="error-text">Field required</div> : " "}
                         </div>
 
                     <br/>
