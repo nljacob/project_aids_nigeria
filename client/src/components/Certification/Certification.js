@@ -6,6 +6,7 @@ import React from "react";
 import certAnswers from '../../certAnswers.json'
 import "./Certification.css";
 import API from '../../utils/API';
+import { Redirect } from 'react-router-dom'
 
 
 class Certification extends React.Component {
@@ -21,7 +22,8 @@ class Certification extends React.Component {
         sponsorAboutMe: "",
         sponsorAboutMySchool: "",
         sponsorWhyInterested: "",
-        sponsorTestScore: ""
+        sponsorTestScore: "",
+        redirect: false
     };
 
     handleInputChange = event => {
@@ -32,7 +34,7 @@ class Certification extends React.Component {
       }
 
     checkAnswers = (event) => {
-        console.log("The entire state: " , this.state);
+        // console.log("The entire state: " , this.state);
         event.preventDefault();
         var runningScore = 0;
         for (var i = 0; i < 10; i++) {
@@ -40,8 +42,7 @@ class Certification extends React.Component {
                 runningScore++;
             }
         }
-        console.log("Running score before setting state: " + runningScore);
-
+        // console.log("Running score before setting state: " + runningScore);
         this.setState({
             sponsorTestScore: runningScore
           }, () => {
@@ -69,14 +70,19 @@ class Certification extends React.Component {
                 sponsorAboutMe: "",
                 sponsorAboutMySchool: "",
                 sponsorWhyInterested: "",
-                sponsorTestScore: ""
+                sponsorTestScore: "",
+                redirect: true
             });
+            // this.props.history.replace('/thankyou');
+            // if (this.state.redirect) {
+            //     return <Redirect to ='/thankyou' />
+            // }
             }).catch(err => {
             console.log(err);
             });
-            console.log("The entire state: " , this.state);
-            console.log("Test score in the state:" , this.state.sponsorTestScore);
-            console.log("Test score in the state at the end:" , this.state.sponsorTestScore);
+            // console.log("The entire state: " , this.state);
+            // console.log("Test score in the state:" , this.state.sponsorTestScore);
+            // console.log("Test score in the state at the end:" , this.state.sponsorTestScore);
           });
 
 
@@ -93,6 +99,13 @@ class Certification extends React.Component {
       }
 
     render() {
+        
+        const {redirect} = this.state;
+
+        if (redirect) {
+            return <Redirect to='/thankyou' />
+        }
+        
         return (
             <div className="certification-page">
             <div className="container">
@@ -247,10 +260,12 @@ class Certification extends React.Component {
                     </h5>
                     <fieldset  className = "form-group">
                     <div className = "form-check">
-                        <input type="radio" name="Question4" value="a" checked={this.state.selectedOption[3] === 'a'} onChange={this.handleOptionChange(3)}/>With PrEP.  This is a preparation of herbal remedies. <br/>
-                        <input type="radio" name="Question4" value="b" checked={this.state.selectedOption[3] === 'b'} onChange={this.handleOptionChange(3)}/>With PrEP.  This is a course of HIV drugs available in some countries which if taken consistently as advised by your healthcare professional prevents HIV infection thorugh sex <br/>
-                        <input type="radio" name="Question4" value="c" checked={this.state.selectedOption[3] === 'c'} onChange={this.handleOptionChange(3)}/>By taking a multivitamin every day <br/>
-                        <input type="radio" name="Question4" value="d" checked={this.state.selectedOption[3] === 'd'} onChange={this.handleOptionChange(3)}/>By wearing mosquito repellent any time you go outside<br/>
+
+                        <input type="radio" name="Question4" value="a" checked={this.state.selectedOption[3] === 'a'} onChange={this.handleOptionChange(3)}/>with PrEP.  This is a preparation of herbal remedies. <br/>
+                        <input type="radio" name="Question4" value="b" checked={this.state.selectedOption[3] === 'b'} onChange={this.handleOptionChange(3)}/>with PrEP.  This is a course of HIV drugs available in some countries which if taken consistently as advised by your healthcare professional prevents HIV infection through sex <br/>
+                        <input type="radio" name="Question4" value="c" checked={this.state.selectedOption[3] === 'c'} onChange={this.handleOptionChange(3)}/>by taking a multivitamin every day <br/>
+                        <input type="radio" name="Question4" value="d" checked={this.state.selectedOption[3] === 'd'} onChange={this.handleOptionChange(3)}/>by wearing mosquito repellent any time you go outside<br/>
+
                     </div>
                     </fieldset>
     
