@@ -116,7 +116,7 @@ class Login extends Component {
 
           {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text">Invalid Email/Password </div><br/></div>  : " "}
         
-          <button type="submit" className="btn btn-default" onSubmit={this.resetForm}>Submit</button>
+          <button type="submit" className="btn btn-info" onSubmit={this.resetForm}>Submit</button>
         </form>
         <br />
         <p>Don't have an account? Sign up <Link id="here" to="/signup">here.</Link></p>
