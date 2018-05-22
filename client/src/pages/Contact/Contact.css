@@ -24,15 +24,15 @@
 }
 
 
-#name {
+.contact-page #name {
     width: 256px;
 }
 
-#email {
+.contact-page #email {
     width: 256px;
 }
 
-#comment {
+.contact-page #comment {
     width: 406px;
     height: 106px;
 }
@@ -43,3 +43,19 @@
     
 }
 
+.contact-page input {
+    text-align: center;
+}
+
+.contact-page textarea {
+    text-align: center;
+}
+
+.contact-page button {
+    background-color: rgb(1,159,175);
+    color: white;
+    padding: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+    border: none;
+}

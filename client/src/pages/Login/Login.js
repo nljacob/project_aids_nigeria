@@ -85,45 +85,57 @@ class Login extends Component {
 
   render() {
     return (
+      <div className="login-page">
       <div className="container">
-        <br />
-        <br />
-        <br /> <br />
-        <h1 id="login">Login</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          <div className="form-group">
-            <label htmlFor="email">Email address:</label>
-            <input className={this.checkEmailError()}
-              placeholder="Email"
-              name="email"
-              type="email"
-              id="email"
-              onChange={this.handleChange} />
+        <div className="row">
+        <div className="col-4"></div>
+          <div className="col-4 text-center">
+            <br/>
+            <br/>
+            <br/> 
+            <br/>
+            <h1 id="login">Log In</h1>
+            <br/>
+            <br/>
+            <form onSubmit={this.handleFormSubmit}>
+              
+              <div className="form-group">
+                <label htmlFor="email"></label>
+                <input className={this.checkEmailError()}
+                  placeholder="Email Address"
+                  name="email"
+                  type="email"
+                  id="email"
+                  onChange={this.handleChange} />
+                {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email Required</div> : " "}
+              </div>
 
-            {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email required</div> : " "}
-            
-          </div>
-          <div className="form-group">
-            <label htmlFor="pwd">Password:</label>
-            <input className={this.checkPasswordError()}
-              placeholder="Password"
-              name="password"
-              type="password"
-              id="pwd"
-              onChange={this.handleChange} />
-            {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
-          </div>
+              <div className="form-group">
+                <label htmlFor="pwd"></label>
+                <input className={this.checkPasswordError()}
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                  id="pwd"
+                  onChange={this.handleChange} />
+                {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password Required</div> : " "}
+              </div>
 
-          {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text">Invalid Email/Password </div><br/></div>  : " "}
-        
-          <button type="submit" className="btn btn-info" onSubmit={this.resetForm}>Submit</button>
-        </form>
-        <br />
-        <p>Don't have an account? Sign up <Link id="here" to="/signup">here.</Link></p>
+              {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text">Invalid Email/Password </div><br/></div>  : " "}
+
+              <br/>
+              <button type="submit" className="btn" onSubmit={this.resetForm}>SUBMIT</button>
+
+            </form>
+ 
+            <br/>
+            <p>Don't have an account? Sign up <Link id="here" to="/signup">here.</Link></p>
+          </div>
+          <div className="col-4"></div>
+        </div>
       </div>
-
+      </div>
     );
   }
 }
-
 export default Login;

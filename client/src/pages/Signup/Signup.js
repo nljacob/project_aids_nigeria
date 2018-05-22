@@ -89,34 +89,40 @@ class Signup extends Component {
 
   render() {
     return (
+      <div className="signup-page">
       <div className="container">
-        <br />
-        <br />
-        <br /> <br />
+      <div className="row">
+      <div className="col-4"></div>
+          <div className="col-4 text-center">
+        <br/>
+        <br/>
+        <br/> 
+        <br/>
         <h1 id="signup">Signup</h1>
+        <br/>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username"></label>
             <input className={this.checkUsernameError()}
               placeholder="Username"
               name="username"
               type="text"
               id="username"
               onChange={this.handleChange} />
-               {(!this.state.username && this.state.submitFlag) ? <div className="error-text">Username required</div> : " "}
+               {(!this.state.username && this.state.submitFlag) ? <div className="error-text">Username Required</div> : " "}
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email address:</label>
+            <label htmlFor="email"></label>
             <input className={this.checkEmailError()}
               placeholder="Email"
               name="email"
               type="email"
               id="email"
               onChange={this.handleChange} />
-                {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email required</div> : " "}
+                {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email Required</div> : " "}
           </div>
           <div className="form-group">
-            <label htmlFor="pwd">Password:</label>
+            <label htmlFor="pwd"></label>
             <input className={this.checkPasswordError()}
               placeholder="Password"
               name="password"
@@ -126,10 +132,14 @@ class Signup extends Component {
                {(!this.state.password && this.state.submitFlag) ? <div className="error-text">Password required</div> : " "}
           </div>
           {((this.state.serverCheck === "fail") && this.state.submitFlag) ? <div><div className="error-text"> Username or Email already exists </div><br/></div>  : " "}
-          <button type="submit" className="btn btn-info">Submit</button>
+          <button type="submit" className="btn btn-info">SUBMIT</button>
         </form>
-        <br />
+        <br/>
         <p>Already have an account? Login <Link id="here" to="/login">here.</Link></p>
+      </div>
+      <div className="col-4"></div>
+      </div>
+      </div>
       </div>
     );
   }
