@@ -17,3 +17,13 @@
 .donate-page #centered {
     text-align: center;
 }
+
+.donate-page button {
+    background-color: rgb(1,159,175);
+    color: white;
+    padding: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+    border: none;
+    margin-top: 5%;
+}
