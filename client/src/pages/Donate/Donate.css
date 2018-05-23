@@ -10,10 +10,23 @@
     color: rgb(224, 30, 61);
 }
 
-.donate-page #donatebutton {
-    width: 10%;
+.donate-page h5 {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: rgb(90,90,90);
 }
 
-.donate-page #centered {
-    text-align: center;
+.donate-page button {
+    background-color: rgb(1,159,175);
+    color: white;
+    padding: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+    border: none;
+    margin-top: 2%;
+}
+
+.donate-page #image-donatechart {
+    height: 70%;
+    width: 60%;
 }
