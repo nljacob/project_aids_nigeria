@@ -3,7 +3,7 @@ import React from "react";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 import "./Donate.css";
-import donatebutton from "../../images/donatebutton.png";
+import donatechart from "../../images/donatechart.png";
 
 const Donate = () => (
     <div className="donate-page">
@@ -14,25 +14,22 @@ const Donate = () => (
                     <br />
                     <br />
                     <br />
-                    <h3 id="centered">We need your help!</h3>
+                    <h3>We need your help!</h3>
                     <br />
-                  </div>
-                  </div>  
+                </div>
+            </div>  
                   
-                  <div>
-                  <div>
+            <div className="row">
+                <div className="col-md-6 text-center">
+                    <br/>
                     <p>
                         Project AIDS Nigeria is a Charitable Educational Organization ground in Christian Faith.  We believe that it is only through education and through sharing the truth of the Gospel of Christ that can we can make progress against the advancement og HIV.
-                        <br />
+                        <br/>
                         But we cannot do it alone...
                     </p>
-                    <br />
-                    <br />
-                    <h3 id="centered">Please Donate</h3>
-                    <br />
-                    <p>
-                        By 'clicking' on the DONATE button below, you can help us reach and train the workers needed to educate the thousands of Nigerians at risk by this horrible disease.  Will you stand with us?  God Bless You!
-                    </p>
+                    <br/>
+                    <p>By 'clicking' on the DONATE button below, you can help us reach and train the workers needed to educate the thousands of Nigerians at risk by this horrible disease.  Will you stand with us?  God Bless You!</p>
+                    
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_s-xclick"/>
                         <input type="hidden" name="hosted_button_id" value="S9EE85PUGBZZE"/>
@@ -40,17 +37,16 @@ const Donate = () => (
                         <button type="submit" className="btn">DONATE</button>
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
                     </form>
+                    <br/>
+                    <p>Thank you for your generous, tax deductible gift!</p>
                 </div>
-                <div className="col">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <h3 id="centered">How we use your donations</h3>
-                    <br />
-                    <p>
-                        All donations are used in the Project Aids Nigeria Ministry. To the side there is a chart that represents where each dollar goes.
-                    </p>
+
+                <div className="col-md-6 text-center">
+                    <img alt="" src= {donatechart} id="image-donatechart"/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h5 id="centered">How your giving helps us</h5>
                 </div>
             </div>
         </div>
