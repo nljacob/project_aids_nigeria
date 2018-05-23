@@ -4,6 +4,7 @@ import React from "react";
 // import Col from "../components/Col";
 import "./Contact.css";
 import map from "../../images/map.png";
+import ContactApp from '../../components/Contact/Contact'
 
 const Contact = () => (
     <div className="contact-page">
@@ -73,7 +74,10 @@ const Contact = () => (
             <div className="col">
             </div>
             <div className="col text-center">
-                    <form>
+
+                <ContactApp />
+
+                    {/* <form>
                         
                         <input id="name" type="text" placeholder="Name" required/>
                         <br/>
@@ -89,7 +93,7 @@ const Contact = () => (
 
                         <button type="button" className="btn btn-info">SUBMIT</button>
                         
-                    </form>                    
+                    </form>                     */}
                 </div>
                 <div className="col">
             </div>
