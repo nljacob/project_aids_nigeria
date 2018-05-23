@@ -8,15 +8,19 @@ import map from "../../images/map.png";
 const Contact = () => (
     <div className="contact-page">
         <div className="container">
-            <div className="row">
-                <div className="col text-center">
-                        <br/>
-                        <br/>
-                        <h3>Contact Project AIDS Nigeria</h3>
-                        <br/>
-                        <br/>
+        <div className="row">
+                    <div className="col-3">
+                    </div>
+                    <div className="col-6 text-center">
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Contact Project AIDS Nigeria</h3>
+                    <br />
+                    </div>
+                    <div className="col-3">
+                    </div>
                 </div>
-            </div>
             <div className="row">
             <div className="col-12 text-center">
                 <img alt="" src= {map} id="map-image"/>
@@ -43,11 +47,22 @@ const Contact = () => (
                 
                 </div>
                 <div className="row">
+                    <div className="col-3">
+                    </div>
+                    <div className="col-6 text-center">
+                    <br />
+                    <h3>SEND US A MESSAGE!</h3>
+                    <br />
+                    </div>
+                    <div className="col-3">
+                    </div>
+                </div>
+                {/* <div className="row">
                 <div className="col text-center">
                 <h3 id="sendmessage">SEND US A MESSAGE!</h3>
                 <br/>
                 </div>
-                </div>
+                </div> */}
                 <div className="row">
                 <div className="col text-center">
                 <p>We welcome your comments and your support. Please complete the form below and we will contact you as soon as possible.</p>
