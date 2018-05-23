@@ -8,7 +8,6 @@ import BlogElement from '../../components/Blog/Blog'
 
 const Blog = () => (
   <div className="blog-page">
-    
     <div className="container">
     <div className="row">
                 <div className="col text-center">

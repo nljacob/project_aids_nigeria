@@ -8,26 +8,26 @@ import BlogElement from '../../components/ViewBlog/ViewBlog'
 
 const ViewBlog = () => (
   <div className="blog-page">
-    
+
     <div className="container">
-    <div className="row">
-    <div className="col">
-    </div>
-    <div className="col">
-    <br/>
-    <br/>
-    <br/>
-    <h3 className="text-center">Recent Blog Posts</h3>
-    <br/>
-    </div>
-    <div className="col">
-    </div>
-    </div>
-    <div className="row">
-                <div className="col text-center">
-                <BlogElement />
-                </div>
-    </div>
+      <div className="row">
+        <div className="col">
+        </div>
+        <div className="col">
+          <br />
+          <br />
+          <br />
+          <h3 className="text-center">Recent Blog Posts</h3>
+          <br />
+        </div>
+        <div className="col">
+        </div>
+      </div>
+      <div className="row">
+        <div className="col text-center">
+          <BlogElement />
+        </div>
+      </div>
     </div>
   </div>
 );

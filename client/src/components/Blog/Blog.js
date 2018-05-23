@@ -93,12 +93,11 @@ class Blog extends React.Component {
 		return (
 			<div>
 				<div >
-				
 					<input id="MyTitle" name="MyTitle" className="form-control"
-						placeholder="My Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
+						placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
 					<br />					
 					<input id="MyImageURL" name="MyImageURL" className="form-control"
-						placeholder="My Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
+						placeholder="Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
 					<br />
 					<textarea id="MyText" name="MyText" className="form-control"
 						placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
