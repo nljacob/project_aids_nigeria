@@ -4,11 +4,9 @@ import API from '../../utils/API';
 
 class ContactApp extends Component {
 
-    //   state = {
-    //     name: "",
-    //     email: "",
-    //     message: ""
-    //   };
+      state = {
+        message: ""
+      };
 
     handleSubmit(e) {
         e.preventDefault();
@@ -22,10 +20,16 @@ class ContactApp extends Component {
         }
         API.sendEmail(data).then((response) => {
             if (response.data.msg === 'success') {
-                alert("Message Sent.");
+                this.setState({
+                    message: "Message Sent."
+                });
+                // alert("Message Sent.");
                 this.resetForm()
             } else if (response.data.msg === 'fail') {
-                alert("Message failed to send.")
+                this.setState({
+                    message: "Message failed to send."
+                });
+                // alert("Message failed to send.")
             }
         });
     }
@@ -37,6 +41,7 @@ class ContactApp extends Component {
     render() {
         return (
             <div>
+                <div>{this.state.message}</div>
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                     <div className="form-group">
                         {/* <label for="name">Name</label> */}
@@ -52,7 +57,7 @@ class ContactApp extends Component {
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
-            </div>
+            </div> 
         )
     }
 }

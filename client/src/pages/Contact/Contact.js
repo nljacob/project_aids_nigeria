@@ -67,7 +67,7 @@ const Contact = () => (
                 <div className="row">
                 <div className="col text-center">
                 <p>We welcome your comments and your support. Please complete the form below and we will contact you as soon as possible.</p>
-                <br/>
+                {/* <br/> */}
                 </div>
                 </div>
             <div className="row">
