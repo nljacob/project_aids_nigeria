@@ -9,17 +9,21 @@ import ContactApp from '../../components/Contact/Contact'
 const Contact = () => (
     <div className="contact-page">
         <div className="container">
-            <div className="row">
-                <div className="col text-center">
-                        <br/>
-                        <br/>
-                        <h3>Contact Project AIDS Nigeria</h3>
-                        <br/>
-                        <br/>
+        <div className="row">
+                    <div className="col-md-3">
+                    </div>
+                    <div className="col-md-6 text-center">
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Contact Project AIDS Nigeria</h3>
+                    <br />
+                    </div>
+                    <div className="col-md-3">
+                    </div>
                 </div>
-            </div>
             <div className="row">
-            <div className="col-12 text-center">
+            <div className="col-md-12 text-center">
                 <img alt="" src= {map} id="map-image"/>
                 <div id="contactinfo">
                     <h5>ADDRESS:</h5>
@@ -44,15 +48,26 @@ const Contact = () => (
                 
                 </div>
                 <div className="row">
+                    <div className="col-md-3">
+                    </div>
+                    <div className="col-md-6 text-center">
+                    <br />
+                    <h3>SEND US A MESSAGE!</h3>
+                    <br />
+                    </div>
+                    <div className="col-md-3">
+                    </div>
+                </div>
+                {/* <div className="row">
                 <div className="col text-center">
                 <h3 id="sendmessage">SEND US A MESSAGE!</h3>
                 <br/>
                 </div>
-                </div>
+                </div> */}
                 <div className="row">
                 <div className="col text-center">
                 <p>We welcome your comments and your support. Please complete the form below and we will contact you as soon as possible.</p>
-                <br/>
+                {/* <br/> */}
                 </div>
                 </div>
             <div className="row">
@@ -80,7 +95,7 @@ const Contact = () => (
                         
                     </form>                     */}
                 </div>
-                <div className="col text-center">
+                <div className="col">
             </div>
             </div>
         </div>

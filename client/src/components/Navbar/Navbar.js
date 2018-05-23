@@ -111,7 +111,7 @@ const Navbar = props => (
           }
         >
           <Link to="/login" className="nav-link">
-          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i> Log In
+          <i className="fas fa-user accountlogo" title="Log In/Sign Up"></i> Login
           </Link>
         </li>
       </ul>

@@ -186,29 +186,39 @@ class Certification extends React.Component {
             <div className="certification-page">
             <div className="container">
                 <div className="row">
-                    <div className="col text-center">
-                        <h3>Welcome to the Certification page!</h3> 
-                        <br/>
+                    <div className="col-3">
+                    </div>
+                    <div className="col-6 text-center">
+                    <h3>Welcome to the Certification page!</h3>
+                    <br />
+                    </div>
+                    <div className="col-3">
                     </div>
                 </div>
                 <div className="row">
                     <div className="col">
-                        <h5>Interested in starting a PAN club at your school?</h5>
+                        <h4>Interested in starting a PAN club at your school?</h4>
                         <p>Our goal at PAN is to share accurate information about AIDS/HIV.  One way we do this is by screening potential club sponsors with a basic application and certification test.  Any adult at your school (teacher, administrator, counselor, etc...) who is willing to sponsor the club is eligible to complete our PAN application and certification test.  The application is our way of getting to know you and your school, so please use this as an opportunity to shine!  Tell us about all the great things your school already does, and why you are interested in bringing PAN to your school site.  Then you will be asked to read through part of our curriculum, and demonstrate your understanding by passing our certification test.  This ensures that the club sponsor has a basic understanding of our curriculum from which to build as the club grows.  Once we receive your application and test score we will contact you to discuss our training process and other certification details.  Thank you for your interest in PAN!  We look forward to working with you soon!</p>
                     </div>
                 </div>
 
-                <h5>Curriculum</h5>
+                <h4>Curriculum</h4>
                 <ul>
                     <li><a id="red" target="_blank" rel="noopener noreferrer" href="https://www.avert.org/about-hiv-aids/what-hiv-aids">What are HIV and AIDS?</a></li>
                     <li><a id="red" target="_blank" rel="noopener noreferrer" href="https://www.avert.org/hiv-transmission-prevention/how-you-get-hiv">How do you get HIV?</a></li>
                 </ul>
-                <br />
-
-                <h5>Application and Certification Test</h5>
-
+                <div className="row">
+                    <div className="col-3">
+                    </div>
+                    <div className="col-6 text-center">
+                    <h3>Application and Certification Test</h3>
+                    </div>
+                    <div className="col-3">
+                    </div>
+                </div>
+              
                 {/* Add new fields (first name, last name, email address) so we can keep this info with their score in the database */}
-    
+                <br/>
                 <form>
                 <div className="form-group">
                     First Name: <br/> <input 
@@ -236,7 +246,7 @@ class Certification extends React.Component {
                     className = {this.checkFieldErrorMessage("sponsorImageLink")}
                         type="text" 
                         name="sponsorImageLink" 
-                        placeholder="image link for profile"
+                        placeholder="Image link for profile"
                         onChange={this.handleInputChange}
                         value={this.state.sponsorImageLink}
                         /> 
@@ -257,7 +267,7 @@ class Certification extends React.Component {
                     className = {this.checkFieldErrorMessage("sponsorRolePosition")}
                         type="text" 
                         name="sponsorRolePosition" 
-                        placeholder="teacher, counselor, ..."
+                        placeholder="Teacher, Counselor, etc"
                         onChange={this.handleInputChange}
                         value={this.state.sponsorRolePosition}
                         /> 

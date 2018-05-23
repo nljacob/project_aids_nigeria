@@ -14,7 +14,6 @@ class App extends Component {
         <div className="row">
           <div className="col text-center">
           <br/>
-          <br/>
             <h3>HIV POSITIVE SYMPTOMS AND SIGNS</h3>
           </div>
         </div>

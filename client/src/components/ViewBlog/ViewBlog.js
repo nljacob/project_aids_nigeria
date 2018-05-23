@@ -21,8 +21,6 @@ function WritingList(props) {
 	);
 }
 
-
-
 class ViewBlog extends React.Component {
 	constructor() {
 		super();
@@ -64,9 +62,7 @@ class ViewBlog extends React.Component {
 		return (
 			
             <div>
-                <br style= {{lineHeight: 8}}></br>
 				<WritingList writings={this.state.writings} />
-				
 			</div>
 		);
 	}

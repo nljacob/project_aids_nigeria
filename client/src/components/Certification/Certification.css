@@ -30,3 +30,8 @@ input[type="radio"] {
 #modal-message { 
     color: rgb(224, 30, 61);
 }
+
+.certification-page h4 {
+    font-weight: bold;
+}
+
