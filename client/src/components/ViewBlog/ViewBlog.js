@@ -21,8 +21,6 @@ function WritingList(props) {
 	);
 }
 
-
-
 class ViewBlog extends React.Component {
 	constructor() {
 		super();
