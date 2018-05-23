@@ -62,6 +62,13 @@ app.post('/api/certification', (req, res) => {
     .catch(err => res.json(err));
 });
 
+// FIND ALL APPLICATIONS/TEST SCORES SUBMITTED TO GET CERTIFIED PG
+app.get('/api/certification', (req, res) => {
+  db.Certification.find({})
+    .then(data => res.json(data))
+    .catch(err => res.json(err));
+});
+
 // Any route with isAuthenticated is protected and you need a valid token
 // to access
 app.get('/api/user/:id', isAuthenticated, (req, res) => {

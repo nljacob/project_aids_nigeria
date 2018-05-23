@@ -1,5 +1,6 @@
 .login-page .error-text{
     color : rgb(224,30,61);
+    margin-top: 15px;
 }
 
 .login-page .error-focus{

@@ -22,5 +22,11 @@ export default {
       sponsorWhyInterested: sponsorWhyInterested,
       sponsorTestScore: sponsorTestScore
     });
+  },
+  // forDomale: (sponsorFirstName) => {
+  //   return axios.get('/api/certification', {sponsorFirstName: sponsorFirstName});
+  // }
+  forDomale: () => {
+    return axios.get('/api/certification');
   }
 };
