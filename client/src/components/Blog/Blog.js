@@ -93,7 +93,7 @@ class Blog extends React.Component {
 		return (
 			<div>
 				<div >
-				<br style= {{lineHeight: 8}}></br>
+				
 					<input id="MyTitle" name="MyTitle" className="form-control"
 						placeholder="My Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
 					<br />					
