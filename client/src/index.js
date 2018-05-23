@@ -26,6 +26,7 @@ import Profile from "./pages/Profile/Profile";
 import Signup from "./pages/Signup/Signup";
 import AppCert from "./pages/Certification/Certification";
 import ThankyouApp from "./pages/ThankyouCert/ThankyouCert";
+import DomaleOnly from "./pages/DomaleAdmin/DomaleAdmin";
 
 if (localStorage.getItem("id_token")) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('id_token')}`;
@@ -53,6 +54,7 @@ ReactDOM.render(
                 <Route exact path="/profile/:id" component={Profile} />
                 <Route exact path="/certification" component={AppCert} />
                 <Route exact path="/thankyou" component={ThankyouApp} />
+                <Route exact path="/domaleAdmin" component={DomaleOnly} />
             </Wrapper>
             <Footer />
         </div>
