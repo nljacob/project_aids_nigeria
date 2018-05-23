@@ -2,10 +2,13 @@ import React from "react";
 
 // React components can be simple, pure functions
 function Writing(props) {
+	console.log(props.MyImageURL);
 	return (
 		<li className="list-group-item">
 			<h4>{props.MyTitle}</h4>
+			<img src= {props.MyImageURL} alt= {Date.now().toString()} />
 			<p>{props.MyText}</p>
+			
 		</li>
 	);
 }

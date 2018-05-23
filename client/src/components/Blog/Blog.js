@@ -2,10 +2,15 @@ import React from "react";
 
 // React components can be simple, pure functions
 function Writing(props) {
+	console.log(props.MyImageURL);
 	return (
 		<li className="list-group-item">
+			
+			
 			<h4>{props.MyTitle}</h4>
+			<img src= {props.MyImageURL} alt= {Date.now().toString()} />
 			<p>{props.MyText}</p>
+			
 		</li>
 	);
 }
@@ -26,7 +31,8 @@ class Blog extends React.Component {
 			writings: [],
 			blogAccepted: false,
 			MyTitle: "",
-			MyText: ""
+			MyText: "",
+			MyImageURL: "",
 		};
 
 	}
@@ -45,7 +51,8 @@ class Blog extends React.Component {
 		
 		let addWritingData = {
 			MyTitle: this.state.MyTitle,
-			MyText: this.state.MyText
+			MyText: this.state.MyText,
+			MyImageURL: this.state.MyImageURL
 		};
 		
 		this.handleAddWriting(addWritingData);
@@ -69,7 +76,8 @@ class Blog extends React.Component {
 					writings: this.state.writings.concat(writing),
 					blogAccepted: true,
 					MyText: "",
-					MyTitle: ""
+					MyTitle: "",
+					MyImageURL: ""
 				});
 			});
 	}
@@ -85,8 +93,12 @@ class Blog extends React.Component {
 		return (
 			<div>
 				<div >
+				
 					<input id="MyTitle" name="MyTitle" className="form-control"
-						placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
+						placeholder="My Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
+					<br />					
+					<input id="MyImageURL" name="MyImageURL" className="form-control"
+						placeholder="My Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
 					<br />
 					<textarea id="MyText" name="MyText" className="form-control"
 						placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
