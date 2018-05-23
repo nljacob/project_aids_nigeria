@@ -5,11 +5,14 @@
 }
 
 .about-page #image-about01 {
-    height: 90%;
-    margin-top: 1%;
+    /* height: 90%;
+    margin-top: 1%; */
+    width: 100%;
+    height: auto;
 }
 
 .about-page #image-about02 {
     width: 100%;
     height: 100%;
 }
+

@@ -9,20 +9,20 @@ const Contact = () => (
     <div className="contact-page">
         <div className="container">
         <div className="row">
-                    <div className="col-3">
+                    <div className="col-md-3">
                     </div>
-                    <div className="col-6 text-center">
+                    <div className="col-md-6 text-center">
                     <br />
                     <br />
                     <br />
                     <h3>Contact Project AIDS Nigeria</h3>
                     <br />
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3">
                     </div>
                 </div>
             <div className="row">
-            <div className="col-12 text-center">
+            <div className="col-md-12 text-center">
                 <img alt="" src= {map} id="map-image"/>
                 <div id="contactinfo">
                     <h5>ADDRESS:</h5>
@@ -47,14 +47,14 @@ const Contact = () => (
                 
                 </div>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-md-3">
                     </div>
-                    <div className="col-6 text-center">
+                    <div className="col-md-6 text-center">
                     <br />
                     <h3>SEND US A MESSAGE!</h3>
                     <br />
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3">
                     </div>
                 </div>
                 {/* <div className="row">
@@ -91,7 +91,7 @@ const Contact = () => (
                         
                     </form>                    
                 </div>
-                <div className="col text-center">
+                <div className="col">
             </div>
             </div>
         </div>
