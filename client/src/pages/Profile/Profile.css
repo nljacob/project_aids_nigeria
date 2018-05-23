@@ -1,3 +1,7 @@
 .special{
     margin-top:100px;
 }
+
+.profile-page h1 {
+    color: red;
+}

@@ -86,13 +86,13 @@ class Blog extends React.Component {
 			<div>
 				<div >
 					<input id="MyTitle" name="MyTitle" className="form-control"
-						placeholder="My Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
+						placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
 					<br />
 					<textarea id="MyText" name="MyText" className="form-control"
-						placeholder="My Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
+						placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
 					<br />
-					{this.state.blogAccepted ? <div className="error-text">Your post has been accepted.  Check the Blog tab to marvel at your work!</div> : " "}
-					<button className="btn btn-primary" type="button" onClick={this.submit}>
+					{this.state.blogAccepted ? <div className="error-text">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : " "}
+					<button className="btn btn-info" type="button" onClick={this.submit}>
 						Add Blog Post
 					</button>
 				</div>
