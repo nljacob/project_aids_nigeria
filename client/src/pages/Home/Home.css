@@ -49,26 +49,22 @@ body {
 
 .home-page #image-home04 {
     width: 100%;
-    height: 100.5%;
-    
-}
-
-.home-page #image-statimg03 {
-    height: 90%;
-    width: 60%;
-    margin-top: 17%;
-    
+    height: 100.5%;   
 }
 
 .home-page #image-statimg01 {
-    height: 110%;
-    width: 75%;    
-    margin-top: -15%;
+    height: 90%;
+    width: 90%;
 }
 
 .home-page #image-statimg02 {
-    height: 100%;
-    width: 120%;
+    height: 110%;
+    width: 110%;
+}
+
+.home-page #image-statimg03 {
+    height: 130%;
+    width: 130%;
 }
 
 .home-page #quote {
@@ -76,4 +72,8 @@ body {
     font-size: 120%;
     margin-top: 1%;
     margin-bottom: 0;
+}
+
+.home-page #ourstudentstext {
+    padding-left: 5%;
 }
