@@ -9,6 +9,11 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
 
+// NEXT THREE THINGS ADDED FOR NODEMAILER
+var router = express.Router();
+var nodemailer = require('nodemailer');
+const creds = require('./config/config');
+
 // Setting CORS so that any website can
 // Access our API
 app.use((req, res, next) => {
@@ -31,6 +36,25 @@ const isAuthenticated = exjwt({
   secret: 'all sorts of code up in here'
 });
 
+// NODEMAILER STUFF STARTS HERE
+var transport = {
+  host: 'smtp.gmail.com',
+  auth: {
+    user: creds.USER,
+    pass: creds.PASS
+  }
+}
+
+var transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Server is ready to take messages');
+  }
+});
+// NODEMAILER STUFF ENDS HERE
 
 // LOGIN ROUTE
 app.post('/api/login', (req, res) => {
@@ -103,6 +127,39 @@ app.post('/writings', (req, res) => {
 });
 
 //== ^ ^ ==
+
+// ADD NEW MAILER ROUTE HERE
+app.post('/api/send', (req, res, next) => {
+  var name = req.body.name;
+  var email = req.body.email;
+  let myMessage = req.body.message;
+
+  console.log(myMessage);
+
+  var content = `name: ${name} \n email: ${email} \n message: ${myMessage}`;
+
+  console.log(content);
+
+  var mail = {
+    from: name,
+    to: creds.USER,  //Change to email address that you want to receive messages on
+    subject: 'New Message from Contact Form',
+    text: content
+  }
+
+  transporter.sendMail(mail, (err, data) => {
+    if (err) {
+      res.json({
+        msg: 'fail'
+      })
+    } else {
+      res.json({
+        msg: 'success'
+      })
+    }
+  })
+});
+// NEW NODEMAILER ROUTE ENDS HERE
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
