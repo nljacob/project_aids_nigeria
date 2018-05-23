@@ -61,9 +61,7 @@ class ViewBlog extends React.Component {
 		return (
 			
             <div>
-                <br style= {{lineHeight: 8}}></br>
 				<WritingList writings={this.state.writings} />
-				
 			</div>
 		);
 	}
