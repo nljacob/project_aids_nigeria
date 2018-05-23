@@ -28,5 +28,9 @@ export default {
   // }
   forDomale: () => {
     return axios.get('/api/certification');
+  },
+
+  sendEmail: (data) => {
+    return axios.post('/api/send', data);
   }
 };
