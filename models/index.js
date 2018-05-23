@@ -1,4 +1,5 @@
 module.exports = {
   User: require('./User'),
-  Certification: require('./Certification')
+  Certification: require('./Certification'),
+  Writings: require('./Writing')
 };

@@ -18,21 +18,33 @@ const Contact = () => (
                 </div>
             </div>
             <div className="row">
-                <div className="col-6 text-center">
-                    <h4>ADDRESS:</h4>
+            <div className="col-12 text-center">
+                <img alt="" src= {map} id="map-image"/>
+                <div id="contactinfo">
+                    <h5>ADDRESS:</h5>
                     <h6>No: 22 Bank Road Bori​<br/>Ogoni, Rivers State, Nigeria</h6>
-                    <h4>PHONE:</h4>
+                    <h5>PHONE:</h5>
                     <h6>09075542187</h6>
-                    <h4>EMAIL:</h4>
+                    <h5>EMAIL:</h5>
                     <h6>aidsnigeria@gmail.com<br/>panstudentsconnect@gmail.com </h6>
                 </div>
-                <div className="col-6">
-                <img alt="" src= {map} id="map-image" />
-                </div>
+            </div>
+                
+            {/* <div className="col-6 text-center">
+            <h4>ADDRESS:</h4>
+            <h6>No: 22 Bank Road Bori​<br/>Ogoni, Rivers State, Nigeria</h6>
+            <h4>PHONE:</h4>
+            <h6>09075542187</h6>
+            <h4>EMAIL:</h4>
+            <h6>aidsnigeria@gmail.com<br/>panstudentsconnect@gmail.com </h6>
+            </div> */}
+
+                
+                
                 </div>
                 <div className="row">
                 <div className="col text-center">
-                <h3>SEND US A MESSAGE</h3>
+                <h3 id="sendmessage">SEND US A MESSAGE!</h3>
                 <br/>
                 </div>
                 </div>
@@ -45,31 +57,26 @@ const Contact = () => (
             <div className="row">
             <div className="col">
             </div>
-            <div className="col">
+            <div className="col text-center">
                     <form>
-                        <label htmlFor="name">Name:</label><br/>
-                        <input id="name" type="text" required/>
                         
+                        <input id="name" type="text" placeholder="Name" required/>
+                        <br/>
+                        <br/>
+                        
+                        <input id="email" type="email" placeholder="Email" required/>
                         <br/>
                         <br/>
 
-                        <label htmlFor="email">Email:</label><br/>
-                        <input id="email" type="email" required/>
-
+                        <textarea id="comment"name="message" placeholder="Comment"/>
                         <br/>
                         <br/>
 
-                        <label htmlFor="comment">Comment: &nbsp;</label><br/>
-                        <textarea id="comment"name="message" rows="10" cols="30"/>
-
-                        <br/>
-                        <br/>
-
-                        <button type="button" className="btn btn-info">Submit</button>
+                        <button type="button" className="btn btn-info">SUBMIT</button>
                         
                     </form>                    
                 </div>
-                <div className="col">
+                <div className="col text-center">
             </div>
             </div>
         </div>

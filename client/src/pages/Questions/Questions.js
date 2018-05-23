@@ -19,6 +19,8 @@ const Questions = () => (
         </div>
       </div>
       <div className="row">
+      <div className="col">
+      </div>
         <div className="col">
           <ul>
             <li><a id="red" href="#AIDS">What is AIDS? What causes AIDS?</a></li> 
@@ -30,6 +32,8 @@ const Questions = () => (
             <li><a id="red" href="#healthy">Is there anything I can do to stay healthy?</a></li>
           </ul>
         </div>
+        <div className="col">
+      </div>
       </div>
       <hr />
       <div className="row">

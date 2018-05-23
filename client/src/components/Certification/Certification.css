@@ -25,3 +25,8 @@
 input[type="radio"] {
     margin: 0 8px 0 8px;
 }
+
+/* ModalVideo */
+#modal-message { 
+    color: rgb(224, 30, 61);
+}

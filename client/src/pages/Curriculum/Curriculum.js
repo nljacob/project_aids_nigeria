@@ -28,8 +28,16 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col text-center">
-          <a className="btn btn-info" href="/video" role="button">HIV POSITIVE SYMPTOMS AND SIGNS</a>&nbsp;
-          <a className="btn btn-info" href="/video2" role="button">THE SCIENCE OF HIV/AIDS</a>
+          <a id="button-space" className="btn btn-info" href="/video" role="button">HIV POSITIVE SYMPTOMS AND SIGNS</a>
+          <a id="button-space"className="btn btn-info" href="/video2" role="button">THE SCIENCE OF HIV/AIDS</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">WHAT IS HIV?</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">HIV PREVENTION</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">SIGNS YOU MAY HAVE HIV</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">STAGES OF HIV</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">ARE AIDS AND HIV THE SAME?</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">MEDICINE FOR HIV</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">CURES FOR HIV</a>
+          <a id="button-space" className="btn btn-info" href="" role="button">RESOURCES FOR AIDS</a>
           </div>
         </div>
       </div>

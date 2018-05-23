@@ -1,17 +1,43 @@
-.error-text{
-    color : red;
+.login-page .error-text{
+    color : rgb(224,30,61);
+    margin-top: 15px;
 }
 
-.error-focus{
-    box-shadow: 0 0 0 1px red;
+.login-page .error-focus{
+    box-shadow: rgb(224,30,61);
+
 }
 
-#login {
+.login-page #login {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
     color: rgb(224, 30, 61);
 }
 
-#here:hover {
+.login-page p {
+    font-size: 130%;
+}
+
+.login-page #here:hover {
     color: rgb(1,159,175);
+}
+
+.login-page input {
+    width: 100% !important;
+    text-align: center;
+    margin: -2.8%;
+}
+
+.login-page button {
+    background-color: rgb(1,159,175);
+    color: white;
+    padding: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+    border: none;
+    margin-top: 5%;
+}
+
+.login-page button:hover {
+    background-color: rgb(1,184,199);
 }
