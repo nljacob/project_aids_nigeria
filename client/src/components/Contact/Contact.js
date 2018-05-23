@@ -50,7 +50,7 @@ class ContactApp extends Component {
                         {/* <label for="message">Message</label> */}
                         <textarea className="form-control" rows="5" id="message" placeholder="Comment"></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn">SUBMIT</button>
                 </form>
             </div>
         )

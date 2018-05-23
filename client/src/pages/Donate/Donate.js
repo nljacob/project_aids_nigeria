@@ -43,9 +43,6 @@ const Donate = () => (
 
                 <div className="col-md-6 text-center">
                     <img alt="" src= {donatechart} id="image-donatechart"/>
-                    <br/>
-                    <br/>
-                    <br/>
                     <h5 id="centered">How your giving helps us</h5>
                 </div>
             </div>
