@@ -4,6 +4,7 @@ import API from '../../utils/API';
 import { Link } from 'react-router-dom';
 // import BlogElement from '../../components/Blog/Blog';
 import OneApplicant from '../../components/OneApplicant/OneApplicant';
+import "./DomaleAdmin.css";
 
 class DomaleOnly extends Component {
 
@@ -24,34 +25,53 @@ class DomaleOnly extends Component {
 
   render() {
     return (
-      <div>
-        <br />
-        <br />
-        <br />
-        <h1>Welcome Domale!</h1>
-        <br />
-        <h2>Prospective PAN Club Sponsors:</h2>
-        <ul>
-            {this.state.sponsorApplicants.map(oneApplicant => (
-                <OneApplicant
-                    key={oneApplicant._id}
-                    id={oneApplicant._id}
-                    first={oneApplicant.sponsorFirstName}
-                    last={oneApplicant.sponsorLastName}
-                    img={oneApplicant.sponsorImageLink}
-                    email={oneApplicant.sponsorEmail}
-                    role={oneApplicant.sponsorRolePosition}
-                    about={oneApplicant.sponsorAboutMe}
-                    aboutSchool={oneApplicant.sponsorAboutMySchool}
-                    why={oneApplicant.sponsorWhyInterested}
-                    score={oneApplicant.sponsorTestScore}
-                    // date={oneApplicant.createdAt}
-                />
+      <div className="domaleadmin-page">
+        <div className="container">
+        
+        <div className="row">
+          <div className="col text-center">
+            <br/>
+            <br/>
+            <br/>
+            <h3>Welcome Domale!</h3>
+            <br/>
+          </div>
+        </div>
+          
+        {/* <div className="row">
+          <div className="col text-center">
+            <h4>Prospective PAN Club Sponsors</h4>
+          </div>
+        </div>
+        <br/> */}
+          
+        <div className="row">
+          <div className="col">
+          <ul>
+              {this.state.sponsorApplicants.map(oneApplicant => (
+                  <OneApplicant
+                      key={oneApplicant._id}
+                      id={oneApplicant._id}
+                      first={oneApplicant.sponsorFirstName}
+                      last={oneApplicant.sponsorLastName}
+                      img={oneApplicant.sponsorImageLink}
+                      email={oneApplicant.sponsorEmail}
+                      role={oneApplicant.sponsorRolePosition}
+                      about={oneApplicant.sponsorAboutMe}
+                      aboutSchool={oneApplicant.sponsorAboutMySchool}
+                      why={oneApplicant.sponsorWhyInterested}
+                      score={oneApplicant.sponsorTestScore}
+                      // date={oneApplicant.createdAt}
+                  />
 
-                // oneApplicant.sponsorFirstName
-            ))}
-        </ul>
-      </div>
+                  // oneApplicant.sponsorFirstName
+              ))}
+          </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        
     )
   }
 }
