@@ -11,16 +11,16 @@ const ViewBlog = () => (
 
     <div className="container">
       <div className="row">
-        <div className="col">
+        <div className="col-md-4">
         </div>
-        <div className="col">
+        <div className="col-md-4">
           <br />
           <br />
           <br />
           <h3 className="text-center">Recent Blog Posts</h3>
           <br />
         </div>
-        <div className="col">
+        <div className="col-md-4">
         </div>
       </div>
       <div className="row">

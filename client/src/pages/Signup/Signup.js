@@ -92,8 +92,8 @@ class Signup extends Component {
       <div className="signup-page">
       <div className="container">
       <div className="row">
-      <div className="col-4"></div>
-          <div className="col-4 text-center">
+      <div className="col-md-4"></div>
+          <div className="col-md-4 text-center">
         <br/>
         <br/>
         <br/> 
@@ -137,7 +137,7 @@ class Signup extends Component {
         <br/>
         <p>Already have an account? Login <Link id="here" to="/login">here.</Link></p>
       </div>
-      <div className="col-4"></div>
+      <div className="col-md-4"></div>
       </div>
       </div>
       </div>

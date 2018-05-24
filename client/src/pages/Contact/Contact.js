@@ -52,12 +52,12 @@ const Contact = () => (
                 </div>
                 </div>
             <div className="row">
-            <div className="col">
+            <div className="col-md-4">
             </div>
-            <div className="col text-center">
+            <div className="col-md-4 text-center">
                 <ContactApp />
                 </div>
-                <div className="col">
+                <div className="col-md-4">
             </div>
             </div>
         </div>
