@@ -87,3 +87,11 @@
     margin-bottom: 10%;
 }
 
+.error-text{
+    color : red;
+ }
+ 
+ .error-focus{
+    box-shadow: 0 0 0 1px red;
+ }
+

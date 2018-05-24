@@ -12,7 +12,6 @@ class ContactApp extends Component {
         comment: "",
         submitFlag: false
     };
-
     handleSubmit(e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
@@ -131,6 +130,4 @@ class ContactApp extends Component {
         )
     }
 }
-
-
 export default ContactApp;
