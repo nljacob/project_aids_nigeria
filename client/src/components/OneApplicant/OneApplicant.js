@@ -3,6 +3,7 @@ import React from 'react';
 const OneApplicant = (props) => (
     <div>
         <h5>Applicant ID: {props.id}</h5> 
+        <img src={props.img} />
         <ul>
             <li> 
                 <span>FIRST NAME: </span>{props.first}
@@ -10,9 +11,10 @@ const OneApplicant = (props) => (
             <li> 
                 <span>LAST NAME: </span>{props.last}
             </li>
-            <li> 
-                <span>PHOTO LINK: </span>{props.img}
-            </li>   
+            {/* <li> 
+                <span>PHOTO LINK: </span> <br/>
+                <img src={props.img} />
+            </li>    */}
             <li> 
                 <span>EMAIL: </span>{props.email}
             </li>

@@ -31,3 +31,8 @@
 .domaleadmin-page ul span {
     color: rgb(1,159,175);
 }
+
+.domaleadmin-page img {
+    max-width: 300px;
+    max-height: auto;
+}
