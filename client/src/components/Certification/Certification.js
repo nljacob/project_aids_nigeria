@@ -461,7 +461,7 @@ class Certification extends React.Component {
                    {(!this.state.selectedOption[9] && this.state.submitFlag ) ? <div className="error-text">This field is required</div> : " "}
                     </fieldset>
                     <br />
-                    <button type="button" className="btn btn-info" onClick={this.checkAnswers} id="Submit Button">Submit</button>
+                    <button type="button" className="btn btn-info" onClick={this.checkAnswers} id="Submit Button">SUBMIT</button>
                 </form>
     
             </div>

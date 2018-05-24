@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API from '../../utils/API';
+import '../../pages/Contact/Contact.css';
+
 class ContactApp extends Component {
+
     state = {
         message: "",
         name: "",
@@ -9,113 +12,119 @@ class ContactApp extends Component {
         comment: "",
         submitFlag: false
     };
-    checkFieldErrorMessage(field) {
-        let formControl = "form-control";
-        switch (field) {
-            case "name":
-                if (!this.state.name && this.state.submitFlag) {
-                    formControl = "form-control error-focus";
-                }
-                break;
-            case "email":
-                if (!this.state.email && this.state.submitFlag) {
-                    formControl = "form-control error-focus";
-                }
-                break;
-            case "comment":
-                if (!this.state.comment && this.state.submitFlag) {
-                    formControl = "form-control error-focus";
-                }
-                break;
-            default:
-                formControl = "form-control";
-        }
-        return formControl;
-    }
-    inputFieldValidation() {
-        if (!this.state.name || !this.state.email || !this.state.comment) {
-            return (false);
-        }
-        else {
-            return (true);
-        }
-    }
     handleSubmit(e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const comment = document.getElementById('comment').value;
         let data = {
             name: name,
             email: email,
-            message: message
+            comment: comment
         }
-        // If forms are not filled out don't send the email
-        API.sendEmail(data).then((response) => {
-            if (response.data.msg === 'success') {
-                this.setState({
-                    message: "Message Sent."
-                });
-                this.resetForm()
-            } else if (response.data.msg === 'fail') {
-                this.setState({
-                    message: "Message failed to send."
-                });
-            }
+
+        this.setState({
+            submitFlag: true
         });
-        
+
+        // If forms are not filled out don't send the email
+        if (this.state.email && this.state.name && this.state.comment) {
+
+            API.sendEmail(data).then((response) => {
+                if (response.data.msg === 'success') {
+                    this.setState({
+                        message: "Message Sent."
+                    });
+                    this.resetForm()
+                } else if (response.data.msg === 'fail') {
+                    this.setState({
+                        message: "Message failed to send."
+                    });
+                }
+            });
+        } else {
+            console.log("Contact Page failed.");
+        }
+
     }
+
+    handleChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+    
+      };
+
     resetForm() {
         document.getElementById('contact-form').reset();
     }
+
+    checkEmailError() {
+        if (!this.state.email && this.state.submitFlag) {
+            return ("form-control error-focus");
+        }
+        else {
+            return ("form-control");
+        }
+    }
+
+    checkNameError() {
+        if (!this.state.name && this.state.submitFlag) {
+            return ("form-control error-focus");
+        }
+        else {
+            return ("form-control");
+        }
+    }
+
+    checkCommentError() {
+        if (!this.state.comment && this.state.submitFlag) {
+            return ("form-control error-focus");
+        }
+        else {
+            return ("form-control");
+        }
+    }
+
     render() {
         return (
             <div>
-                <div>{this.state.message}</div>
+                <div id="confirm-message">{this.state.message}</div>
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+
                     <div className="form-group">
-                        Name: <br /> <input
-                            className={this.checkFieldErrorMessage("name")}
-                            type="text"
+                        <label htmlFor="name"></label> Name:
+                        <input className={this.checkNameError()}
+                            name="name"
+                            type="name"
                             id="name"
-                            // name="name"
-                            onChange={this.handleInputChange}
-                            value={this.state.name}
-                        />
-                        {(!this.state.name && this.state.submitFlag) ? <div className="error-text">Name required</div> : " "}
+                            onChange={this.handleChange} />
+                        {(!this.state.name && this.state.submitFlag) ? <div className="error-text">Name Required</div> : " "}
                     </div>
-                    <div className="form-group">
-                        Email: <br /> <input
-                            className={this.checkFieldErrorMessage("email")}
-                            type="text"
-                            // name="email" 
+
+                    <div className="form-group"> 
+                        <label htmlFor="email"></label> Email:
+                        <input className={this.checkEmailError()}
+                            // placeholder="Email Address"
+                            name="email"
+                            type="email"
                             id="email"
-                            onChange={this.handleInputChange}
-                            value={this.state.email}
-                        />
-                        {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email required</div> : " "}
+                            onChange={this.handleChange} />
+                        {(!this.state.email && this.state.submitFlag) ? <div className="error-text">Email Required</div> : " "}
                     </div>
+
                     <div className="form-group">
-                        Comment: <br /> <input
-                            className={this.checkFieldErrorMessage("comment")}
-                            type="text"
-                            // name="comment" 
-                            id="message"
-                            onChange={this.handleInputChange}
-                            value={this.state.comment}
-                        />
-                        {(!this.state.comment && this.state.submitFlag) ? <div className="error-text">Comment required</div> : " "}
+                        <label htmlFor="comment"></label> Comment:
+                        <textarea className={this.checkCommentError()}
+                            // placeholder="Email Address"
+                            name="comment"
+                            type="comment"
+                            id="comment"
+                            onChange={this.handleChange} />
+                        {(!this.state.comment && this.state.submitFlag) ? <div className="error-text">Comment Required</div> : " "}
                     </div>
-                    {/* <div className="form-group">
-                        <input type="text" id="name" placeholder="Name" />
-                        </div> */}
-                    {/* // <div className="form-group">
-                        //     <input type="email" id="email" aria-describedby="emailHelp" placeholder="Email" />
-                        // </div>
-                        // <div className="form-group">
-                        //     <textarea className="form-control" rows="5" id="message" placeholder="Comment"></textarea>
-                        // </div> */}
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-info" onSubmit={this.resetForm}>Submit</button>
                 </form>
             </div>
         )
