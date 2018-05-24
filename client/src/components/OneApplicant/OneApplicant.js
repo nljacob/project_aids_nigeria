@@ -2,34 +2,36 @@ import React from 'react';
 
 const OneApplicant = (props) => (
     <div>
-        <h4>Applicant ID: {props.id}</h4> 
+        <h5>Applicant ID: {props.id}</h5> 
+        <img src={props.img} />
         <ul>
             <li> 
-                First Name: {props.first}
+                <span>FIRST NAME: </span>{props.first}
             </li>
             <li> 
-                Last Name: {props.last}
+                <span>LAST NAME: </span>{props.last}
+            </li>
+            {/* <li> 
+                <span>PHOTO LINK: </span> <br/>
+                <img src={props.img} />
+            </li>    */}
+            <li> 
+                <span>EMAIL: </span>{props.email}
             </li>
             <li> 
-                Photo Link: {props.img}
+                <span>ROLE: </span>{props.role}
             </li>
             <li> 
-                Email: {props.email}
+                <span>ABOUT ME: </span>{props.about}
             </li>
             <li> 
-                Role: {props.role}
+                <span>ABOUT SCHOOL: </span>{props.aboutSchool}
             </li>
             <li> 
-                About Me: {props.about}
+                <span>WHY INTERESTED: </span>{props.why}
             </li>
             <li> 
-                About School: {props.aboutSchool}
-            </li>
-            <li> 
-                Why Interested: {props.why}
-            </li>
-            <li> 
-                Test Score: {props.score}
+                <span>TEST SCORE: </span>{props.score}
             </li>
             {/* <li> 
                 Date Submitted: {props.date}
