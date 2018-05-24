@@ -1,3 +1,11 @@
+.error-text{
+    color : red;
+}
+
+.error-focus{
+    box-shadow: 0 0 0 1px red;
+}
+
 .blog-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
