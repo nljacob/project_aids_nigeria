@@ -88,8 +88,8 @@ class Login extends Component {
       <div className="login-page">
       <div className="container">
         <div className="row">
-        <div className="col-4"></div>
-          <div className="col-4 text-center">
+        <div className="col-md-4"></div>
+          <div className="col-md-4 text-center">
             <br/>
             <br/>
             <br/> 
@@ -130,7 +130,7 @@ class Login extends Component {
             <br/>
             <p>Don't have an account? Sign up <Link id="here" to="/signup">here.</Link></p>
           </div>
-          <div className="col-4"></div>
+          <div className="col-md-4"></div>
         </div>
       </div>
       </div>
