@@ -29,10 +29,7 @@ class Profile extends Component {
       <br/>
         <h3 className="text-center">Welcome {this.state.username}!</h3>
         <br/>
-        {/* <p>Username: {this.state.username}</p>
-        <p>Email: {this.state.email}</p> */}
         <BlogElement />
-        {/* <Link to="/">Go home</Link> */}
       </div>
       </div>
     )

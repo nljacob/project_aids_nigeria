@@ -1,3 +1,15 @@
+.error-text{
+    color : red;
+}
+
+.error-focus{
+    box-shadow: 0 0 0 1px red;
+}
+
+#confirm-message {
+    color:  rgb(1,159,175);
+}
+
 .contact-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
@@ -24,16 +36,16 @@
 }
 
 
-.contact-page #name {
+/* .contact-page #name {
     width: 256px;
 }
 
 .contact-page #email {
     width: 256px;
-}
+} */
 
 .contact-page #comment {
-    width: 406px;
+    /* width: 406px; */
     height: 106px;
 }
 
@@ -43,13 +55,13 @@
     /* border: .5px rgb(166,166,166) solid;     */
 }
 
-.contact-page input {
+/* .contact-page input {
     text-align: center;
-}
+} */
 
-.contact-page textarea {
+/* .contact-page textarea {
     text-align: center;
-}
+} */
 
 .contact-page button {
     background-color: rgb(1,159,175);

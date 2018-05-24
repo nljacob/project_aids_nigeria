@@ -19,6 +19,7 @@ import Curriculum from "./pages/Curriculum/Curriculum";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Login from "./pages/Login/Login";
 import Video1 from "./pages/Video1/Video1";
 import Video2 from "./pages/Video2/Video2";
@@ -34,6 +35,7 @@ if (localStorage.getItem("id_token")) {
 
 ReactDOM.render(
     <Router>
+<ScrollToTop>
         <div>
             <Navbar />
             <Wrapper>
@@ -58,6 +60,7 @@ ReactDOM.render(
             </Wrapper>
             <Footer />
         </div>
+        </ScrollToTop>
     </Router>
     , document.getElementById("root")
 
