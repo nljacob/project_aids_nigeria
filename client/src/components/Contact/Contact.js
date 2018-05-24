@@ -91,7 +91,7 @@ class ContactApp extends Component {
     render() {
         return (
             <div>
-                <div>{this.state.message}</div>
+                <div id="confirm-message">{this.state.message}</div>
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
 
                     <div className="form-group">
@@ -117,7 +117,7 @@ class ContactApp extends Component {
 
                     <div className="form-group">
                         <label htmlFor="comment"></label> Comment:
-                        <input className={this.checkCommentError()}
+                        <textarea className={this.checkCommentError()}
                             // placeholder="Email Address"
                             name="comment"
                             type="comment"
