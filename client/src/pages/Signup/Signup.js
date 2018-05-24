@@ -135,7 +135,7 @@ class Signup extends Component {
           <button type="submit" className="btn btn-info">SUBMIT</button>
         </form>
         <br/>
-        <p>Already have an account? Login <Link id="here" to="/login">here.</Link></p>
+        <p>Already have an account? Log in <Link id="here" to="/login">here.</Link></p>
       </div>
       <div className="col-md-4"></div>
       </div>
