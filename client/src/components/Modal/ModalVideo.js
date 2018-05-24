@@ -62,7 +62,7 @@ const customStyles = {
       }
       else {
         this.setState({
-          message: "False, the correct answer was" + letterArray[this.props.answer -1]
+          message: "Incorrect. The correct answer was" + letterArray[this.props.answer -1]
         })
       }
     }

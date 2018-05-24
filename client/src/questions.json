@@ -1,21 +1,21 @@
 [
     {
         "id": 1,
-        "question": "Question 1: Are HIV and AIDS the same thing?", 
-        "answerChoiceOne": " False",
-        "answerChoiceTwo": " True",
-        "answerChoiceThree": " Maybe",
-        "answerChoiceFour": " I don't know",
-        "answer": 1
+        "question": "Question 1: HIV and AIDS _____.", 
+        "answerChoiceOne": " are liver diseases",
+        "answerChoiceTwo": " very similar",
+        "answerChoiceThree": " are two different things",
+        "answerChoiceFour": " exactly the same thing",
+        "answer": 3
     },
     {
         "id": 2,
-        "question": "Question 2: Can you rely on common symptoms to determine whether you have AIDS?",
-        "answerChoiceOne": " True",
-        "answerChoiceTwo": " False",
-        "answerChoiceThree": " Maybe",
-        "answerChoiceFour": " I don't know",
-        "answer": 2
+        "question": "Question 2: In order to determine if you have AIDS ______.",
+        "answerChoiceOne": " you can rely on common symptoms",
+        "answerChoiceTwo": " ask your mother",
+        "answerChoiceThree": " google it",
+        "answerChoiceFour": " get tested",
+        "answer": 1
     },
     {
         "id": 3,
