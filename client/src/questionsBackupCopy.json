@@ -1,21 +1,21 @@
 [
     {
         "id": 1,
-        "question": "Question 1: HIV and AIDS are _____.", 
-        "answerChoiceOne": " liver diseases",
-        "answerChoiceTwo": " transmitted by mosquitoes",
-        "answerChoiceThree": " two different things",
-        "answerChoiceFour": " exactly the same thing",
-        "answer": 3
+        "question": "Question 1: Are HIV and AIDS the same thing?", 
+        "answerChoiceOne": " False",
+        "answerChoiceTwo": " True",
+        "answerChoiceThree": " Maybe",
+        "answerChoiceFour": " I don't know",
+        "answer": 1
     },
     {
         "id": 2,
-        "question": "Question 2: Which of the following is true?",
-        "answerChoiceOne": " HIV tests can be negative if taken immediatley after contracting the virus.",
-        "answerChoiceTwo": " If you exhibit common symptoms of HIV you can be sure you've contracted the virus.",
-        "answerChoiceThree": " The best way to determine if you have contracted HIV is to use WebMD.",
-        "answerChoiceFour": " There is no way to know if you have HIV.",
-        "answer": 1
+        "question": "Question 2: Can you rely on common symptoms to determine whether you have AIDS?",
+        "answerChoiceOne": " True",
+        "answerChoiceTwo": " False",
+        "answerChoiceThree": " Maybe",
+        "answerChoiceFour": " I don't know",
+        "answer": 2
     },
     {
         "id": 3,
