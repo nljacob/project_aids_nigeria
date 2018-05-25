@@ -124,7 +124,7 @@ class Blog extends React.Component {
                         placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
                           {(!this.state.MyText && this.state.submitFlag) ? <div className="error-text">Text is Required</div> : " "}
                     <br />
-                    {this.state.blogAccepted ? <div className="error-text text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : " "}
+                    {this.state.blogAccepted ? <div className="success-msg text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : " "}
                 
                     <button className="btn btn-info" type="button" onClick={this.submit}>
                         Add Blog Post
