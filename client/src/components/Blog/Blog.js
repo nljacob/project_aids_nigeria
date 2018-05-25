@@ -52,7 +52,7 @@ class Blog extends React.Component {
         this.setState({
             submitFlag: true
           });
-        console.log("in submit")
+        
         let validationFlag = this.inputFieldValidation()
         if(validationFlag) {
             this.handleAddWriting(addWritingData);
@@ -63,6 +63,9 @@ class Blog extends React.Component {
     inputFieldValidation() {
         if (!this.state.MyTitle||!this.state.MyImageURL||!this.state.MyText)
         {
+            this.setState({
+                blogAccepted : false
+            });
             return(false);
         }
         else {
@@ -124,7 +127,7 @@ class Blog extends React.Component {
                         placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
                           {(!this.state.MyText && this.state.submitFlag) ? <div className="error-text">Text is Required</div> : " "}
                     <br />
-                    {this.state.blogAccepted ? <div className="success-msg text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : " "}
+                    {this.state.blogAccepted && !this.state.MyTitle && !this.state.MyImageURL && !this.state.MyText ? <div className="success-msg text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : ""}
                 
                     <button className="btn btn-info" type="button" onClick={this.submit}>
                         Add Blog Post
