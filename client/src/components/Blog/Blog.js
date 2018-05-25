@@ -134,6 +134,7 @@ class Blog extends React.Component {
                 <div >
                     <input id="MyTitle" name="MyTitle" className={this.checkTitleError()}
                         placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
+                         {(!this.state.MyTitle && this.state.submitFlag) ? <div className="error-text">Field is Required</div> : " "}
                     <br />                    
                     <input id="MyImageURL" name="MyImageURL" className={this.checkImageError()}
                         placeholder="Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
