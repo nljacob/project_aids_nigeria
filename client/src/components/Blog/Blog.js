@@ -1,4 +1,5 @@
 import React from "react";
+import "../../pages/Blog/Blog.css";
 // React components can be simple, pure functions
 function Writing(props) {
     console.log(props.MyImageURL);
@@ -29,6 +30,7 @@ class Blog extends React.Component {
             MyTitle: "",
             MyText: "",
             MyImageURL: "",
+            submitFlag: false
         };
     }
     componentWillMount() {
@@ -46,8 +48,57 @@ class Blog extends React.Component {
             MyImageURL: this.state.MyImageURL
         };
         
-        this.handleAddWriting(addWritingData);
+        //setting submit flag for validation
+        this.setState({
+            submitFlag: true
+          });
+        console.log("in submit")
+        let validationFlag = this.inputFieldValidation()
+        if(validationFlag) {
+            this.handleAddWriting(addWritingData);
+    
+        }
     }
+    // validation functions
+    inputFieldValidation() {
+        if (!this.state.MyTitle||!this.state.MyImageURL||!this.state.MyText)
+        {
+            return(false);
+        }
+        else {
+            return(true);
+        }
+    }
+    checkTitleError(){
+        console.log("in checkTitleError ")
+        if (!this.state.MyTitle && this.state.submitFlag) {
+          return ("form-control error-focus"); 
+        }
+       
+        else {
+            return ("form-control");
+        }
+     }
+
+     checkImageError(){
+        if (!this.state.MyImageURL && this.state.submitFlag) {
+          return ("form-control error-focus"); 
+        }
+       
+        else {
+            return ("form-control");
+        }
+     }
+
+     checkTextError(){
+        if (!this.state.MyText && this.state.submitFlag) {
+            return ("form-control error-focus"); 
+        }
+       
+        else {
+            return ("form-control");
+        }
+     }
     /*
      * Add newWriting to store (`this.state`) and re-render
      */
@@ -66,7 +117,8 @@ class Blog extends React.Component {
                     blogAccepted: true,
                     MyText: "",
                     MyTitle: "",
-                    MyImageURL: ""
+                    MyImageURL: "",
+                    submitFlag: false
                 });
             });
     }
@@ -80,13 +132,13 @@ class Blog extends React.Component {
         return (
             <div>
                 <div >
-                    <input id="MyTitle" name="MyTitle" className="form-control"
+                    <input id="MyTitle" name="MyTitle" className={this.checkTitleError()}
                         placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
                     <br />                    
-                    <input id="MyImageURL" name="MyImageURL" className="form-control"
+                    <input id="MyImageURL" name="MyImageURL" className={this.checkImageError()}
                         placeholder="Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
                     <br />
-                    <textarea id="MyText" name="MyText" className="form-control"
+                    <textarea id="MyText" name="MyText" className={this.checkTextError()}
                         placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
                     <br />
                     {this.state.blogAccepted ? <div className="error-text text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : " "}
