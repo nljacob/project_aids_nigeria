@@ -134,13 +134,15 @@ class Blog extends React.Component {
                 <div >
                     <input id="MyTitle" name="MyTitle" className={this.checkTitleError()}
                         placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
-                         {(!this.state.MyTitle && this.state.submitFlag) ? <div className="error-text">Field is Required</div> : " "}
+                         {(!this.state.MyTitle && this.state.submitFlag) ? <div className="error-text">Title is Required</div> : " "}
                     <br />                    
                     <input id="MyImageURL" name="MyImageURL" className={this.checkImageError()}
                         placeholder="Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
+                          {(!this.state.MyImageURL && this.state.submitFlag) ? <div className="error-text">Image is Required</div> : " "}
                     <br />
                     <textarea id="MyText" name="MyText" className={this.checkTextError()}
                         placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
+                          {(!this.state.MyText && this.state.submitFlag) ? <div className="error-text">Text is Required</div> : " "}
                     <br />
                     {this.state.blogAccepted ? <div className="error-text text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : " "}
                 
