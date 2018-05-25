@@ -69,36 +69,16 @@ class Blog extends React.Component {
             return(true);
         }
     }
-    checkTitleError(){
-        console.log("in checkTitleError ")
-        if (!this.state.MyTitle && this.state.submitFlag) {
+
+    ValidationCheck(fieldType,submitFlag){
+        if (!fieldType && submitFlag){
           return ("form-control error-focus"); 
         }
-       
         else {
             return ("form-control");
         }
      }
 
-     checkImageError(){
-        if (!this.state.MyImageURL && this.state.submitFlag) {
-          return ("form-control error-focus"); 
-        }
-       
-        else {
-            return ("form-control");
-        }
-     }
-
-     checkTextError(){
-        if (!this.state.MyText && this.state.submitFlag) {
-            return ("form-control error-focus"); 
-        }
-       
-        else {
-            return ("form-control");
-        }
-     }
     /*
      * Add newWriting to store (`this.state`) and re-render
      */
@@ -132,15 +112,15 @@ class Blog extends React.Component {
         return (
             <div>
                 <div >
-                    <input id="MyTitle" name="MyTitle" className={this.checkTitleError()}
+                    <input id="MyTitle" name="MyTitle" className={this.ValidationCheck(this.state.MyTitle,this.state.submitFlag)}
                         placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
                          {(!this.state.MyTitle && this.state.submitFlag) ? <div className="error-text">Title is Required</div> : " "}
                     <br />                    
-                    <input id="MyImageURL" name="MyImageURL" className={this.checkImageError()}
+                    <input id="MyImageURL" name="MyImageURL" className={this.ValidationCheck(this.state.MyImageURL,this.state.submitFlag)}
                         placeholder="Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
                           {(!this.state.MyImageURL && this.state.submitFlag) ? <div className="error-text">Image is Required</div> : " "}
                     <br />
-                    <textarea id="MyText" name="MyText" className={this.checkTextError()}
+                    <textarea id="MyText" name="MyText" className={this.ValidationCheck(this.state.MyText,this.state.submitFlag)}
                         placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
                           {(!this.state.MyText && this.state.submitFlag) ? <div className="error-text">Text is Required</div> : " "}
                     <br />
