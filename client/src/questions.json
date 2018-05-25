@@ -1,20 +1,20 @@
 [
     {
         "id": 1,
-        "question": "Question 1: HIV and AIDS _____.", 
-        "answerChoiceOne": " are liver diseases",
-        "answerChoiceTwo": " very similar",
-        "answerChoiceThree": " are two different things",
+        "question": "Question 1: HIV and AIDS are _____.", 
+        "answerChoiceOne": " liver diseases",
+        "answerChoiceTwo": " transmitted by mosquitoes",
+        "answerChoiceThree": " two different things",
         "answerChoiceFour": " exactly the same thing",
         "answer": 3
     },
     {
         "id": 2,
-        "question": "Question 2: In order to determine if you have AIDS ______.",
-        "answerChoiceOne": " you can rely on common symptoms",
-        "answerChoiceTwo": " ask your mother",
-        "answerChoiceThree": " google it",
-        "answerChoiceFour": " get tested",
+        "question": "Question 2: Which of the following is true?",
+        "answerChoiceOne": " HIV tests can be negative if taken immediatley after contracting the virus.",
+        "answerChoiceTwo": " If you exhibit common symptoms of HIV you can be sure you've contracted the virus.",
+        "answerChoiceThree": " The best way to determine if you have contracted HIV is to use WebMD.",
+        "answerChoiceFour": " There is no way to know if you have HIV.",
         "answer": 1
     },
     {
