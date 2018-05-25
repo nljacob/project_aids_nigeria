@@ -1,4 +1,5 @@
 import React from "react";
+import "../../pages/Blog/Blog.css";
 // React components can be simple, pure functions
 function Writing(props) {
     console.log(props.MyImageURL);
@@ -29,6 +30,7 @@ class Blog extends React.Component {
             MyTitle: "",
             MyText: "",
             MyImageURL: "",
+            submitFlag: false
         };
     }
     componentWillMount() {
@@ -46,8 +48,40 @@ class Blog extends React.Component {
             MyImageURL: this.state.MyImageURL
         };
         
-        this.handleAddWriting(addWritingData);
+        //setting submit flag for validation
+        this.setState({
+            submitFlag: true
+          });
+        
+        let validationFlag = this.inputFieldValidation()
+        if(validationFlag) {
+            this.handleAddWriting(addWritingData);
+    
+        }
     }
+    // validation functions
+    inputFieldValidation() {
+        if (!this.state.MyTitle||!this.state.MyImageURL||!this.state.MyText)
+        {
+            this.setState({
+                blogAccepted : false
+            });
+            return(false);
+        }
+        else {
+            return(true);
+        }
+    }
+
+    ValidationCheck(fieldType,submitFlag){
+        if (!fieldType && submitFlag){
+          return ("form-control error-focus"); 
+        }
+        else {
+            return ("form-control");
+        }
+     }
+
     /*
      * Add newWriting to store (`this.state`) and re-render
      */
@@ -66,7 +100,8 @@ class Blog extends React.Component {
                     blogAccepted: true,
                     MyText: "",
                     MyTitle: "",
-                    MyImageURL: ""
+                    MyImageURL: "",
+                    submitFlag: false
                 });
             });
     }
@@ -80,16 +115,19 @@ class Blog extends React.Component {
         return (
             <div>
                 <div >
-                    <input id="MyTitle" name="MyTitle" className="form-control"
+                    <input id="MyTitle" name="MyTitle" className={this.ValidationCheck(this.state.MyTitle,this.state.submitFlag)}
                         placeholder="Title" onChange={this.handleFormInput} value={this.state.MyTitle}/>
+                         {(!this.state.MyTitle && this.state.submitFlag) ? <div className="error-text">Title is Required</div> : " "}
                     <br />                    
-                    <input id="MyImageURL" name="MyImageURL" className="form-control"
+                    <input id="MyImageURL" name="MyImageURL" className={this.ValidationCheck(this.state.MyImageURL,this.state.submitFlag)}
                         placeholder="Image URL" onChange={this.handleFormInput} value={this.state.MyImageURL}/>
+                          {(!this.state.MyImageURL && this.state.submitFlag) ? <div className="error-text">Image is Required</div> : " "}
                     <br />
-                    <textarea id="MyText" name="MyText" className="form-control"
+                    <textarea id="MyText" name="MyText" className={this.ValidationCheck(this.state.MyText,this.state.submitFlag)}
                         placeholder="Text" rows="10" onChange={this.handleFormInput} value={this.state.MyText}/>
+                          {(!this.state.MyText && this.state.submitFlag) ? <div className="error-text">Text is Required</div> : " "}
                     <br />
-                    {this.state.blogAccepted ? <div className="error-text text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : " "}
+                    {this.state.blogAccepted && !this.state.MyTitle && !this.state.MyImageURL && !this.state.MyText ? <div className="success-msg text-center">Your post has been accepted. Check the Blog tab to marvel at your work!</div> : ""}
                 
                     <button className="btn btn-info" type="button" onClick={this.submit}>
                         Add Blog Post

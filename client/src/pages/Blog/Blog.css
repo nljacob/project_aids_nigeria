@@ -6,6 +6,10 @@
     box-shadow: 0 0 0 1px red;
 }
 
+.success-msg{
+color:  rgb(1,159,175);
+}
+
 .blog-page h3 {
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
