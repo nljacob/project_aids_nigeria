@@ -133,7 +133,7 @@ app.post('/writings', (req, res) => {
 app.post('/api/send', (req, res, next) => {
   var name = req.body.name;
   var email = req.body.email;
-  let myMessage = req.body.message;
+  let myMessage = req.body.comment;
 
   console.log(myMessage);
 
