@@ -23,43 +23,54 @@ body {
 .home-page h2 {
     font-family: 'Fjalla One', sans-serif;
 }
-.home-page #image-home01 {
-    width: 90%;
-    height: 95%;
-    /* border: solid 10px rgb(90,90,90); */
-}
-.home-page #image-home02 {
-    /* margin-top: 7%; */
-    width: 100%;
-    height: 80%;
-}
-.home-page #image-home03 {
-    width: 100%;
-    
-}
-.home-page #image-home04 {
-    width: 100%;
-    height: 100.5%;
-    
-}
-.home-page #image-statimg03 {
-    height: 90%;
-    width: 60%;
-    margin-top: 17%;
-    
-}
-.home-page #image-statimg01 {
-    height: 110%;
-    width: 75%;    
-    margin-top: -15%;
-}
-.home-page #image-statimg02 {
-    height: 100%;
-    width: 120%;
-}
+
 .home-page #quote {
     color: rgb(1,159,175);
     font-size: 120%;
     margin-top: 1%;
     margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .home-page #image-home01 {
+    width: 90%;
+      height: 95%;
+      /* border: solid 10px rgb(90,90,90); */
+  }
+  .home-page #image-home02 {
+      /* margin-top: 7%; */
+      width: 100%;
+      height: 80%;
+  }
+  .home-page #image-home03 {
+      width: 100%;
+
+  }
+  .home-page #image-home04 {
+      width: 100%;
+      height: 100.5%;
+
+  }
+  .home-page #image-statimg03 {
+      height: 90%;
+      width: 60%;
+      margin-top: 17%;
+
+  }
+  .home-page #image-statimg01 {
+      height: 110%;
+      width: 75%;
+      margin-top: -15%;
+  }
+  .home-page #image-statimg02 {
+      height: 100%;
+      width: 120%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .home-page img {
+      max-height: 80vh;
+      max-width: 80%;
+  }
 }
