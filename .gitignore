@@ -1,7 +1,3 @@
-yarn.lock
-
-.vscode/
-
 # Logs
 logs
 *.log
@@ -67,6 +63,8 @@ typings/
 # Mac
 .DS_Store
 
+# VSCode
+.vscode/
+
 # Webstorm
 .idea/
-
