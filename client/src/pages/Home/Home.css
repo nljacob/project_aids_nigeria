@@ -31,6 +31,15 @@ body {
     margin-bottom: 0;
 }
 
+@media screen and (max-width: 991px) {
+  .home-page img {
+      max-width: 60%;
+  }
+  .home-page #image-statimg02 {
+      max-width: 80%;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .home-page #image-home01 {
     width: 90%;
@@ -65,11 +74,14 @@ body {
   }
 }
 
-@media screen and (max-width: 991px) {
-  .home-page img {
-      max-width: 60%;
+/* these styles only apply to bootstrap lg screen size */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-page #image-statimg01 {
+      height: 100%;
+      margin-top: 0;
   }
   .home-page #image-statimg02 {
-      max-width: 80%;
+      margin-top: 20%;
+      height: 80%;
   }
 }
